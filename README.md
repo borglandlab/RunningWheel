@@ -19,7 +19,7 @@
 | Base Top (~60 g of PLA)						| $29.99/kg from Amazon			| $1.80		| 1		| $1.80	     |
 | Spinner (~72 g of PLA)						| $29.99/kg from Amazon			| $2.16		| 1		| $2.16	     |
 | Sensor Holder (~1 g of PLA)						| $29.99/kg from Amazon			| $0.03		| 1		| $0.03	     |
-| 'Total Cost'								| 					| 		| 		| '$64.35'   |
+| **Total Cost**								| 					| 		| 		| **$64.35**   |
 
 ## Printing and Assembly
 ### 3D Printing
@@ -38,85 +38,85 @@ Following printing of the Base Top the support material can be removed. A layer 
 
 
 #### Specifications for the eryone thinker ER20 and flsun qqs-pro printers
-Adhesion Type: Skirt
-Alternate Extra Wall: Yes
-Avoid Printed Parts When Traveling: Yes
-Combing mode: All
-Custom support blocker for “Base Top.stl”: Only print support material where the slanted roof section meets the horizontal roof section. Place support blockers covering the rest of the Base Top. See attached images to see where to place the support material.
-Enable Retraction: Yes
-Extrude width: 0.46 mm (wall/top/bottom/infill/everything)
-Infill Line Distance: 6.9 mm
-Infill Density: 7%
-Infill Overlap Percentage: 25%
-Infill Patter: Zig zag
-Infill Travel Optimisation: Yes
-Initial Layer Height: 0.24 mm
-Layer height: 0.2 mm
-Material: Generic PLA
-Optimizing wall printing order: Yes
-Print Cooling: 70% at all times
-Print Temperature: 200C (nozzle), 40C (bed)
-Speed: 50 mm/s everything
-Initial Speed: 30 mm/s
-Wall Line count: 2
+- Adhesion Type: Skirt
+- Alternate Extra Wall: Yes
+- Avoid Printed Parts When Traveling: Yes
+- Combing mode: All
+- Custom support blocker for “Base Top.stl”: Only print support material where the slanted roof section meets the horizontal roof section. Place support blockers covering the rest of the Base Top. See attached images to see where to place the support material.
+- Enable Retraction: Yes
+- Extrude width: 0.46 mm (wall/top/bottom/infill/everything)
+- Infill Line Distance: 6.9 mm
+- Infill Density: 7%
+- Infill Overlap Percentage: 25%
+- Infill Patter: Zig zag
+- Infill Travel Optimisation: Yes
+- Initial Layer Height: 0.24 mm
+- Layer height: 0.2 mm
+- Material: Generic PLA
+- Optimizing wall printing order: Yes
+- Print Cooling: 70% at all times
+- Print Temperature: 200C (nozzle), 40C (bed)
+- Speed: 50 mm/s everything
+- Initial Speed: 30 mm/s
+- Wall Line count: 2
 
 Before mass printing, the printer bed was cleaned with isopropyl alcohol. An outline of the part was then printed, followed by light glue stick application to the area. After each print, the old purge line/skirt was scraped off the bed. Before printing again, the area was cleaned with a lightly dampened cloth and the print area was again prepared with light glue stick application.
 
 
 #### Specifications for the Sindoh 3DWOX
-Advanced mode on
-Basic Settings:
-Layer height: 0.2 mm
-Nozzle Temperature: 200C
-Bed Temperature: 40C
-Infill Density: 7%
-Flow Compensation: 100%
-Quality/Shell Settings:
-Bottom Layer Thickness: 0 mm
-Bottom Layer Line Width: 200%
-Retraction Combing: All
-Internal Moving Area: Default
-Wall Thickness: 0.88 mm
-Top/Bottom Thickness: 0.80 mm
-Solid Top: yes
-Solid Bottom: yes
-Wall Printing Direction: Inside to Outside
-Infill Settings:
-Infill Patter: Automatic
-Infill Overlap: 25%
-Skin Type: Line
-Skin Overlap: 15%
-Speed Settings:
-Print Speed: 50 mm/s
-Travel Speed: 130 mm/s
-First Layer Speed: 30 mm/s
-Infill Speed: 0 mm/s
-Top/Bottom Speed: 0 mm/s
-Outer Wall Speed: 0 mm/s
-Inner Wall Speed: 0 mm/s
-Retraction/Cooling Settings:
-Enable Retraction: yes
-Speed: 30 mm/s
-Length: 6.00 mm
-Minimal Travel: 1.50 mm
-Minimal Extrusion Before Retraction: 0.02 mm
-Lowering Bed during Retraction: 0 mm
-Regular Fan Speed: 50%
-Maximum Fan Speed: 50%
-Height at Regular Fan Speed: 0.60 mm
-Enable Cooling Fan: yes
-Minimal Layer Time: 5 sec
-Minimum Speed: 10 mm/s
-Minimum wait period for Lowering Bed: no
-Support:
-Support: none
-Bed Adhesion:
-Bed Adhesion: skirt
-Skirt Line Count: 1
-Skirt Line Gap: 3 mm
-Skirt Minimal Length: 150 mm
-Shape Error Correction: 
-Combination Mode A: yes
+- Advanced mode on
+- Basic Settings:
+- Layer height: 0.2 mm
+- Nozzle Temperature: 200C
+- Bed Temperature: 40C
+- Infill Density: 7%
+- Flow Compensation: 100%
+- Quality/Shell Settings:
+- Bottom Layer Thickness: 0 mm
+- Bottom Layer Line Width: 200%
+- Retraction Combing: All
+- Internal Moving Area: Default
+- Wall Thickness: 0.88 mm
+- Top/Bottom Thickness: 0.80 mm
+- Solid Top: yes
+- Solid Bottom: yes
+- Wall Printing Direction: Inside to Outside
+- Infill Settings:
+- Infill Patter: Automatic
+- Infill Overlap: 25%
+- Skin Type: Line
+- Skin Overlap: 15%
+- Speed Settings:
+- Print Speed: 50 mm/s
+- Travel Speed: 130 mm/s
+- First Layer Speed: 30 mm/s
+- Infill Speed: 0 mm/s
+- Top/Bottom Speed: 0 mm/s
+- Outer Wall Speed: 0 mm/s
+- Inner Wall Speed: 0 mm/s
+- Retraction/Cooling Settings:
+- Enable Retraction: yes
+- Speed: 30 mm/s
+- Length: 6.00 mm
+- Minimal Travel: 1.50 mm
+- Minimal Extrusion Before Retraction: 0.02 mm
+- Lowering Bed during Retraction: 0 mm
+- Regular Fan Speed: 50%
+- Maximum Fan Speed: 50%
+- Height at Regular Fan Speed: 0.60 mm
+- Enable Cooling Fan: yes
+- Minimal Layer Time: 5 sec
+- Minimum Speed: 10 mm/s
+- Minimum wait period for Lowering Bed: no
+- Support:
+   - Support: none
+   - Bed Adhesion:
+   - Bed Adhesion: skirt
+   - Skirt Line Count: 1
+   - Skirt Line Gap: 3 mm
+   - Skirt Minimal Length: 150 mm
+- Shape Error Correction: 
+   - Combination Mode A: yes
 
 With these settings, the printer will print no support blockers. However, for “Base Top.stl” support material should be printed where the slanted roof section meets the horizontal roof section. You need to manually add this. See attached images to see where to place the support material.
 
