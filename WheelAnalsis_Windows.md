@@ -82,7 +82,7 @@ To provide easy execution of the appropriate download codes, I have created a gr
    2. Downloads the data, analyzes it in MATLAB, and creates graphs of the total distance travelled and average velocity.
    3. This is the main button that I use. The rest are just if you want to do an isolated step of the process.
 
-When you click on one of these buttons, no noise or impression will be made. However, the Terminal or Command Prompt window will pop-up and you will be able to see the progress of the command you have selected.
+When you click on one of these buttons, no noise or impression will be made. However, the Command Prompt window will pop-up and you will be able to see the progress of the command you have selected.
 
 For this GUI to work, you will also need the following two python modules in your Python_Code directory:
 1. [RunningWheel_StartupScript.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/RunningWheel_StartupScript.py)
