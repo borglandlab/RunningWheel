@@ -158,7 +158,7 @@ Wiring (follow the [electrical schematic](https://github.com/borglandlab/Running
 - Pin 3 of the right (hf3) hall effect sensor is connected to pin 1 (CH0) of the MCP3008.
 - Each hall effect sensor has a pull-down resistor connecting pin 3 to ground.
 
-For you reference, we've included images of the electrical assembly from the [back](https://github.com/borglandlab/RunningWheel/blob/main/Pictures/RPi_behind.jpg), [front](https://github.com/borglandlab/RunningWheel/blob/main/Pictures/RPi_above.jpg), and [side](https://github.com/borglandlab/RunningWheel/blob/main/Pictures/RPi_side.jpg).
+For your reference, we've included images of the electrical assembly from the [back](https://github.com/borglandlab/RunningWheel/blob/main/Pictures/RPi_behind.jpg), [front](https://github.com/borglandlab/RunningWheel/blob/main/Pictures/RPi_above.jpg), and [side](https://github.com/borglandlab/RunningWheel/blob/main/Pictures/RPi_side.jpg).
 
 -----
 ## Raspberry Pi Zero W Set up
