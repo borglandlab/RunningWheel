@@ -56,7 +56,6 @@ To arrange and bin the data collected from the running wheels in more presentabl
 To provide easy execution of the appropriate download codes, I have created a graphical user interface (GUI) in python that can be opened and used to speedily initiate analysis. The buttons on this GUI are linked to the command files. The code required for running the GUI is:
 1. [Wheel_GUI.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI.py)
 - You will need to install [applescript](https://macdownload.informer.com/applescript-editor/) using pip3 to use the GUI on macOS
-- You will not need to install anything else to use the GUI on Windows
 
 **This GUI contains the following buttons:**
 1. Run before first Download (only run once at beginning)
@@ -161,9 +160,8 @@ Directory = '/Users/<USERNAME>/'
 ### MATLAB
 
 Place the MATLAB files in the MATLAB folder which is typically found under Documents.
-An example for macOS and Windows is below:
-- macOS: /Users/<USERNAME>/Documents/MATLAB/MatLab/<MATLAB file>
-- Windows (using OneDrive): C:\Users\<USERNAME>\OneDrive\Documents\MATLAB\<MATLAB file>
+An example for macOS is below:
+- /Users/<USERNAME>/Documents/MATLAB/MatLab/<MATLAB file>
 
 These files include:
 - [Wheel_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Analysis.m)
@@ -443,7 +441,6 @@ mouseweight_directory()
 I have created a GUI that will analyze the mouse weights along with the data from the running wheels. The code for running this GUI is:
 1. [Wheel_GUI_withMouseWeight.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI.py)
 - You will need to install [applescript](https://macdownload.informer.com/applescript-editor/) using pip3 to use the GUI on macOS
-- You will not need to install anything else to use the GUI on Windows
 
 **Additional button for GUI with mouse weight analysis included:**
 1. Mouse Weight Download and Plot Graphs
