@@ -1,4 +1,5 @@
 # Running Wheel Paper Name
+------
 
 ## Cost of Running Wheel
 | Item									| Supplier				| Unit Cost	| Needed	| Total Cost |
@@ -21,7 +22,9 @@
 | Sensor Holder (~1 g of PLA)						| $29.99/kg from Amazon			| $0.03		| 1		| $0.03	     |
 | **Total Cost**								| 					| 		| 		| **$64.35**   |
 
+-----
 ## Printing and Assembly
+
 ### 3D Printing
 There are four pieces that need to be printed for each running wheel. It is best to print all pieces for a single wheel from the same printer, as this will improve how well the parts will fit together. The pieces included:
 1. Base Bottom
@@ -130,7 +133,7 @@ Electrical Components:
 - Raspberry Pi 0 W with a microSD card:
 - The MCP 3008 analog to digital converter (ADC)
 - 3 A1302 continuous time ratiometric linear hall effect sensors
-- 3 10k resistors
+- 3 10kohm resistors
 - A 10 x 10 PCB breakout board (this can be cut to size)
 - 20 gauge solid core wires
 
@@ -149,16 +152,19 @@ Wiring (follow the electrical schematic):
 - Pin 3 of the right (hf3) hall effect sensor is connected to pin 1 (CH0) of the MCP3008.
 - Each hall effect sensor has a pull-down resistor connecting pin 3 to ground.
 
-
+-----
 ## Raspberry Pi Zero W Set up
 There are two ways to set up the software on your raspberry pi zero for running wheel use.
 1. Clone an SD card
 2. Manually install operating system, 3rd party modules, and spinner.py file
 
+
 ### 1. Clone an SD card
 On my mac I used an app called ApplePiBaker to clone an SD card and copy it to a new SD card. You can find the documentation for the ApplePiBaker online.
 
+
 ### 2. Manual installation
+
 #### Downloading Operating System
 1. Install Raspberry Pi Imager on your personal computer (This is available for Windows, macOS, and Linux)
 2. Insert an SD card into your computer
@@ -168,16 +174,18 @@ On my mac I used an app called ApplePiBaker to clone an SD card and copy it to a
    - Storage: selected empty SD card
    - Click “Write”
 
+
 #### Setting up Raspberry Pi
 1. Put SD card into Raspberry Pi and turn on - will reboot
 2. Set up Country, Language, and Timezone according to your actual timezone
-   a. Will ask you to change password. We’ve left ours without a password
+   1. Will ask you to change password. We’ve left ours without a password
 3. Select internet connection you plan to use and input password
-   a. We’ve connected to our University’s guest account. To ensure that we don’t get kicked out everytime, we’ve added the MAC address for each RPi to the network so that they are permanently in the system. We did this through the IT department.
-      i. To find the MAC address, open Terminal and enter “ifconfig” and follow the instructions found at this [website](https://raspberrytips.com/mac-address-on-raspberry-pi/)
+   1. We’ve connected to our University’s guest account. To ensure that we don’t get kicked out everytime, we’ve added the MAC address for each RPi to the network so that they are permanently in the system. We did this through the IT department.
+      1. To find the MAC address, open Terminal and enter “ifconfig” and follow the instructions found at this [website](https://raspberrytips.com/mac-address-on-raspberry-pi/)
       > The MAC address just after the keyword “ether” in the section corresponding to your network interface. It's represented as a 12-digit hexadecimal number (AA:BB:CC:DD:EE:FF).
 4. Allow for system to update - this can take a while
 5. Reboot/Restart RPi
+
 
 #### Install Adafruit libraries and configure pi for SPI interface
 1. Make sure the Raspberry Pi is connected to the internet
@@ -186,40 +194,43 @@ On my mac I used an app called ApplePiBaker to clone an SD card and copy it to a
 4. Enter: “sudo pip3 install adafruit-circuitpython-mcp3xxx”
 5. Enter: “sudo raspi-config” --> 3 Interface Options —> P4 SPI —> Would you like the SPI interface to be enabled? - “Yes”
 6. Enter “sudo reboot”
-'''console
+```{console}
 pi@raspberrypi:~ $ sudo pip3 install adafruit-blinka
 pi@raspberrypi:~ $ sudo pip3 install adafruit-circuitpython-mcp3xxx
 pi@raspberrypi:~ $ sudo raspi-config
+# 3 Interface Options —> P4 SPI —> Would you like the SPI interface to be enabled? -> “Yes”
 pi@raspberrypi:~ $ sudo reboot
-'''
+```
 
 #### Copying python code to RPi
 1. Insert USB drive into RPi containing python code for spinner.
 2. Copy spinner.py file to RPi from USB drive
 3. Change number in text editor to correspond with spinner number.
 
+
 #### Setting up RPi for python program to automatically run at start-up/reboot
 1. Open Terminal
 2. Enter: “sudo crontab -e”
-   a. Crontab is included in Raspbian
+   1. Crontab is included in Raspbian
 3. Scroll to the very bottom and enter: “@reboot sleep 60 && sudo python3 /home/pi/Desktop/spinner.py”
 4. Control x --> “Y” --> Enter
 5. cd to directory of your script. In our case it’s desktop so we will enter: “cd /home/pi/Desktop/”
 6. Chmod file to make it executable by the computer; enter: “sudo chmod +x spinner.py”
 7. Reboot, enter: “sudo reboot”
-   a. Every time you change the .py file you need to run the chmod
-   b. Is also useful as a test
-'''console
+   1. Every time you change the .py file you need to run the chmod
+   2. Is also useful as a test
+```{console}
 pi@raspberrypi:~ $ sudo crontab -e
 # scroll to bottom and enter "@reboot sleep 60 && sudo python3 /home/pi/Desktop/spinner.py”
 pi@raspberrypi:~ $ cd /home/pi/Desktop/
 pi@raspberrypi:~/home/pi/Desktop $ sudo chmod +x spinner.py
 pi@raspberrypi:~/home/pi/Desktop $ sudo reboot
-'''
+```
 
 
 #### Notes
 1. I’ve found that deleting the text file before running new experiments keeps things from corrupting and not working properly.
+
 
 #### Cloning
 Once the raspberry pi is setup, you can clone the SD card as a backup.zip file. Then just clone the backup onto all of your SD cards. After doing this, you will need to go on your raspberry pi to change the name of the spinner on the spinner.py file. Then do the following:
@@ -227,16 +238,15 @@ Once the raspberry pi is setup, you can clone the SD card as a backup.zip file. 
 2. cd to directory of your script. In our case it’s desktop so we will enter: “cd /home/pi/Desktop/”
 3. Chmod file to make it executable by the computer; enter: “sudo chmod +x spinner.py”
 4. Reboot, enter: “sudo reboot”
-'''console
+```{console}
 pi@raspberrypi:~ $ /home/pi/Desktop/
 pi@raspberrypi:~/home/pi/Desktop $ sudo chmod +x spinner.py
 pi@raspberrypi:~/home/pi/Desktop $ sudo reboot
-'''
+```
 This is faster and easier than setting them all up individually.
 However, you will still need to make sure that you have the MAC addresses for each raspberry pi.
 
-
-
+-----
 ## Software for using Running Wheel
 
 ### Wheel Download Software
@@ -271,6 +281,7 @@ In addition, the following python modules must also be installed on your compute
 7. email – preinstalled
 8. smtplib – preinstalled
 
+
 ### Wheel Analysis Software
 The running wheel data is analyzed in MATLAB by the following function:
 1. Wheel_Analysis.m
@@ -282,9 +293,11 @@ for Wheel_Analysis.m to work properly it needs the following two functions:
 Graphs of the total distance travelled and average velocity can quickly be created for each spinner with the gathered data using the following function:
 1. Wheel_Plot.m
 
+
 ### Further Analysis of wheel data
 To arrange and bin the data collected from the running wheels in more presentable ways, the following script was used:
 1. Wheel_Tables.m
+
 
 ### Analysis of mouse weight, food and water consumption
 The following function was used to analyze and plot the mouse weight, food consumed, and water consumed each day:
@@ -300,12 +313,13 @@ The use of the function MouseWeight_Analysis.m requires that you use our data co
 The following script was used to create tables with all the data organized according to groups:
 1. MouseWeight_Tables.m
 
+
 ### Filling out the ABA.xlsx workbook
 The ABA.xlsx workbook has 4 template sheets.
-a. Acclimation_Template
-b. Baseline_Template
-c. Restriction_Template_6hrs
-d. Restriction_Template_3hrs
+- Acclimation_Template
+- Baseline_Template
+- Restriction_Template_6hrs
+- Restriction_Template_3hrs
 
 1. Make one copy of the Acclimation_Template. In the corresponding location of the table, enter in the date on which the first day of acclimation will occur (example: Saturday, Jun 12, 2021). When you isolate the mice you can also write in the time that this occurred.
 
@@ -322,19 +336,20 @@ This directory is necessary to use MouseWeight_Analysis.m
 
 1. Open mouseweight_directory.py in a text editor and update the “Directory” and “WORKBOOK”. These should be the location on Dropbox where the workbook can be found and the name of the workbook, respectively.
 2. In python, enter:
-   a. import os
-   b. os.chdir(‘/Users/<USERNAME>/Desktop/RunningWheel/Python_Code’) or os.chdir(‘C:\Users\<USERNAME>\OneDrive\Desktop\ RunningWheel\Python_Code’)
+   1. import os
+   2. os.chdir(‘/Users/<USERNAME>/Desktop/RunningWheel/Python_Code’) or os.chdir(‘C:\Users\<USERNAME>\OneDrive\Desktop\ RunningWheel\Python_Code’)
       i. macOS and Windows respectively
-   c. from mouseweight_directory import mouseweight_directory
-   d. mouseweight_directory()
-3. Check the ABA.xlsx and there should be a new sheet/tab at the end with a directory
-'''python
+   3. from mouseweight_directory import mouseweight_directory
+   4. mouseweight_directory()
+```{python}
 import os
 os.chdir(‘/Users/<USERNAME>/Desktop/RunningWheel/Python_Code’)
 from mouseweight_directory import mouseweight_directory
 mouseweight_directory()
-'''
+```
+3. Check the ABA.xlsx and there should be a new sheet/tab at the end with a directory
 
+   
 #### Execution of Wheel Download and Analysis
 
 To provide easy execution of the appropriate download codes, I have created a graphical user interface (GUI) in python that can be opened and used to speedily initiate analysis. The buttons on this GUI are linked to the command/batch files. The code required for running the GUI is:
@@ -344,30 +359,30 @@ To provide easy execution of the appropriate download codes, I have created a gr
 
 **This GUI contains the following buttons:**
 1. Run before first Download (only run once at beginning)
-   a. This is linked to the command/batch file START_UP.command or START_UP.bat
-   b. This must be run once at the beginning before any data is downloaded and should not be run again.
+   1. This is linked to the command/batch file START_UP.command or START_UP.bat
+   2. This must be run once at the beginning before any data is downloaded and should not be run again.
 2. Data Download
-   a. This is linked the command/batch file DOWNLOAD.command or DOWNLOAD.bat
-   b. Just downloads data from the email account to the excel files on your personal computer.
+   1. This is linked the command/batch file DOWNLOAD.command or DOWNLOAD.bat
+   2. Just downloads data from the email account to the excel files on your personal computer.
 3. Data Analysis
-   a. This is linked to the command/batch file WheelAnalysis_nographs.command or WheelAnalysis_nographs.bat
-   b. Just analyzes the data in MATLAB, storing the data in a MATLAB structure.
+   1. This is linked to the command/batch file WheelAnalysis_nographs.command or WheelAnalysis_nographs.bat
+   2. Just analyzes the data in MATLAB, storing the data in a MATLAB structure.
 4. Plot Graphs
-   a. This is linked to the command/batch file PlotWheel.command or PlotWheel.bat
-   b. Just plots the total distance and velocity for each running wheel using the data from the MATLAB structure.
+   1. This is linked to the command/batch file PlotWheel.command or PlotWheel.bat
+   2. Just plots the total distance and velocity for each running wheel using the data from the MATLAB structure.
 5.  Data Download and Analysis
-    a. This is linked to the command/batch file Download_Analysis.command or Download_Analysis.bat
-    b. Downloads the data from the email account, stores it in excel files on your personal computer, and analyzes the data in MATLAB storing the data in a MATLAB structure
+   1. This is linked to the command/batch file Download_Analysis.command or Download_Analysis.bat
+   2. Downloads the data from the email account, stores it in excel files on your personal computer, and analyzes the data in MATLAB storing the data in a MATLAB structure
 6. Data Analysis and Plot Graphs
-   a. This is linked to the command/batch file WheelAnalysis_graphs.command or WheelAnalysis_graphs.bat
-   b. Analyzes the data in MATLAB, storing it in a MATLAB structure, and then creating graphs of the total distance travelled and the average velocity.
+   1. This is linked to the command/batch file WheelAnalysis_graphs.command or WheelAnalysis_graphs.bat
+   2. Analyzes the data in MATLAB, storing it in a MATLAB structure, and then creating graphs of the total distance travelled and the average velocity.
 7. Data Download, Analysis, and Plot Graphs
-   a. This is linked to the command/batch file Download_Analysis_Plot.command or Download_Analysis_Plot.bat
-   b. Downloads the data, analyzes it in MATLAB, and creates graphs of the total distance travelled and average velocity.
-   c. This is the main button that I use. The rest are just if you want to do an isolated step of the process.
+   1. This is linked to the command/batch file Download_Analysis_Plot.command or Download_Analysis_Plot.bat
+   2. Downloads the data, analyzes it in MATLAB, and creates graphs of the total distance travelled and average velocity.
+   3. This is the main button that I use. The rest are just if you want to do an isolated step of the process.
 8. Mouse Weight Download and Plot Graphs
-   a. This is linked to the command/batch file MouseWeightAnalysis_graphs.command or MouseWeightAnalysis_graphs.bat
-   b. Downloads the mouse weight data from the DropBox location, stores it in a structure, and creates graphs showing the weight of the mouse and the food consumed over the course of the experiment. After the morning of the first restriction day, this will also calculate the 75% cutoff values for each mouse.
+   1. This is linked to the command/batch file MouseWeightAnalysis_graphs.command or MouseWeightAnalysis_graphs.bat
+   2. Downloads the mouse weight data from the DropBox location, stores it in a structure, and creates graphs showing the weight of the mouse and the food consumed over the course of the experiment. After the morning of the first restriction day, this will also calculate the 75% cutoff values for each mouse.
 
 When you click on one of these buttons, no noise or impression will be made. However, the Terminal or Command Prompt window will pop-up and you will be able to see the progress of the command you have selected.
 
@@ -416,6 +431,7 @@ Edits and Updates:
 - mouseweight_directory.py
   - Update “DIRECTORY”, and “WORKBOOK”
 
+   
 #### MATLAB
 
 Place the MATLAB files in the MATLAB folder which is typically found under Documents.
@@ -450,6 +466,7 @@ Edits and Updates:
 - MouseWeight_Tables
   - Update the two paths, “mouse_savedData2”, “mouse_savedData1”, “Structure”, and “Main_table”. You may also need to update “AdLibWheel_index”, “AdLibDummy_index”, “RestrictedWheel_index”, and “RestrictedDummy_index”
 
+   
 #### Command/Batch
 
 Place the command/batch files in a folder that is already in the PATH environment.
@@ -471,16 +488,16 @@ These files include (macOS):
 
 You can create the .command files using a text editor and saving them with .command. Save them in your PATH environment as stated above. You will then need to make these files executable. Do this with the following code in a Terminal window:
 1. cd /Users/<Username>
-   a. This is where your terminal window should be automatically. To double check that your .command files are in this directory you can just enter “ls”
+   1. This is where your terminal window should be automatically. To double check that your .command files are in this directory you can just enter “ls”
 2. chmod +x <Filename>
-   a.Example: chmod +x START_UP.command
-   b.You will need to do this whenever you edit these files.
-'''console
+   1.Example: chmod +x START_UP.command
+   2.You will need to do this whenever you edit these files.
+```{console}
 usermac@USER ~ % cd /Users/<Username>
 usermac@User ~ % ls
 # Check that your .command files are here
 usermac@User ~ % chmod +x <Filename>
-'''
+```
 
 Edits and Updates that you may need to do:
 1. Make sure that the directories are correct for where you’ve put the files on your computer. 
