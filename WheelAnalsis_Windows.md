@@ -3,7 +3,9 @@
 ## Wheel Download Software
 You must have python3 installed on you computer to run the data download software. It might work with Python 2, however it has only been tested with Python 3.
 
-In addition, make sure that your system PATH variable includes python or your computer will be unable to find it. Also make sure that the directories used in all code line up with the directories on your computer. See below for more information on changing this.
+In addition, make sure that your system PATH variable includes python or your computer will be unable to find it. This will prevent the code that I am sharing here from working on your computer. You can learn more about how to do this at this [website](https://www.educative.io/edpresso/how-to-add-python-to-path-variable-in-windows).
+
+Also make sure that the directories used in all code line up with the directories on your computer. See below for more information on changing this.
 
 I have created 3 different python modules that you need to download:
 1. [GETdata_wheel.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/GETdata_wheel.py)
