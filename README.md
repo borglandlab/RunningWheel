@@ -31,10 +31,11 @@ We designed and constructed an open source [running wheel system](https://github
 
 ### 3D Printing
 There are four pieces that need to be printed for each running wheel. It is best to print all pieces for a single wheel from the same printer, as this will improve how well the parts will fit together. The pieces included:
-1. Base Bottom
-2. Base Top
-3. Sensor Holder
-4. Spinner
+1. [Base Bottom](https://github.com/borglandlab/RunningWheel/blob/main/3Dprintingfiles/STL/Base%20Bottom.STL)
+2. [Base Top](https://github.com/borglandlab/RunningWheel/blob/main/3Dprintingfiles/STL/Base%20Top.STL)
+3. [Sensor Holder](https://github.com/borglandlab/RunningWheel/blob/main/3Dprintingfiles/STL/Sensor%20Holder.STL)
+4. [Spinner](https://github.com/borglandlab/RunningWheel/blob/main/3Dprintingfiles/STL/Spinner.STL)
+
 It is ideal to print the Spinner part with the same infill settings across all running wheels, as this will decrease the variability in weight. Spinners with different weights will spin differently, changing the experience of the mouse and the likelihood that they will use the wheel.
 
 To facilitate greater reproducibility of our 3D printed running wheels, we’ve outlined printer specifications that we selected, and a summary of the printing process.
@@ -49,7 +50,7 @@ Following printing of the Base Top the support material can be removed. A layer 
 - Alternate Extra Wall: Yes
 - Avoid Printed Parts When Traveling: Yes
 - Combing mode: All
-- Custom support blocker for “Base Top.stl”: Only print support material where the slanted roof section meets the horizontal roof section. Place support blockers covering the rest of the Base Top. See attached images to see where to place the support material.
+- Custom support blocker for “[Base Top.stl](https://github.com/borglandlab/RunningWheel/blob/main/3Dprintingfiles/STL/Base%20Top.STL)”: Only print support material where the slanted roof section meets the horizontal roof section. Place support blockers covering the rest of the Base Top. See [attached images](https://github.com/borglandlab/RunningWheel/tree/main/3Dprintingfiles/SupportBlockers) to see where to place the support material.
 - Enable Retraction: Yes
 - Extrude width: 0.46 mm (wall/top/bottom/infill/everything)
 - Infill Line Distance: 6.9 mm
@@ -125,7 +126,7 @@ Before mass printing, the printer bed was cleaned with isopropyl alcohol. An out
 - Shape Error Correction: 
    - Combination Mode A: yes
 
-With these settings, the printer will print no support blockers. However, for “Base Top.stl” support material should be printed where the slanted roof section meets the horizontal roof section. You need to manually add this. See attached images to see where to place the support material.
+With these settings, the printer will print no support blockers. However, for “[Base Top.stl](https://github.com/borglandlab/RunningWheel/blob/main/3Dprintingfiles/STL/Base%20Top.STL)” support material should be printed where the slanted roof section meets the horizontal roof section. You need to manually add this. See [attached images](https://github.com/borglandlab/RunningWheel/tree/main/3Dprintingfiles/SupportBlockers) to see where to place the support material.
 
 
 ### Assembling the Running Wheel
