@@ -280,12 +280,6 @@ However, you will still need to make sure that you have the MAC addresses for ea
 ## Running Wheels with no wifi connection
 
 If you are running your experiments with no, or a very weak/unreliable wifi connection, then you may wish to use the no wifi mode. To run the no wifi mode, these changes from the previous instructions will need to be made:
-1. Copy the 
-
------
-## Software for using Running Wheel
-
-I have created software for both [macOS](https://github.com/borglandlab/RunningWheel/blob/main/WheelAnalysis_macOS.md) and Windows. Click on the appropriate link to be taken to the setup and use instructions.
 1. You do not need to install the third party module, Speedtest.
 2. You do not need to connect to the wifi during setup.
 3. Copy the [no wifi spinner code](https://github.com/borglandlab/RunningWheel/blob/main/Spinner_Code/spinner_noWIFI.py) to the raspberry pi instead of the wifi version.
@@ -300,4 +294,7 @@ SPINNER_NAME = 1  #Corresponds to the wheel number
 TRIGGER_THRESHOLD = 30
 ```
 
+-----
+## Software for using Running Wheel
 
+I have created software for both [macOS](https://github.com/borglandlab/RunningWheel/blob/main/WheelAnalysis_macOS.md) and Windows. Click on the appropriate link to be taken to the setup and use instructions.
