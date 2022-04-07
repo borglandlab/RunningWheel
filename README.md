@@ -530,31 +530,154 @@ An example for macOS and Windows is below:
 - Windows (using OneDrive): C:\Users\<USERNAME>\OneDrive\Documents\MATLAB\<MATLAB file>
 
 These files include:
-- Wheel_Analysis.m
-- Wheel_Plot.m
-- Wheel_Tables.m
-- importData.m
-- importDirectory.m
-- importLength.m
+- [Wheel_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Analysis.m)
+- [Wheel_Plot.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Plot.m)
+- [Wheel_Tables.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Tables.m)
+- [importData.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/importData.m)
+- [importDirectory.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/importDirectory.m)
+- [importLength.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/importLength.m)
 
 Optional files for calculating changes in food, water, and mouse weight:
-- MouseWeight_Analysis.m
-- MouseWeight_Tables.m
-- importDirectory_weights.m
-- importWeights.m
+- [MouseWeight_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/MouseWeight_Analysis.m)
+- [MouseWeight_Tables.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/MouseWeight_Tables.m)
+- [importDirectory_weights.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/importDirectory_weights.m)
+- [importWeights.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/importWeights.m)
 
 Edits and Updates:
-- Make sure you have the Statistics and Machine Learning Toolbox
-- Wheel_Analysis.m
+- Make sure you have the [Statistics and Machine Learning Toolbox](https://www.mathworks.com/products/statistics.html?ef_id=Cj0KCQjwl7qSBhD-ARIsACvV1X3OpXmC9absXSTA4-pBrpWimDmcodpmaS-EzpkjGsTvFY9vyjFwjhoaAlKcEALw_wcB:G:s&s_kwcid=AL!8664!3!521185651561!b!!g!!%2Bmatlab%20%2Bmachine%20%2Blearning&s_eid=ppc_43685094884&q=+matlab%20+machine%20+learning&gclid=Cj0KCQjwl7qSBhD-ARIsACvV1X3OpXmC9absXSTA4-pBrpWimDmcodpmaS-EzpkjGsTvFY9vyjFwjhoaAlKcEALw_wcB)
+- [Wheel_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Analysis.m)
   - Update the two paths (should correspond MATLAB in general and the MATLAB RunningWheel folder – not necessary to have a RunningWheel folder), “PATH”, “timezone”, “Structure”, and “Wheel_number” (default is 8). If you change the design of the wheel then you may also need to update the “runningwheel_diameter”.
-- Wheel_Plot.m
+```{MATLAB}
+% Assigning variables
+addpath('/Users/<USERNAME>/Documents/MATLAB/MATLAB')    %This path should correspond to you MATLAB folder.
+addpath('/Users/<USERNAME>/Documents/MATLAB/MATLAB/RunningWheel')   %This path should correspond to the folder where you are keeping your running wheel code.
+PATH = '/Users/<USERNAME>/Desktop/RunningWheel/Wheel_Data/'; %This is the folder path where your saved data is located.
+timezone = 'America/Edmonton';  %This should be changed to your preferred time zone.
+Structure = 'RunningWheelData.mat'; % name of the MATLAB structure that contains/will contain the running wheel data
+runningwheel_diameter = 110; % the diameter of the mouses running trajectory (mm)
+Wheel_number = 8;   %   This is the number of running wheels that I am using
+```
+- [Wheel_Plot.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Plot.m)
   - Update the two paths, “PATH_dataload”, “PATH_destination1”, “PATH_destination2”, “timezone”, “Acclimation_day1”, “Baseline_day1”, “Restriction_final”, and “Structure”.
-- Wheel_Tables.m
+```{MATLAB}
+addpath('/Users/<USERNAME>/Documents/MATLAB/MatLab')
+addpath('/Users/<USERNAME>/Documents/MATLAB/MatLab/RunningWheel')
+PATH_dataload = '/Users/<USERNAME>/Desktop/RunningWheel/Wheel_Data/'; %This is the folder path where your saved data is located.
+PATH_destination1 = '/Users/<USERNAME>/Desktop/RunningWheel/Wheel_Figures/'; %This is the location where you plan to save your figures.
+PATH_destination2 = '/Users/<USERNAME>/Dropbox/RunningWheel/';   %This is the secondary location where you plan to save your figures (I saved my figures twice).
+
+timezone = 'America/Edmonton';  %This should be changed to your preferred time zone.
+Acclimation_day1 = datetime('21-Sep-2021'); % This should be the first day of the acclimation phase
+Baseline_day1 = datetime('23-Sep-2021');    % This should be the first day of the baseline phase
+Restriction_final = datetime('now','Format','dd-MM-yyyy'); % This should be the last day of the experiment.
+%Restriction_final = datetime('1-Oct-2021');    %Use this is the experiment
+%has concluded
+
+Structure = 'RunningWheelData_Jun2021.mat'; % name of the MATLAB structure that contains/will contain the running wheel data
+```
+- [Wheel_Tables.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Tables.m)
   - Update the two paths, “PATH”, “Acclimation_day1”, “Baseline_day1”, “Restriction_final”, “timezone”, “Main_table”, “Hourly_table”, and “Structure”. You may also need to update “Groups_variables”, “Control_index”, and “Restricted_index”.
-- MouseWeight_Analysis.m
+```{MATLAB}
+addpath('/Users/<USERNAME>/Documents/MATLAB/MATLAB')    %This path should correspond to you MATLAB folder.
+addpath('/Users/<USERNAME>/Documents/MATLAB/MATLAB/RunningWheel')   %This path should correspond to the folder where you are keeping your running wheel code.
+PATH = '/Users/<USERNAME>/Desktop/Wheel/DataDownload/'; %This is the folder path where your saved data is located.
+
+% Setting my dates
+Acclimation_day1 = datetime('12-Jun-2021');
+Baseline_day1 = datetime('14-Jun-2021');
+Restriction_final = datetime('1-Jul-2021');
+%This will be the 8th day of the 3 hour restriction, however the mice are
+%removed for the experiment before being restricted on this day.
+timezone = 'America/Edmonton';  %This should be changed to your preferred time zone.
+
+% Table names
+Main_table = 'RunningWheel_tables.xlsx';
+Hourly_table = 'RunningWheel_hourlybin.xlsx';
+
+% Matlab Structre name
+Structure = 'RunningWheelData.mat';
+
+% These are the order of the variables/groups in my tables
+Groups_variables = {'AdLib1','AdLib3','AdLib5','AdLib7','Restricted2','Restricted4','Restricted6','Restricted8'};
+
+% These are the running wheel numbers that correspond to each group:
+Control_index = [1 3 5 7];
+Restricted_index = [2 4 6 8];
+```
+- [MouseWeight_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/MouseWeight_Analysis.m)
   - Update the two paths, “mouse_savedData2”, “mouse_savedData1”, “Excel_file”, “Structure”, “Acclimation_day1”, “Baseline_day1”, “Restriction_final”, and “timezone”. You may also need to update “Groups_variables”, “number_mice”, “AdLib”, “Restricted”, and the mouse naming. This analysis is set-up for 16 mice in 4 different groups. Group 1 – Ad Lib with Wheel, Group 2 – Ad Lib with dummy Wheel, Group 3 – Restricted with Wheel, and Group 4 – Restricted with dummy Wheel. They alternate in that order. If you set it up in a different way then this analysis of the mouse weight will not work.
-- MouseWeight_Tables
+```{MATLAB}
+%% Assigning variables
+
+addpath('/Users/<USERNAME>/Documents/MATLAB/MATLAB')    
+addpath('/Users/<USERNAME>/Documents/MATLAB/MATLAB/RunningWheel')
+mouse_savedData2 = '/Users/<USERNAME>/Dropbox/RunningWheel/';    %This is where the excel file is being stored where we are entering in the data (Dropbox for us).
+% It is also the secondary location where I am saving my running wheel data.
+mouse_savedData1 = '/Users/<USERNAME>/Desktop/RunningWheel/Wheel_Data/'; %This is the primary location on my computer where I am saving my running wheel data.
+
+Excel_file = 'ABA.xlsx';
+Structure = 'ABA_weight.mat';
+
+Acclimation_day1 = '12-Jun-2021';   % This should be the first day of the acclimation phase
+Baseline_day1 = datetime('14-Jun-2021');    % This should be the first day of the baseline phase
+Restriction_final = '1-Jul-2021'; % This should be the last day of the experiment.
+%Restriction_final = 'now' %Last day of experiment (use 'now' if it isn't the last day yet)
+timezone = 'America/Edmonton';  %This should be changed to your preferred time zone.
+
+Restriction_day1 = Baseline_day1 + 7;
+Today_date = datetime('now');
+Today_date.Format = 'dd-MMM-yyyy';
+
+cd(mouse_savedData2)
+
+% These are the order of the variables/groups in my tables
+Groups_variables = {'AdLibWheel1',
+                    'AdLibWheel5',
+                    'AdLibWheel9',
+                    'AdLibWheel13', 
+                    'AdLibDummy3',
+                    'AdLibDummy7',
+                    'AdLibDummy11',
+                    'AdLibDummy15', 
+                    'RestrictedWheel2',
+                    'RestrictedWheel6',
+                    'RestrictedWheel10',
+                    'RestrictedWheel14',
+                    'RestrictedDummy4',
+                    'RestrictedDummy8',
+                    'RestrictedDummy12',
+                    'RestrictedDummy16'};
+
+% These are the mouse numbers that correspond to each group:
+
+number_mice = 16; % Total number of mice in the experiment
+
+%This will determine how the analysis is carried out (this is because the
+%sheets are filled out differently for the two different groups):
+AdLib = [1 2 5 6 9 10 13 14];   %Mice that were fed ad libitum chow
+Restricted = [3 4 7 8 11 12 15 16]; %Miece that were food restricted
+```
+- [MouseWeight_Tables](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/MouseWeight_Tables.m)
   - Update the two paths, “mouse_savedData2”, “mouse_savedData1”, “Structure”, and “Main_table”. You may also need to update “AdLibWheel_index”, “AdLibDummy_index”, “RestrictedWheel_index”, and “RestrictedDummy_index”
+```{MATLAB}
+addpath('/Users/<USERNAME>/Documents/MATLAB/MATLAB')    
+addpath('/Users/<USERNAME>/Documents/MATLAB/MATLAB/RunningWheel')
+mouse_savedData2 = '/Users/<USERNAME>/Dropbox/RunningWheel/';    %This is where the excel file is being stored where we are entering in the data (Dropbox for us).
+% It is also the secondary location where I am saving my running wheel data.
+mouse_savedData1 = '/Users/<USERNAME>/Desktop/RunningWheel/Wheel_Data/'; 
+
+Structure = 'ABA_weight.mat';
+Main_table = 'RunningWheel_tables.xlsx';
+
+cd(mouse_savedData2)
+load(Structure)
+
+%This will determine how the data is sorted into tables:
+AdLibWheel_index = [1 5 9 13];    %ControlWheel are mice with ad libitum chow and a running wheel
+AdLibDummy_index = [2 6 10 14];   %Mice with ad libitum chow and a dummy wheel
+RestrictedWheel_index = [3 7 11 15];    %Mice that are food restricted and a running wheel
+RestrictedDummy_index = [4 8 12 16];    %Mice that are food restricted and a dummy wheel
+```
 
    
 #### Command/Batch
