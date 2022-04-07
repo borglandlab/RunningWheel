@@ -1,4 +1,5 @@
-# Running Wheel Paper Name
+# Open Source Running Wheel for the Activity-Based Anorexia Model
+Nathan Godfrey, Kehan Chen, Temoor Tayyab, and Stephanie Borgland
 
 ------
 ## Brief Description
