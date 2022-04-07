@@ -175,7 +175,7 @@ Structure the "RunningWheel" folder accordingly:
 - RunningWheel_App (file)
   - This is an alias/shortcut to the command/batch file to open the Wheel_GUI.py
 
-Edits and Updates:
+#### Edits and Updates:
 - [GETdata_wheel_nowifi.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/GETdata_wheel_nowifi.py)
   - Update “SavedData_Directory”, and “Spinner_List”
 ```{python}
@@ -264,7 +264,7 @@ Optional files for calculating changes in food, water, and mouse weight:
 - [importDirectory_weights.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/importDirectory_weights.m)
 - [importWeights.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/importWeights.m)
 
-Edits and Updates:
+#### Edits and Updates:
 - Make sure you have the [Statistics and Machine Learning Toolbox](https://www.mathworks.com/products/statistics.html?ef_id=Cj0KCQjwl7qSBhD-ARIsACvV1X3OpXmC9absXSTA4-pBrpWimDmcodpmaS-EzpkjGsTvFY9vyjFwjhoaAlKcEALw_wcB:G:s&s_kwcid=AL!8664!3!521185651561!b!!g!!%2Bmatlab%20%2Bmachine%20%2Blearning&s_eid=ppc_43685094884&q=+matlab%20+machine%20+learning&gclid=Cj0KCQjwl7qSBhD-ARIsACvV1X3OpXmC9absXSTA4-pBrpWimDmcodpmaS-EzpkjGsTvFY9vyjFwjhoaAlKcEALw_wcB)
 - [Wheel_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Analysis.m)
   - Update the two paths (should correspond MATLAB in general and the MATLAB RunningWheel folder – not necessary to have a RunningWheel folder), “PATH”, “timezone”, “Structure”, and “Wheel_number” (default is 8). If you change the design of the wheel then you may also need to update the “runningwheel_diameter”.
@@ -433,7 +433,7 @@ usermac@User ~ % ls
 usermac@User ~ % chmod +x <Filename>
 ```
 
-Edits and Updates that you may need to do:
+#### Edits and Updates that you may need to do:
 1. Make sure that the directories are correct for where you’ve put the files on your computer. 
 2. You may need to update the MATLAB year (i.e. 2021b)
 ```
@@ -459,7 +459,7 @@ Files for Windows:
 
 You can create a .bat file using a text editor and saving them with .bat. Save them in your PATH environment as stated above. These files are automatically executable. I found that I was unable to open these files to edit them after creating them. I had to remake them if I needed to edit them. The files provided here are .txt, so you will need to resave them as .bat.
 
-Edits and Updates that you may need to do:
+#### Edits and Updates that you may need to do:
 1. Make sure that the directories are correct for where you’ve put the files on your computer.
 2. Make sure that the python.exe directory is correct.
 ```
