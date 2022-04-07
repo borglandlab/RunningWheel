@@ -53,9 +53,8 @@ To arrange and bin the data collected from the running wheels in more presentabl
    
 ### Execution of Wheel Download and Analysis
 
-To provide easy execution of the appropriate download codes, I have created a graphical user interface (GUI) in python that can be opened and used to speedily initiate analysis. The buttons on this GUI are linked to the command/batch files. The code required for running the GUI is:
+To provide easy execution of the appropriate download codes, I have created a graphical user interface (GUI) in python that can be opened and used to speedily initiate analysis. The buttons on this GUI are linked to the batch files. The code required for running the GUI is:
 1. [Wheel_GUI.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI.py)
-- You will need to install [applescript](https://macdownload.informer.com/applescript-editor/) using pip3 to use the GUI on macOS
 - You will not need to install anything else to use the GUI on Windows
 
 **This GUI contains the following buttons:**
@@ -109,7 +108,7 @@ Structure the "RunningWheel" folder accordingly:
 - Wheel_Figures (folder)
   - Where all the MATLAB figures will be stored
 - RunningWheel_App (file)
-  - This is an alias/shortcut to the command/batch file to open the Wheel_GUI.py
+  - This is an alias/shortcut to the batch file to open the Wheel_GUI.py
 
 #### Must Update:
 ```
@@ -150,7 +149,7 @@ password = 'app specific password'	#App password. You will need to set this up o
 from_email = 'Mouse Spinners <email address>'	#Email account that will send the alert email.
 to_email = 'personal email'	#Email account that you want to receive the alert. I had it sent to my personal email address so that I'd see it immediately.
 ```
-- [Wheel_GUI.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI.py) or [Wheel_GUI_withMouseWeight](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI_withMouseWeight.py)
+- [Wheel_GUI.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI.py)
   - Update “Directory”
 ```{python}
 # Specify directory where your executable files are located (.command or .bat)
@@ -434,7 +433,7 @@ I have created a GUI that will analyze the mouse weights along with the data fro
 
 **Additional button for GUI with mouse weight analysis included:**
 1. Mouse Weight Download and Plot Graphs
-   1. This is linked to the command/batch file MouseWeightAnalysis_graphs.command or MouseWeightAnalysis_graphs.bat
+   1. This is linked to the batch file MouseWeightAnalysis_graphs.bat
    2. Downloads the mouse weight data from the DropBox location, stores it in a structure, and creates graphs showing the weight of the mouse and the food consumed over the course of the experiment. After the morning of the first restriction day, this will also calculate the 75% cutoff values for each mouse.
 	
 ---
