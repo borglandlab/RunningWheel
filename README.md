@@ -688,15 +688,15 @@ Examples of this for the macOS and Windows are below:
 - Windows: C:\Users\<USERNAME>
 
 These files include (macOS):
-- START_UP.command
-- DOWNLOAD.command
-- WheelAnalysis_nographs.command
-- PlotWheel.command
-- WheelAnalysis_graphs.command
-- Download_Analysis.command
-- Download_Analysis_Plot.command
-- MouseWeightAnalysis_graphs.command
-- OPEN_Wheel_GUI.command
+- [START_UP.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/START_UP.command)
+- [DOWNLOAD.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/DOWNLOAD.command)
+- [WheelAnalysis_nographs.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/WheelAnalysis_nographs.command)
+- [PlotWheel.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/PlotWheel.command)
+- [WheelAnalysis_graphs.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/WheelAnalysis_graphs.command)
+- [Download_Analysis_nographs.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/WheelAnalysis_nographs.command)
+- [Download_Analysis_Plot.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/Download_Analysis_Plot.command)
+- [MouseWeightAnalysis_graphs.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/MouseWeightAnalysis_graphs.command)
+- [OPEN_Wheel_GUI.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/OPEN_Wheel_GUI.command)
   - Create an alias/shortcut to this file called “RunningWheel_App” and store where ever you like.
 
 You can create the .command files using a text editor and saving them with .command. Save them in your PATH environment as stated above. You will then need to make these files executable. Do this with the following code in a Terminal window:
@@ -715,24 +715,36 @@ usermac@User ~ % chmod +x <Filename>
 Edits and Updates that you may need to do:
 1. Make sure that the directories are correct for where you’ve put the files on your computer. 
 2. You may need to update the MATLAB year (i.e. 2021b)
+```{console}
+/Applications/MATLAB_R2021b.app/bin/matlab -nodisplay -r
+'''
 3. If you are not using python3 then you will need to change that
+```{console}
+python3 /Users/<USERNAME>/Desktop/RunningWheel/Python_Code/
+```
 
 
 Files for Windows:
-- START_UP.bat
-- DOWNLOAD.bat
-- WheelAnalysis_nographs.bat
-- PlotWheel.bat
-- WheelAnalysis_graphs.bat
-- Download_Analysis.bat
-- Download_Analysis_Plot.bat
-- MouseWeightAnalysis_graphs.bat
-- OPEN_Wheel_GUI.bat
+- [START_UP.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/START_UP.txt)
+- [DOWNLOAD.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/DOWNLOAD.txt)
+- [WheelAnalysis_nographs.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/WheelAnalysis_nographs.txt)
+- [PlotWheel.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/PlotWheel.txt)
+- [WheelAnalysis_graphs.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/MouseWeightAnalysis_graphs.txt)
+- [Download_Analysis.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/Download_Analysis.txt)
+- [Download_Analysis_Plot.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/Download_Analysis_Plot.txt)
+- [MouseWeightAnalysis_graphs.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/MouseWeightAnalysis_graphs.txt)
+- [OPEN_Wheel_GUI.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/OPEN_Wheel_GUI.txt)
   - Create an alias/shortcut to this file called “RunningWheel_App” and store where ever you like.
 
-You can create a .bat file using a text editor and saving them with .bat. Save them in your PATH environment as stated above. These files are automatically executable. I found that I was unable to open these files to edit them after creating them. I had to remake them if I needed to edit them.
+You can create a .bat file using a text editor and saving them with .bat. Save them in your PATH environment as stated above. These files are automatically executable. I found that I was unable to open these files to edit them after creating them. I had to remake them if I needed to edit them. The files provided here are .txt, so you will need to resave them as .bat.
 
 Edits and Updates that you may need to do:
 1. Make sure that the directories are correct for where you’ve put the files on your computer.
 2. Make sure that the python.exe directory is correct.
+```{console}
+"C:\Users\<USERNAME>\OneDrive\Desktop\Uni\bin\matlab.exe" -batch
+'''
 3. Make sure that the MATLAB directory is correct (both matlab.exe and the MATLAB folder under Documents)
+```{console}
+"C:\Users\<USERNAME>\AppData\Local\Programs\Python\Python39\python.exe"
+```
