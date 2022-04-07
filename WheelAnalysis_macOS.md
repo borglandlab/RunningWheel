@@ -111,7 +111,6 @@ Structure the "RunningWheel" folder accordingly:
   - This is an alias/shortcut to the command file to open the Wheel_GUI.py
 
 #### Must Update:
-```
 - [GETdata_wheel.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/GETdata_wheel.py)
   - Update "Spinner_List", "Spinner_Email", “SavedData_Directory”, “Code_Directory”, and “EmailAlert_hours”
 ```{python}
