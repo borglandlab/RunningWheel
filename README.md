@@ -715,11 +715,11 @@ usermac@User ~ % chmod +x <Filename>
 Edits and Updates that you may need to do:
 1. Make sure that the directories are correct for where you’ve put the files on your computer. 
 2. You may need to update the MATLAB year (i.e. 2021b)
-```{console}
+```
 /Applications/MATLAB_R2021b.app/bin/matlab -nodisplay -r
-'''
+```
 3. If you are not using python3 then you will need to change that
-```{console}
+```
 python3 /Users/<USERNAME>/Desktop/RunningWheel/Python_Code/
 ```
 
@@ -741,10 +741,10 @@ You can create a .bat file using a text editor and saving them with .bat. Save t
 Edits and Updates that you may need to do:
 1. Make sure that the directories are correct for where you’ve put the files on your computer.
 2. Make sure that the python.exe directory is correct.
-```{console}
+```
 "C:\Users\<USERNAME>\OneDrive\Desktop\Uni\bin\matlab.exe" -batch
-'''
+```
 3. Make sure that the MATLAB directory is correct (both matlab.exe and the MATLAB folder under Documents)
-```{console}
+```
 "C:\Users\<USERNAME>\AppData\Local\Programs\Python\Python39\python.exe"
 ```
