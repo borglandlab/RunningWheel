@@ -438,7 +438,7 @@ I have created a GUI that will analyze the mouse weights along with the data fro
 ---
 ## Running Wheels with no wifi connection
 
-If you are running your experiments with no, or a very weak/unreliable wifi connection, then you may wish to use the no wifi mode. If you choose to do this, you will first need to copy all the saved text files from each raspberry pi onto a USB drive and then store them together in a file. You can then use the following code to organize your data into Workbooks. Following this, the data analysis will be the same (i.e. the MATlAB part does not change).
+If you are running your experiments with no, or a very weak/unreliable wifi connection, then you may wish to use the no wifi mode. If you choose to do this, you will first need to copy all the saved text files from each raspberry pi onto a USB drive and then store them together in a file. You can then use the following code to organize your data into Workbooks. Following this, the data analysis will be the same (i.e. the MATlAB part does not change). All you will need to do is select the “Data Analysis and Plot Graphs” button on the GUI.
 
 - [GETdata_wheel_nowifi.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/GETdata_wheel_nowifi.py)
 	- Put this file in the Python_Code folder instead of the Getdata_wheel.py.
