@@ -436,17 +436,17 @@ Examples of where this would be for macOS and Windows are below:
 - macOS: /Users/<USERNAME>/Desktop/
 - Windows (using OneDrive): C:\Users\<USERNAME>\OneDrive\Desktop\
 
-Structure the folder accordingly:
-RunningWheel
+Structure the "RunningWheel" folder accordingly:
 - Python_Code (folder)
-  - GETdata_wheel_nowifi.py
-  - GETdata_wheel.py
-  - inbox.py
-  - RunningWheel_DownloadScript.py
-  - RunningWheel_StartupScript.py
-  - send_wheelalert.py
-  - Wheel_GUI.py
-  - mouseweight_directory.py – optional
+  - [GETdata_wheel_nowifi.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/GETdata_wheel_nowifi.py) - optional
+  - [GETdata_wheel.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/GETdata_wheel.py)
+  - [inbox.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/inbox.py)
+  - [RunningWheel_DownloadScript.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/RunningWheel_DownloadScript.py)
+  - [RunningWheel_StartupScript.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/RunningWheel_StartupScript.py)
+  - [send_wheelalert.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/send_wheelalert.py)
+  - [Wheel_GUI.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI.py)
+  - [mouseweight_directory.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/mouseweight_directory.py) – optional
+  - [Wheel_GUI_withMouseWeight](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI_withMouseWeight.py) - optional
 - Wheel_Data (folder)
   - Where all the running wheel data will be stored
 - Wheel_Figures (folder)
@@ -455,18 +455,71 @@ RunningWheel
   - This is an alias/shortcut to the command/batch file to open the Wheel_GUI.py
 
 Edits and Updates:
-- GETdata_wheel_nowifi.py
-  - Update “SavedData_Directory”, “Spinner_List”, and “Spinner_Email”
-- GETdata_wheel.py
-  - Update “SavedData_Directory”, “Code_Directory”, and “EmailAlert_hours”
-- inbox.py
+- [GETdata_wheel_nowifi.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/GETdata_wheel_nowifi.py)
+  - Update “SavedData_Directory”, and “Spinner_List”
+```{python}
+# Make sure this corresponds to the directory where I will find and save my data
+SavedData_Directory = '/Users/<USERNAME>/Desktop/RunningWheel/Wheel_Data'	#This will need to be the folder directory where the data is saved.
+
+#This will need to be as long as the number of spinners you have. This variable is used in Wheel_RunFirst and GetData_wheel functions.
+Spinner_List = ['Spinner_1',
+'Spinner_2',
+'Spinner_3',
+'Spinner_4',
+'Spinner_5',
+'Spinner_6',
+'Spinner_7',
+'Spinner_8']
+```
+- [GETdata_wheel.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/GETdata_wheel.py)
+  - Update "Spinner_List", "Spinner_Email", “SavedData_Directory”, “Code_Directory”, and “EmailAlert_hours”
+```{python}
+Spinner_List = ['Spinner_1',
+'Spinner_2',
+'Spinner_3',
+'Spinner_4',
+'Spinner_5',
+'Spinner_6',
+'Spinner_7',
+'Spinner_8']
+
+Spinner_Email = 'email address'	#This is the email where your data from the running wheels is being sent
+
+SavedData_Directory = '/Users/<USERNAME>/Desktop/RunningWheel/Wheel_Data'	#This will need to be the folder directory where the data is saved.
+Code_Directory = '/Users/<USERNAME>/Desktop/RunningWheel/Python_Code'	#This will need to be the folder directory where the code is kept.
+
+EmailAlert_hours = 3 	#will send an alert if this number of hours passes without recieving an email
+```
+- [inbox.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/inbox.py)
   - Update “host” (only update if you are not using gmail), “username”, and “password”
-- send_wheelalert.py
+```{python}
+host = 'imap.gmail.com'	#This stays the same unless you are not using gmail
+username = 'email address'	#This will need to be the email address that you plan to send and receive with.
+												#I've set it up so that the spinners send emails using this email address and they also send it to this email address.
+password = 'app specific password'	#This is the app specific password. You need to get this from you gmail account. It will require a little setting up.
+```
+- [send_wheelalert.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/send_wheelalert.py)
   - Update “HOST”, “username”, “password”, “from_email”, and “to_email”
-- Wheel_GUI.py
+```{python}
+#Changes these so that they correspond to your email account.
+HOST = 'smtp.gmail.com'	#This is for a gmail account
+username = 'email address'	#Email address
+password = 'app specific password'	#App password. You will need to set this up on your google account first.
+from_email = 'Mouse Spinners <email address>'	#Email account that will send the alert email.
+to_email = 'personal email'	#Email account that you want to receive the alert. I had it sent to my personal email address so that I'd see it immediately.
+```
+- [Wheel_GUI.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI.py) or [Wheel_GUI_withMouseWeight](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI_withMouseWeight.py)
   - Update “Directory”
-- mouseweight_directory.py
+```{python}
+# Specify directory where your executable files are located (.command or .bat)
+Directory = '/Users/<USERNAME>/'
+```
+- [mouseweight_directory.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/mouseweight_directory.py)
   - Update “DIRECTORY”, and “WORKBOOK”
+```{python}
+DIRECTORY = '/Users/<USERNAME>/Dropbox/RunningWheel'	#Location where the Mouse weight sheets are located
+WORKBOOK = 'ABA.xlsx'
+```
 
    
 #### MATLAB
