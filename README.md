@@ -285,9 +285,9 @@ You must have python3 installed on you computer to run the data download softwar
 In addition, make sure that your system PATH variable includes python or your computer will be unable to find it. Also make sure that the directories used in all code line up with the directories on your computer. See below for more information on changing this.
 
 I have created 3 different python modules that you need to download:
-1. GETdata_wheel.py
-2. inbox.py
-3. send_wheelalert.py
+1. [GETdata_wheel.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/GETdata_wheel.py)
+2. [inbox.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/inbox.py)
+3. [send_wheelalert.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/send_wheelalert.py)
 
 These modules contain the following functions:
 GETdata_wheel.py
@@ -314,38 +314,39 @@ In addition, the following python modules must also be installed on your compute
 
 ### Wheel Analysis Software
 The running wheel data is analyzed in MATLAB by the following function:
-1. Wheel_Analysis.m
+1. [Wheel_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Analysis.m)
 
 for Wheel_Analysis.m to work properly it needs the following two functions:
-1. importLength.m
-2. importDirectory.m
+1. [importLength.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/importLength.m)
+2. [importDirectory.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/importDirectory.m)
+3. [importData.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/importData.m)
 
 Graphs of the total distance travelled and average velocity can quickly be created for each spinner with the gathered data using the following function:
-1. Wheel_Plot.m
+1. [Wheel_Plot.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Plot.m)
 
 
 ### Further Analysis of wheel data
 To arrange and bin the data collected from the running wheels in more presentable ways, the following script was used:
-1. Wheel_Tables.m
+1. [Wheel_Tables.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Tables.m)
 
 
 ### Analysis of mouse weight, food and water consumption
 The following function was used to analyze and plot the mouse weight, food consumed, and water consumed each day:
-1. MouseWeight_Analysis.m
+1. [MouseWeight_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/MouseWeight_Analysis.m)
    - After the morning of the first day of the first restriction (day 8 of experiment), this function will also calculate the 75% cutoff value for each mouse. This is 75% of the final day of baseline.
 
 The function Mouse_Weight.m requires the following 2 functions to work:
-1. importDirectory_weights.m
-2. importWeights.m
+1. [importDirectory_weights.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/importDirectory_weights.m)
+2. [importWeights.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/importWeights.m)
 
-The use of the function MouseWeight_Analysis.m requires that you use our data collection workbook, ABA.xlsx, and store it on DropBox. Before the start of the experiment, a sheet for each day of the experiment should be created. Once this is done, the python function, mouseweight_directory.py, should be used to create a directory at the end of ABA.xlsx that is used by MouseWeight_Analysis.m to properly do the analysis. More information on filling out the ABA.xlsx workbook is below.
+The use of the function MouseWeight_Analysis.m requires that you use our data collection workbook, [ABA.xlsx](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/ABA.xlsx), and store it on DropBox. Before the start of the experiment, a sheet for each day of the experiment should be created. Once this is done, the python function, mouseweight_directory.py, should be used to create a directory at the end of ABA.xlsx that is used by MouseWeight_Analysis.m to properly do the analysis. More information on filling out the ABA.xlsx workbook is below.
 
 The following script was used to create tables with all the data organized according to groups:
-1. MouseWeight_Tables.m
+1. [MouseWeight_Tables.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/MouseWeight_Tables.m)
 
 
 ### Filling out the ABA.xlsx workbook
-The ABA.xlsx workbook has 4 template sheets.
+The [ABA.xlsx workbook](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/ABA.xlsx) has 4 template sheets.
 - Acclimation_Template
 - Baseline_Template
 - Restriction_Template_6hrs
@@ -364,8 +365,13 @@ The name of each sheet/tab should be the date of data collection (ddmmmyyyy) and
 #### Create the directory for this workbook
 This directory is necessary to use MouseWeight_Analysis.m
 
-1. Open mouseweight_directory.py in a text editor and update the “Directory” and “WORKBOOK”. These should be the location on Dropbox where the workbook can be found and the name of the workbook, respectively.
-2. In python, enter:
+1. You will need to download the python module [mouseweight_directory](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/mouseweight_directory.py) to do this
+2. Open mouseweight_directory.py in a text editor and update the “Directory” and “WORKBOOK”. These should be the location on Dropbox where the workbook can be found and the name of the workbook, respectively.
+```{python}
+DIRECTORY = '/Users/<USERNAME>/Dropbox/RunningWheel'	#Location where the Mouse weight sheets are located
+WORKBOOK = 'ABA.xlsx'
+```
+4. In python, enter:
    1. import os
    2. os.chdir(‘/Users/<USERNAME>/Desktop/RunningWheel/Python_Code’) or os.chdir(‘C:\Users\<USERNAME>\OneDrive\Desktop\ RunningWheel\Python_Code’)
       i. macOS and Windows respectively
@@ -378,13 +384,14 @@ from mouseweight_directory import mouseweight_directory
 mouseweight_directory()
 ```
 3. Check the ABA.xlsx and there should be a new sheet/tab at the end with a directory
+   1. Only do this once, or you will create multiple directories, which will create errors when running the code later.
 
    
 #### Execution of Wheel Download and Analysis
 
 To provide easy execution of the appropriate download codes, I have created a graphical user interface (GUI) in python that can be opened and used to speedily initiate analysis. The buttons on this GUI are linked to the command/batch files. The code required for running the GUI is:
-1. Wheel_GUI.py
-- You will need to install applescript using pip3 to use the GUI on macOS
+1. [Wheel_GUI.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI_withMouseWeight.py)
+- You will need to install [applescript](https://macdownload.informer.com/applescript-editor/) using pip3 to use the GUI on macOS
 - You will not need to install anything else to use the GUI on Windows
 
 **This GUI contains the following buttons:**
@@ -417,8 +424,8 @@ To provide easy execution of the appropriate download codes, I have created a gr
 When you click on one of these buttons, no noise or impression will be made. However, the Terminal or Command Prompt window will pop-up and you will be able to see the progress of the command you have selected.
 
 For this GUI to work, you will also need the following two python modules in your Python_Code directory:
-1. RunningWheel_StartupScript.py
-2. RunningWheel_DownloadScript.py
+1. [RunningWheel_StartupScript.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/RunningWheel_StartupScript.py)
+2. [RunningWheel_DownloadScript.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/RunningWheel_DownloadScript.py)
 
 
 ### Setting up software on your personal computer
