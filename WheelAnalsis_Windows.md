@@ -6,9 +6,9 @@ You must have python3 installed on you computer to run the data download softwar
 In addition, make sure that your system PATH variable includes python or your computer will be unable to find it. Also make sure that the directories used in all code line up with the directories on your computer. See below for more information on changing this.
 
 I have created 3 different python modules that you need to download:
-1. [GETdata_wheel.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/GETdata_wheel.py)
-2. [inbox.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/inbox.py)
-3. [send_wheelalert.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/send_wheelalert.py)
+1. [GETdata_wheel.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/GETdata_wheel.py)
+2. [inbox.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/inbox.py)
+3. [send_wheelalert.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/send_wheelalert.py)
 
 These modules contain the following functions:
 GETdata_wheel.py
@@ -35,26 +35,26 @@ In addition, the following python modules must also be installed on your compute
 ---
 ## Wheel Analysis Software
 The running wheel data is analyzed in MATLAB by the following function:
-1. [Wheel_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Analysis.m)
+1. [Wheel_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/MATLAB/WheelAnalysis/Wheel_Analysis.m)
 
 for Wheel_Analysis.m to work properly it needs the following two functions:
-1. [importLength.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/importLength.m)
-2. [importDirectory.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/importDirectory.m)
-3. [importData.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/importData.m)
+1. [importLength.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/MATLAB/WheelAnalysis/importLength.m)
+2. [importDirectory.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/MATLAB/WheelAnalysis/importDirectory.m)
+3. [importData.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/MATLAB/WheelAnalysis/importData.m)
 
 Graphs of the total distance travelled and average velocity can quickly be created for each spinner with the gathered data using the following function:
-1. [Wheel_Plot.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Plot.m)
+1. [Wheel_Plot.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/MATLAB/WheelAnalysis/Wheel_Plot.m)
 
 ---
 ## Further Analysis of wheel data
 To arrange and bin the data collected from the running wheels in more presentable ways, the following script was used:
-1. [Wheel_Tables.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Tables.m)
+1. [Wheel_Tables.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/MATLAB/WheelAnalysis/Wheel_Tables.m)
 
    
 ### Execution of Wheel Download and Analysis
 
 To provide easy execution of the appropriate download codes, I have created a graphical user interface (GUI) in python that can be opened and used to speedily initiate analysis. The buttons on this GUI are linked to the batch files. The code required for running the GUI is:
-1. [Wheel_GUI.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI.py)
+1. [Wheel_GUI.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/Wheel_GUI.py)
 - You will not need to install anything else to use the GUI on Windows
 
 **This GUI contains the following buttons:**
@@ -84,8 +84,8 @@ To provide easy execution of the appropriate download codes, I have created a gr
 When you click on one of these buttons, no noise or impression will be made. However, the Command Prompt window will pop-up and you will be able to see the progress of the command you have selected.
 
 For this GUI to work, you will also need the following two python modules in your Python_Code directory:
-1. [RunningWheel_StartupScript.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/RunningWheel_StartupScript.py)
-2. [RunningWheel_DownloadScript.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/RunningWheel_DownloadScript.py)
+1. [RunningWheel_StartupScript.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/RunningWheel_StartupScript.py)
+2. [RunningWheel_DownloadScript.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/RunningWheel_DownloadScript.py)
 
 ---
 ## Setting up software on your personal computer
@@ -97,12 +97,12 @@ Create a folder on the Desktop called “RunningWheel”.
 
 Structure the "RunningWheel" folder accordingly:
 - Python_Code (folder)
-  - [GETdata_wheel.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/GETdata_wheel.py)
-  - [inbox.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/inbox.py)
-  - [RunningWheel_DownloadScript.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/RunningWheel_DownloadScript.py)
-  - [RunningWheel_StartupScript.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/RunningWheel_StartupScript.py)
-  - [send_wheelalert.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/send_wheelalert.py)
-  - [Wheel_GUI.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI.py)
+  - [GETdata_wheel.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/GETdata_wheel.py)
+  - [inbox.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/inbox.py)
+  - [RunningWheel_DownloadScript.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/RunningWheel_DownloadScript.py)
+  - [RunningWheel_StartupScript.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/RunningWheel_StartupScript.py)
+  - [send_wheelalert.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/send_wheelalert.py)
+  - [Wheel_GUI.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/Wheel_GUI.py)
 - Wheel_Data (folder)
   - Where all the running wheel data will be stored
 - Wheel_Figures (folder)
@@ -111,10 +111,10 @@ Structure the "RunningWheel" folder accordingly:
   - This is an alias/shortcut to the batch file to open the Wheel_GUI.py
 
 #### Must Update:
-```
-- [GETdata_wheel.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/GETdata_wheel.py)
+- [GETdata_wheel.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/GETdata_wheel.py)
   - Update "Spinner_List", "Spinner_Email", “SavedData_Directory”, “Code_Directory”, and “EmailAlert_hours”
 ```{python}
+#This will need to be as long as the number of spinners you have. This variable is used in Wheel_RunFirst and GetData_wheel functions.
 Spinner_List = ['Spinner_1',
 'Spinner_2',
 'Spinner_3',
@@ -126,20 +126,21 @@ Spinner_List = ['Spinner_1',
 
 Spinner_Email = 'email address'	#This is the email where your data from the running wheels is being sent
 
-SavedData_Directory = '/Users/<USERNAME>/Desktop/RunningWheel/Wheel_Data'	#This will need to be the folder directory where the data is saved.
-Code_Directory = '/Users/<USERNAME>/Desktop/RunningWheel/Python_Code'	#This will need to be the folder directory where the code is kept.
+SavedData_Directory = 'C:\\Users\\<USERNAME>\\OneDrive\\Desktop\\RunningWheel\\Wheel_Data'	#This will need to be the folder directory where the data is saved.
+Code_Directory = 'C:\\Users\\<USERNAME>\\OneDrive\\Desktop\\RunningWheel\\Python_Code'	#This will need to be the folder directory where the code is kept.
 
 EmailAlert_hours = 3 	#will send an alert if this number of hours passes without recieving an email
 ```
-- [inbox.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/inbox.py)
+- [inbox.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/inbox.py)
   - Update “host” (only update if you are not using gmail), “username”, and “password”
 ```{python}
+# Make sure that this information is correct for you system.
 host = 'imap.gmail.com'	#This stays the same unless you are not using gmail
 username = 'email address'	#This will need to be the email address that you plan to send and receive with.
 												#I've set it up so that the spinners send emails using this email address and they also send it to this email address.
 password = 'app specific password'	#This is the app specific password. You need to get this from you gmail account. It will require a little setting up.
 ```
-- [send_wheelalert.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/send_wheelalert.py)
+- [send_wheelalert.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/send_wheelalert.py)
   - Update “HOST”, “username”, “password”, “from_email”, and “to_email”
 ```{python}
 #Changes these so that they correspond to your email account.
@@ -149,57 +150,51 @@ password = 'app specific password'	#App password. You will need to set this up o
 from_email = 'Mouse Spinners <email address>'	#Email account that will send the alert email.
 to_email = 'personal email'	#Email account that you want to receive the alert. I had it sent to my personal email address so that I'd see it immediately.
 ```
-- [Wheel_GUI.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI.py)
+- [Wheel_GUI.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/Wheel_GUI.py)
   - Update “Directory”
 ```{python}
-# Specify directory where your executable files are located (.command or .bat)
-Directory = '/Users/<USERNAME>/'
+# Specify directory where your executable files are located (.command or .exe)
+Directory = "C:\\Users\\<USERNAME>\\"
 ```
 
    
 ### MATLAB
 
 Place the MATLAB files in the MATLAB folder which is typically found under Documents.
-An example for macOS and Windows is below:
-- macOS: /Users/<USERNAME>/Documents/MATLAB/MatLab/<MATLAB file>
-- Windows (using OneDrive): C:\Users\<USERNAME>\OneDrive\Documents\MATLAB\<MATLAB file>
+An example for Windows is below (Using OneDrive):
+- C:\Users\<USERNAME>\OneDrive\Documents\MATLAB\<MATLAB file>
 
 These files include:
-- [Wheel_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Analysis.m)
-- [Wheel_Plot.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Plot.m)
-- [Wheel_Tables.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Tables.m)
-- [importData.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/importData.m)
-- [importDirectory.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/importDirectory.m)
-- [importLength.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/importLength.m)
+- [Wheel_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/MATLAB/WheelAnalysis/Wheel_Analysis.m)
+- [Wheel_Plot.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/MATLAB/WheelAnalysis/Wheel_Plot.m)
+- [Wheel_Tables.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/MATLAB/WheelAnalysis/Wheel_Tables.m)
+- [importData.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/MATLAB/WheelAnalysis/importData.m)
+- [importDirectory.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/MATLAB/WheelAnalysis/importDirectory.m)
+- [importLength.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/MATLAB/WheelAnalysis/importLength.m)
 
-Optional files for calculating changes in food, water, and mouse weight:
-- [MouseWeight_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/MouseWeight_Analysis.m)
-- [MouseWeight_Tables.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/MouseWeight_Tables.m)
-- [importDirectory_weights.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/importDirectory_weights.m)
-- [importWeights.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/importWeights.m)
 
 #### Must Update:
 - Make sure you have the [Statistics and Machine Learning Toolbox](https://www.mathworks.com/products/statistics.html?ef_id=Cj0KCQjwl7qSBhD-ARIsACvV1X3OpXmC9absXSTA4-pBrpWimDmcodpmaS-EzpkjGsTvFY9vyjFwjhoaAlKcEALw_wcB:G:s&s_kwcid=AL!8664!3!521185651561!b!!g!!%2Bmatlab%20%2Bmachine%20%2Blearning&s_eid=ppc_43685094884&q=+matlab%20+machine%20+learning&gclid=Cj0KCQjwl7qSBhD-ARIsACvV1X3OpXmC9absXSTA4-pBrpWimDmcodpmaS-EzpkjGsTvFY9vyjFwjhoaAlKcEALw_wcB)
-- [Wheel_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Analysis.m)
+- [Wheel_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/MATLAB/WheelAnalysis/Wheel_Analysis.m)
   - Update the two paths (should correspond MATLAB in general and the MATLAB RunningWheel folder – not necessary to have a RunningWheel folder), “PATH”, “timezone”, “Structure”, and “Wheel_number” (default is 8). If you change the design of the wheel then you may also need to update the “runningwheel_diameter”.
 ```{MATLAB}
 % Assigning variables
-addpath('/Users/<USERNAME>/Documents/MATLAB/MATLAB')    %This path should correspond to you MATLAB folder.
-addpath('/Users/<USERNAME>/Documents/MATLAB/MATLAB/RunningWheel')   %This path should correspond to the folder where you are keeping your running wheel code.
-PATH = '/Users/<USERNAME>/Desktop/RunningWheel/Wheel_Data/'; %This is the folder path where your saved data is located.
+addpath('C:\Users\<USERNAME>\OneDrive\Documents\MATLAB\')    %This path should correspond to you MATLAB folder.
+addpath('C:\Users\<USERNAME\OneDrive\Documents\MATLAB\RunningWheel\')   %This path should correspond to the folder where you are keeping your running wheel code.
+PATH = 'C:\Users\<USERNAME>\OneDrive\Desktop\RunningWheel\Wheel_Data\'; %This is the folder path where your saved data is located.
 timezone = 'America/Edmonton';  %This should be changed to your preferred time zone.
 Structure = 'RunningWheelData.mat'; % name of the MATLAB structure that contains/will contain the running wheel data
 runningwheel_diameter = 110; % the diameter of the mouses running trajectory (mm)
 Wheel_number = 8;   %   This is the number of running wheels that I am using
 ```
-- [Wheel_Plot.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Plot.m)
+- [Wheel_Plot.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/MATLAB/WheelAnalysis/Wheel_Plot.m)
   - Update the two paths, “PATH_dataload”, “PATH_destination1”, “PATH_destination2”, “timezone”, “Acclimation_day1”, “Baseline_day1”, “Restriction_final”, and “Structure”.
 ```{MATLAB}
-addpath('/Users/<USERNAME>/Documents/MATLAB/MatLab')
-addpath('/Users/<USERNAME>/Documents/MATLAB/MatLab/RunningWheel')
-PATH_dataload = '/Users/<USERNAME>/Desktop/RunningWheel/Wheel_Data/'; %This is the folder path where your saved data is located.
-PATH_destination1 = '/Users/<USERNAME>/Desktop/RunningWheel/Wheel_Figures/'; %This is the location where you plan to save your figures.
-PATH_destination2 = '/Users/<USERNAME>/Dropbox/RunningWheel/';   %This is the secondary location where you plan to save your figures (I saved my figures twice).
+addpath('C:\Users\<USERNAME>\OneDrive\Documents\MATLAB\')    %This path should correspond to you MATLAB folder.
+addpath('C:\Users\<USERNAME>\OneDrive\Documents\MATLAB\RunningWheel\')   %This path should correspond to the folder where you are keeping your running wheel code.
+PATH_dataload = 'C:\Users\<USERNAME>\OneDrive\Desktop\RunningWheel\Wheel_Data\'; %This is the folder path where your saved data is located.
+PATH_destination1 = 'C:\Users\<USERNAME>\OneDrive\Desktop\RunningWheel\Wheel_Figures\'; %This is the location where you plan to save your figures.
+PATH_destination2 = 'C:\Users\<USERNAME>\Dropbox\RunningWheel\';   %This is the secondary location where you plan to save your figures (I saved my figures twice).
 
 timezone = 'America/Edmonton';  %This should be changed to your preferred time zone.
 Acclimation_day1 = datetime('21-Sep-2021'); % This should be the first day of the acclimation phase
@@ -210,17 +205,17 @@ Restriction_final = datetime('now','Format','dd-MM-yyyy'); % This should be the 
 
 Structure = 'RunningWheelData_Jun2021.mat'; % name of the MATLAB structure that contains/will contain the running wheel data
 ```
-- [Wheel_Tables.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Tables.m)
+- [Wheel_Tables.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/MATLAB/WheelAnalysis/Wheel_Tables.m)
   - Update the two paths, “PATH”, “Acclimation_day1”, “Baseline_day1”, “Restriction_final”, “timezone”, “Main_table”, “Hourly_table”, and “Structure”. You may also need to update “Groups_variables”, “Control_index”, and “Restricted_index”.
 ```{MATLAB}
-addpath('/Users/<USERNAME>/Documents/MATLAB/MATLAB')    %This path should correspond to you MATLAB folder.
-addpath('/Users/<USERNAME>/Documents/MATLAB/MATLAB/RunningWheel')   %This path should correspond to the folder where you are keeping your running wheel code.
-PATH = '/Users/<USERNAME>/Desktop/Wheel/DataDownload/'; %This is the folder path where your saved data is located.
+addpath('C:\Users\<USERNAME>\OneDrive\Documents\MATLAB\')    %This path should correspond to you MATLAB folder.
+addpath('C:\Users\<USERNAME>\OneDrive\Documents\MATLAB\RunningWheel\')   %This path should correspond to the folder where you are keeping your running wheel code.
+PATH = 'C:\Users\<USERNAME>\OneDrive\Desktop\RunningWheel\Wheel_Data\'; %This is the folder path where your saved data is located.
 
 % Setting my dates
-Acclimation_day1 = datetime('12-Jun-2021');
-Baseline_day1 = datetime('14-Jun-2021');
-Restriction_final = datetime('1-Jul-2021');
+Acclimation_day1 = datetime('8-May-2021'); % This should be the first day of the acclimation phase
+Baseline_day1 = datetime('10-May-2021');    % This should be the first day of the baseline phase
+Restriction_final = datetime('27-May-2021'); % This should be the last day of the experiment.
 %This will be the 8th day of the 3 hour restriction, however the mice are
 %removed for the experiment before being restricted on this day.
 timezone = 'America/Edmonton';  %This should be changed to your preferred time zone.
@@ -278,47 +273,47 @@ In our paper, we used the running wheels in the activity-based anorexia (ABA) mo
 ### The following functions are needed when you are using the ABA model:
 	
 #### Desktop
-- [mouseweight_directory.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/mouseweight_directory.py)
+- [mouseweight_directory.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/mouseweight_directory.py)
 	- Used to create directory for the ABA.xlsx worbook (outlined below)
-- [Wheel_GUI_withMouseWeight.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI_withMouseWeight.py)
+- [Wheel_GUI_withMouseWeight.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/Wheel_GUI_withMouseWeight.py)
 	- Used to execute running wheel analysis and analysis of weights togther (outlined below)
 
 ##### Must Update
-- [mouseweight_directory.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/mouseweight_directory.py)
+- [mouseweight_directory.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/mouseweight_directory.py)
   - Update “DIRECTORY”, and “WORKBOOK”
 ```{python}
-DIRECTORY = '/Users/<USERNAME>/Dropbox/RunningWheel'	#Location where the Mouse weight sheets are located
+DIRECTORY = 'C:\\Users\\<USERNAME>\\Dropbox\\RunningWheel\\'	#Location where the Mouse weight sheets are located
 WORKBOOK = 'ABA.xlsx'
 ```
 
 #### MATLAB
-- [MouseWeight_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/MouseWeight_Analysis.m)
+- [MouseWeight_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/MATLAB/MouseWeight/MouseWeight_Analysis.m)
 	- Used to analyze and plot the mouse weight, food consumed, and water consumed each day
 	- After the morning of the first day of the first restriction (day 8 of experiment), this function will also calculate the 75% cutoff value for each mouse. This is 75% of the final day of baseline.
 	- Requires the following 2 functions to work:
-		1. [importDirectory_weights.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/importDirectory_weights.m)
-		2. [importWeights.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/importWeights.m)
+		1. [importDirectory_weights.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/MATLAB/MouseWeight/importDirectory_weights.m)
+		2. [importWeights.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/MATLAB/MouseWeight/importWeights.m)
 	- The use of the function MouseWeight_Analysis.m requires that you use our data collection workbook, [ABA.xlsx](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/ABA.xlsx), and store it on DropBox. Before the start of the experiment, a sheet for each day of the experiment should be created. Once this is done, the python function, mouseweight_directory.py, should be used to create a directory at the end of ABA.xlsx that is used by MouseWeight_Analysis.m to properly do the analysis. More information on filling out the ABA.xlsx workbook is below.
-- [MouseWeight_Tables.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/MouseWeight_Tables.m)
+- [MouseWeight_Tables.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/MATLAB/MouseWeight/MouseWeight_Tables.m)
 	- Used to create tables with all the data organized according to groups.
 	
 ##### Must Update
-- [MouseWeight_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/MouseWeight_Analysis.m)
+- [MouseWeight_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/MATLAB/MouseWeight/MouseWeight_Analysis.m)
   - Update the two paths, “mouse_savedData2”, “mouse_savedData1”, “Excel_file”, “Structure”, “Acclimation_day1”, “Baseline_day1”, “Restriction_final”, and “timezone”. You may also need to update “Groups_variables”, “number_mice”, “AdLib”, “Restricted”, and the mouse naming. This analysis is set-up for 16 mice in 4 different groups. Group 1 – Ad Lib with Wheel, Group 2 – Ad Lib with dummy Wheel, Group 3 – Restricted with Wheel, and Group 4 – Restricted with dummy Wheel. They alternate in that order. If you set it up in a different way then this analysis of the mouse weight will not work.
 ```{MATLAB}
 %% Assigning variables
 
-addpath('/Users/<USERNAME>/Documents/MATLAB/MATLAB')    
-addpath('/Users/<USERNAME>/Documents/MATLAB/MATLAB/RunningWheel')
-mouse_savedData2 = '/Users/<USERNAME>/Dropbox/RunningWheel/';    %This is where the excel file is being stored where we are entering in the data (Dropbox for us).
+addpath('C:\Users\<USERNAME>\OneDrive\Documents\MATLAB\')    %This path should correspond to you MATLAB folder.
+addpath('C:\Users\<USERNAME>\OneDrive\Documents\MATLAB\RunningWheel\')   %This path should correspond to the folder where you are keeping your running wheel code.
+
+mouse_savedData2 = 'C:\Users\<USERNAME>\Dropbox\RunningWheel\';    %This is where the excel file is being stored where we are entering in the data (Dropbox for us).
 % It is also the secondary location where I am saving my running wheel data.
-mouse_savedData1 = '/Users/<USERNAME>/Desktop/RunningWheel/Wheel_Data/'; %This is the primary location on my computer where I am saving my running wheel data.
+mouse_savedData1 = 'C:\Users\<USERNAME>\OneDrive\Desktop\RunningWheel\Wheel_Data\'; %This is the primary location on my computer where I am saving my running wheel data.
 
 Excel_file = 'ABA.xlsx';
 Structure = 'ABA_weight.mat';
 
 Acclimation_day1 = '12-Jun-2021';   % This should be the first day of the acclimation phase
-Baseline_day1 = datetime('14-Jun-2021');    % This should be the first day of the baseline phase
 Restriction_final = '1-Jul-2021'; % This should be the last day of the experiment.
 %Restriction_final = 'now' %Last day of experiment (use 'now' if it isn't the last day yet)
 timezone = 'America/Edmonton';  %This should be changed to your preferred time zone.
@@ -356,19 +351,20 @@ number_mice = 16; % Total number of mice in the experiment
 AdLib = [1 2 5 6 9 10 13 14];   %Mice that were fed ad libitum chow
 Restricted = [3 4 7 8 11 12 15 16]; %Miece that were food restricted
 ```
-- [MouseWeight_Tables](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/MouseWeight_Tables.m)
+- [MouseWeight_Tables](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/MATLAB/MouseWeight/MouseWeight_Tables.m)
   - Update the two paths, “mouse_savedData2”, “mouse_savedData1”, “Structure”, and “Main_table”. You may also need to update “AdLibWheel_index”, “AdLibDummy_index”, “RestrictedWheel_index”, and “RestrictedDummy_index”
 ```{MATLAB}
-addpath('/Users/<USERNAME>/Documents/MATLAB/MATLAB')    
-addpath('/Users/<USERNAME>/Documents/MATLAB/MATLAB/RunningWheel')
-mouse_savedData2 = '/Users/<USERNAME>/Dropbox/RunningWheel/';    %This is where the excel file is being stored where we are entering in the data (Dropbox for us).
+addpath('C:\Users\<USERNAME>\OneDrive\Documents\MATLAB\')    %This path should correspond to you MATLAB folder.
+addpath('C:\Users\<USERNAME>\OneDrive\Documents\MATLAB\RunningWheel\')   %This path should correspond to the folder where you are keeping your running wheel code.
+
+mouse_savedData2 = 'C:\Users\<USERNAME>\Dropbox\RunningWheel\';    %This is where the excel file is being stored where we are entering in the data (Dropbox for us).
 % It is also the secondary location where I am saving my running wheel data.
-mouse_savedData1 = '/Users/<USERNAME>/Desktop/RunningWheel/Wheel_Data/'; 
+mouse_savedData1 = 'C:\Users\<USERNAME>\OneDrive\Desktop\RunningWheel\Wheel_Data\'; 
 
 Structure = 'ABA_weight.mat';
 Main_table = 'RunningWheel_tables.xlsx';
 
-cd(mouse_savedData2)
+cd(mouse_savedData1)
 load(Structure)
 
 %This will determine how the data is sorted into tables:
@@ -403,10 +399,10 @@ The name of each sheet/tab should be the date of data collection (ddmmmyyyy) and
 ### Create the directory for this workbook
 This directory is necessary to use MouseWeight_Analysis.m
 
-1. You will need to download the python module [mouseweight_directory](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/mouseweight_directory.py) to do this
+1. You will need to download the python module [mouseweight_directory](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/mouseweight_directory.py) to do this
 2. Open mouseweight_directory.py in a text editor and update the “Directory” and “WORKBOOK”. These should be the location on Dropbox where the workbook can be found and the name of the workbook, respectively.
 ```{python}
-DIRECTORY = '/Users/<USERNAME>/Dropbox/RunningWheel'	#Location where the Mouse weight sheets are located
+DIRECTORY = 'C:\\Users\\<USERNAME>\\Dropbox\\RunningWheel\\'	#Location where the Mouse weight sheets are located
 WORKBOOK = 'ABA.xlsx'
 ```
 4. In python, enter:
@@ -416,7 +412,7 @@ WORKBOOK = 'ABA.xlsx'
    4. mouseweight_directory()
 ```{python}
 import os
-os.chdir(‘/Users/<USERNAME>/Desktop/RunningWheel/Python_Code’)
+os.chdir(‘C:\\Users\\<USERNAME>\\Desktop\\RunningWheel\\Python_Code\\’)
 from mouseweight_directory import mouseweight_directory
 mouseweight_directory()
 ```
@@ -427,8 +423,7 @@ mouseweight_directory()
 ### Execution of Wheel Download and Analysis, and mouse weights
 
 I have created a GUI that will analyze the mouse weights along with the data from the running wheels. The code for running this GUI is:
-1. [Wheel_GUI_withMouseWeight.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI.py)
-- You will need to install [applescript](https://macdownload.informer.com/applescript-editor/) using pip3 to use the GUI on macOS
+1. [Wheel_GUI_withMouseWeight.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/Wheel_GUI_withMouseWeight.py)
 - You will not need to install anything else to use the GUI on Windows
 
 **Additional button for GUI with mouse weight analysis included:**
@@ -441,15 +436,14 @@ I have created a GUI that will analyze the mouse weights along with the data fro
 
 If you are running your experiments with no, or a very weak/unreliable wifi connection, then you may wish to use the no wifi mode. If you choose to do this, you will first need to copy all the saved text files from each raspberry pi onto a USB drive and then store them together in a file. You can then use the following code to organize your data into Workbooks. Following this, the data analysis will be the same (i.e. the MATlAB part does not change).
 
-- [GETdata_wheel_nowifi.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/GETdata_wheel_nowifi.py)
+- [GETdata_wheel_nowifi.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/GETdata_wheel_nowifi.py)
 	- Put this file in the Python_Code folder instead of the Getdata_wheel.py.
 	
 ### Must Update:
-- [GETdata_wheel_nowifi.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/GETdata_wheel_nowifi.py)
+- [GETdata_wheel_nowifi.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/Python/GETdata_wheel_nowifi.py)
   - Update “SavedData_Directory”, and “Spinner_List”
 ```{python}
-# Make sure this corresponds to the directory where I will find and save my data
-SavedData_Directory = '/Users/<USERNAME>/Desktop/RunningWheel/Wheel_Data'	#This will need to be the folder directory where the data is saved.
+SavedData_Directory = 'C:\\Users\\<USERNAME>\\OneDrive\\Desktop\\RunningWheel\\Wheel_Data'	#This will need to be the folder directory where the data is saved.
 
 #This will need to be as long as the number of spinners you have. This variable is used in Wheel_RunFirst and GetData_wheel functions.
 Spinner_List = ['Spinner_1',
