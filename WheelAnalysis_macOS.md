@@ -170,11 +170,6 @@ These files include:
 - [importDirectory.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/importDirectory.m)
 - [importLength.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/importLength.m)
 
-Optional files for calculating changes in food, water, and mouse weight:
-- [MouseWeight_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/MouseWeight_Analysis.m)
-- [MouseWeight_Tables.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/MouseWeight_Tables.m)
-- [importDirectory_weights.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/importDirectory_weights.m)
-- [importWeights.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/importWeights.m)
 
 #### Must Update:
 - Make sure you have the [Statistics and Machine Learning Toolbox](https://www.mathworks.com/products/statistics.html?ef_id=Cj0KCQjwl7qSBhD-ARIsACvV1X3OpXmC9absXSTA4-pBrpWimDmcodpmaS-EzpkjGsTvFY9vyjFwjhoaAlKcEALw_wcB:G:s&s_kwcid=AL!8664!3!521185651561!b!!g!!%2Bmatlab%20%2Bmachine%20%2Blearning&s_eid=ppc_43685094884&q=+matlab%20+machine%20+learning&gclid=Cj0KCQjwl7qSBhD-ARIsACvV1X3OpXmC9absXSTA4-pBrpWimDmcodpmaS-EzpkjGsTvFY9vyjFwjhoaAlKcEALw_wcB)
