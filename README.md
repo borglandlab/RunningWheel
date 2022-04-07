@@ -157,6 +157,8 @@ Wiring (follow the [electrical schematic](https://github.com/borglandlab/Running
 - Pin 3 of the right (hf3) hall effect sensor is connected to pin 1 (CH0) of the MCP3008.
 - Each hall effect sensor has a pull-down resistor connecting pin 3 to ground.
 
+For you reference, we've included images of the electrical assembly from the [back](https://github.com/borglandlab/RunningWheel/blob/main/Pictures/RPi_behind.jpg), [front](https://github.com/borglandlab/RunningWheel/blob/main/Pictures/RPi_above.jpg), and [side](https://github.com/borglandlab/RunningWheel/blob/main/Pictures/RPi_side.jpg).
+
 -----
 ## Raspberry Pi Zero W Set up
 There are two ways to set up the software on your raspberry pi zero for running wheel use.
@@ -304,6 +306,8 @@ Before running connect each raspberry pi to a power source, keyboard (with joyst
 When setting up the running wheels, carefully insert the raspberry pi into the Base Top so that the senor holder with sensors is lined up with the hold in the base top. This may require some careful bending of the wires connected to the sensors. The raspberry pi should fit into notches printed on the base bottom. Connect the raspberry pi to a micro USB power cable that is not yet connected to a power supply. Put the screws in place in the front and back of the base top to keep the base bottom connected. Slide the Spinner with the ball bearing on the protrusion of the base top. The running wheel is now ready for calibration. Depending on how much light your 3D printed running wheel base lets through, you may also wish to cover the ACT LED on the raspberry pi with opaque tape.
 
 It is important to note that the mice will chew the USB power cable. We’ve tried a number of different things, but the only reliable solution is to cut and bend copper tubing to protect the cable. The hole in the front of the base top is designed to snuggly fit ½” copper tubing. Tube bending springs can be used to change the shape of the copper tubing without causing kinks. However, you will need to avoid really tight bends because the micro USB cable still needs to be able to slide through the tubing. This will require some playing around to get right depending on how you are setting the wheels up and what type of cage you are using.
+
+We've included a image of a [completely assembled running wheel](https://github.com/borglandlab/RunningWheel/blob/main/Pictures/RunningWheel_complete.jpg) for your reference.
 
 ### Calibration
 
