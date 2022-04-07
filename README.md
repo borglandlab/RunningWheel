@@ -297,4 +297,4 @@ TRIGGER_THRESHOLD = 30
 -----
 ## Software for using Running Wheel
 
-I have created software for both [macOS](https://github.com/borglandlab/RunningWheel/blob/main/WheelAnalysis_macOS.md) and Windows. Click on the appropriate link to be taken to the setup and use instructions.
+I have created software for both [macOS](https://github.com/borglandlab/RunningWheel/blob/main/WheelAnalysis_macOS.md) and [Windows](https://github.com/borglandlab/RunningWheel/blob/main/WheelAnalsis_Windows.md). Click on the appropriate link to be taken to the setup and use instructions.
