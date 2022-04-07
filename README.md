@@ -207,6 +207,15 @@ pi@raspberrypi:~ $ sudo raspi-config
 pi@raspberrypi:~ $ sudo reboot
 ```
 
+
+#### Install third party module
+1. Install Speedtest
+```{console}
+pi@raspberrypi:~ $ sudo pip3 install speedtest-cli
+pi@raspberrypi:~ $ sudo reboot
+```
+
+
 #### Copying python code to RPi
 1. Insert USB drive into RPi containing [python code for spinner](https://github.com/borglandlab/RunningWheel/blob/main/Spinner_Code/spinner_WIFI.py)
 2. Change name of file from spinner_WIFI.py to spinner.py
@@ -295,9 +304,9 @@ send_wheelalert.py
 In addition, the following python modules must also be installed on your computer (some are third party modules, so you will need to check):
 1. os – preinstalled
 2. re – preinstalled
-3. openpyxl – download using pip
+3. [openpyxl](https://pypi.org/project/openpyxl/) – download using pip
 4. datetime – preinstalled
-5. pytz – download using pip
+5. [pytz](https://pypi.org/project/pytz/) – download using pip
 6. imaplib – preinstalled
 7. email – preinstalled
 8. smtplib – preinstalled
