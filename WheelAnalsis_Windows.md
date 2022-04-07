@@ -1,4 +1,4 @@
-# Software for using Running Wheel (macOS)
+# Software for using Running Wheel (Windows)
 ---
 ## Wheel Download Software
 You must have python3 installed on you computer to run the data download software. It might work with Python 2, however it has only been tested with Python 3.
