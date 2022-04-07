@@ -2,7 +2,7 @@
 
 ------
 ## Brief Description
-We designed and constructed an open source [running wheel system](https://github.com/borglandlab/RunningWheel/blob/main/Wheel_Schematic.jpg) that runs independent of a central computer. The body of these wheels are 3D printed. The wheels operate using a raspberry pi zero W, a small but highly available microprocessor, and are programmed completely in python. Data is transmitted to a personal computer, that can be located anywhere, via email, where it is then automatically downloaded, parsed, and analyzed with python and MATLAB programs. Our running wheel system is simple, adaptable, and completely open source. 
+We designed and constructed an open source [running wheel system](https://github.com/borglandlab/RunningWheel/blob/main/Schematics/Wheel_Schematic.jpg) that runs independent of a central computer. The body of these wheels are 3D printed. The wheels operate using a raspberry pi zero W, a small but highly available microprocessor, and are programmed completely in python. Data is transmitted to a personal computer, that can be located anywhere, via email, where it is then automatically downloaded, parsed, and analyzed with python and MATLAB programs. Our running wheel system is simple, adaptable, and completely open source. 
 
 ------
 ## Cost of Running Wheel
@@ -141,7 +141,7 @@ Electrical Components:
 - A 10 x 10 PCB breakout board (this can be cut to size)
 - 20 gauge solid core wires
 
-Wiring (follow the [electrical schematic](https://github.com/borglandlab/RunningWheel/blob/main/Electrical_Schematic.jpg)):
+Wiring (follow the [electrical schematic](https://github.com/borglandlab/RunningWheel/blob/main/Schematics/Electrical_Schematic.jpg)):
 - The MCP3008 ADC is soldered to the 10 x 10 PCB breakout board
 - Pin 16 (VDD) and pin 15 (Vref) of the MCP3008 are both connected to pin 1 (3.3 V) of the Raspberry Pi.
 - Pin 14 (Agnd) and Pin 9 (Dgnd) of the MCP3008 are both connected to pin 6 (ground) of the Raspberry Pi.
