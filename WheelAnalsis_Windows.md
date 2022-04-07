@@ -93,8 +93,8 @@ For this GUI to work, you will also need the following two python modules in you
 
 ### Desktop
 Create a folder on the Desktop called “RunningWheel”.
-- Example of where this would be for Windows is below:
-	- Windows (using OneDrive): C:\Users\<USERNAME>\OneDrive\Desktop\
+- Example of where this would be for Windows (using OneDrive) is below:
+	- C:\Users\<USERNAME>\OneDrive\Desktop\
 
 Structure the "RunningWheel" folder accordingly:
 - Python_Code (folder)
