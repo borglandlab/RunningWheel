@@ -1,5 +1,5 @@
 # Software for using Running Wheel (macOS)
-
+---
 ## Wheel Download Software
 You must have python3 installed on you computer to run the data download software. It might work with Python 2, however it has only been tested with Python 3.
 
@@ -32,7 +32,7 @@ In addition, the following python modules must also be installed on your compute
 7. email – preinstalled
 8. smtplib – preinstalled
 
-
+---
 ## Wheel Analysis Software
 The running wheel data is analyzed in MATLAB by the following function:
 1. [Wheel_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Analysis.m)
@@ -45,73 +45,16 @@ for Wheel_Analysis.m to work properly it needs the following two functions:
 Graphs of the total distance travelled and average velocity can quickly be created for each spinner with the gathered data using the following function:
 1. [Wheel_Plot.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Plot.m)
 
-
+---
 ## Further Analysis of wheel data
 To arrange and bin the data collected from the running wheels in more presentable ways, the following script was used:
 1. [Wheel_Tables.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Tables.m)
-
-
-## Analysis of mouse weight, food and water consumption
-The following function was used to analyze and plot the mouse weight, food consumed, and water consumed each day:
-1. [MouseWeight_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/MouseWeight_Analysis.m)
-   - After the morning of the first day of the first restriction (day 8 of experiment), this function will also calculate the 75% cutoff value for each mouse. This is 75% of the final day of baseline.
-
-The function Mouse_Weight.m requires the following 2 functions to work:
-1. [importDirectory_weights.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/importDirectory_weights.m)
-2. [importWeights.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/importWeights.m)
-
-The use of the function MouseWeight_Analysis.m requires that you use our data collection workbook, [ABA.xlsx](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/ABA.xlsx), and store it on DropBox. Before the start of the experiment, a sheet for each day of the experiment should be created. Once this is done, the python function, mouseweight_directory.py, should be used to create a directory at the end of ABA.xlsx that is used by MouseWeight_Analysis.m to properly do the analysis. More information on filling out the ABA.xlsx workbook is below.
-
-The following script was used to create tables with all the data organized according to groups:
-1. [MouseWeight_Tables.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/MouseWeight_Tables.m)
-
-
-## Filling out the ABA.xlsx workbook
-The [ABA.xlsx workbook](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/ABA.xlsx) has 4 template sheets.
-- Acclimation_Template
-- Baseline_Template
-- Restriction_Template_6hrs
-- Restriction_Template_3hrs
-
-1. Make one copy of the Acclimation_Template. In the corresponding location of the table, enter in the date on which the first day of acclimation will occur (example: Saturday, Jun 12, 2021). When you isolate the mice you can also write in the time that this occurred.
-
-2. Make 7 copies of the Baseline_Template. Enter the Day (1 – 7) (example: Baseline (Day 1)) , and the date (example: Monday, June 14, 2021) when this will occur for each sheet.
-
-3. Make 3 copies of the Restriction_Template_6hrs. Enter the Day (8 – 10) (example: Restriction 6hrs (Day 8)), and the date (example: Monday, June 21, 2021) when this will occur for each sheet.
-
-4. Make 8 copies of the Restriction_Template_3hrs. Enter the Day (11 – 18) (example: Restriction 3 hrs (Day 11)), and the date (example: Thursday, June 24, 2021) when this will occur for each sheet.
-
-The name of each sheet/tab should be the date of data collection (ddmmmyyyy) and they should be in chronological order with the templates at the end. These should all be created before the start of the experiment.
-
-### Create the directory for this workbook
-This directory is necessary to use MouseWeight_Analysis.m
-
-1. You will need to download the python module [mouseweight_directory](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/mouseweight_directory.py) to do this
-2. Open mouseweight_directory.py in a text editor and update the “Directory” and “WORKBOOK”. These should be the location on Dropbox where the workbook can be found and the name of the workbook, respectively.
-```{python}
-DIRECTORY = '/Users/<USERNAME>/Dropbox/RunningWheel'	#Location where the Mouse weight sheets are located
-WORKBOOK = 'ABA.xlsx'
-```
-4. In python, enter:
-   1. import os
-   2. os.chdir(‘/Users/<USERNAME>/Desktop/RunningWheel/Python_Code’) or os.chdir(‘C:\Users\<USERNAME>\OneDrive\Desktop\ RunningWheel\Python_Code’)
-      i. macOS and Windows respectively
-   3. from mouseweight_directory import mouseweight_directory
-   4. mouseweight_directory()
-```{python}
-import os
-os.chdir(‘/Users/<USERNAME>/Desktop/RunningWheel/Python_Code’)
-from mouseweight_directory import mouseweight_directory
-mouseweight_directory()
-```
-3. Check the ABA.xlsx and there should be a new sheet/tab at the end with a directory
-   1. Only do this once, or you will create multiple directories, which will create errors when running the code later.
 
    
 ### Execution of Wheel Download and Analysis
 
 To provide easy execution of the appropriate download codes, I have created a graphical user interface (GUI) in python that can be opened and used to speedily initiate analysis. The buttons on this GUI are linked to the command/batch files. The code required for running the GUI is:
-1. [Wheel_GUI.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI_withMouseWeight.py)
+1. [Wheel_GUI.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI.py)
 - You will need to install [applescript](https://macdownload.informer.com/applescript-editor/) using pip3 to use the GUI on macOS
 - You will not need to install anything else to use the GUI on Windows
 
@@ -138,9 +81,6 @@ To provide easy execution of the appropriate download codes, I have created a gr
    1. This is linked to the command/batch file Download_Analysis_Plot.command or Download_Analysis_Plot.bat
    2. Downloads the data, analyzes it in MATLAB, and creates graphs of the total distance travelled and average velocity.
    3. This is the main button that I use. The rest are just if you want to do an isolated step of the process.
-8. Mouse Weight Download and Plot Graphs
-   1. This is linked to the command/batch file MouseWeightAnalysis_graphs.command or MouseWeightAnalysis_graphs.bat
-   2. Downloads the mouse weight data from the DropBox location, stores it in a structure, and creates graphs showing the weight of the mouse and the food consumed over the course of the experiment. After the morning of the first restriction day, this will also calculate the 75% cutoff values for each mouse.
 
 When you click on one of these buttons, no noise or impression will be made. However, the Terminal or Command Prompt window will pop-up and you will be able to see the progress of the command you have selected.
 
@@ -148,7 +88,7 @@ For this GUI to work, you will also need the following two python modules in you
 1. [RunningWheel_StartupScript.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/RunningWheel_StartupScript.py)
 2. [RunningWheel_DownloadScript.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/RunningWheel_DownloadScript.py)
 
-
+---
 ## Setting up software on your personal computer
 
 ### Desktop
@@ -159,15 +99,12 @@ Examples of where this would be for macOS and Windows are below:
 
 Structure the "RunningWheel" folder accordingly:
 - Python_Code (folder)
-  - [GETdata_wheel_nowifi.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/GETdata_wheel_nowifi.py) - optional
   - [GETdata_wheel.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/GETdata_wheel.py)
   - [inbox.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/inbox.py)
   - [RunningWheel_DownloadScript.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/RunningWheel_DownloadScript.py)
   - [RunningWheel_StartupScript.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/RunningWheel_StartupScript.py)
   - [send_wheelalert.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/send_wheelalert.py)
   - [Wheel_GUI.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI.py)
-  - [mouseweight_directory.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/mouseweight_directory.py) – optional
-  - [Wheel_GUI_withMouseWeight](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI_withMouseWeight.py) - optional
 - Wheel_Data (folder)
   - Where all the running wheel data will be stored
 - Wheel_Figures (folder)
@@ -175,22 +112,7 @@ Structure the "RunningWheel" folder accordingly:
 - RunningWheel_App (file)
   - This is an alias/shortcut to the command/batch file to open the Wheel_GUI.py
 
-#### Edits and Updates:
-- [GETdata_wheel_nowifi.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/GETdata_wheel_nowifi.py)
-  - Update “SavedData_Directory”, and “Spinner_List”
-```{python}
-# Make sure this corresponds to the directory where I will find and save my data
-SavedData_Directory = '/Users/<USERNAME>/Desktop/RunningWheel/Wheel_Data'	#This will need to be the folder directory where the data is saved.
-
-#This will need to be as long as the number of spinners you have. This variable is used in Wheel_RunFirst and GetData_wheel functions.
-Spinner_List = ['Spinner_1',
-'Spinner_2',
-'Spinner_3',
-'Spinner_4',
-'Spinner_5',
-'Spinner_6',
-'Spinner_7',
-'Spinner_8']
+#### Must Update:
 ```
 - [GETdata_wheel.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/GETdata_wheel.py)
   - Update "Spinner_List", "Spinner_Email", “SavedData_Directory”, “Code_Directory”, and “EmailAlert_hours”
@@ -235,12 +157,6 @@ to_email = 'personal email'	#Email account that you want to receive the alert. I
 # Specify directory where your executable files are located (.command or .bat)
 Directory = '/Users/<USERNAME>/'
 ```
-- [mouseweight_directory.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/mouseweight_directory.py)
-  - Update “DIRECTORY”, and “WORKBOOK”
-```{python}
-DIRECTORY = '/Users/<USERNAME>/Dropbox/RunningWheel'	#Location where the Mouse weight sheets are located
-WORKBOOK = 'ABA.xlsx'
-```
 
    
 ### MATLAB
@@ -264,7 +180,7 @@ Optional files for calculating changes in food, water, and mouse weight:
 - [importDirectory_weights.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/importDirectory_weights.m)
 - [importWeights.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/importWeights.m)
 
-#### Edits and Updates:
+#### Must Update:
 - Make sure you have the [Statistics and Machine Learning Toolbox](https://www.mathworks.com/products/statistics.html?ef_id=Cj0KCQjwl7qSBhD-ARIsACvV1X3OpXmC9absXSTA4-pBrpWimDmcodpmaS-EzpkjGsTvFY9vyjFwjhoaAlKcEALw_wcB:G:s&s_kwcid=AL!8664!3!521185651561!b!!g!!%2Bmatlab%20%2Bmachine%20%2Blearning&s_eid=ppc_43685094884&q=+matlab%20+machine%20+learning&gclid=Cj0KCQjwl7qSBhD-ARIsACvV1X3OpXmC9absXSTA4-pBrpWimDmcodpmaS-EzpkjGsTvFY9vyjFwjhoaAlKcEALw_wcB)
 - [Wheel_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/WheelAnalysis/Wheel_Analysis.m)
   - Update the two paths (should correspond MATLAB in general and the MATLAB RunningWheel folder – not necessary to have a RunningWheel folder), “PATH”, “timezone”, “Structure”, and “Wheel_number” (default is 8). If you change the design of the wheel then you may also need to update the “runningwheel_diameter”.
@@ -325,6 +241,108 @@ Groups_variables = {'AdLib1','AdLib3','AdLib5','AdLib7','Restricted2','Restricte
 Control_index = [1 3 5 7];
 Restricted_index = [2 4 6 8];
 ```
+
+   
+### Command/Batch
+
+Place the command/batch files in a folder that is already in the PATH environment.
+Examples of this for the macOS and Windows are below:
+- macOS: /Users/<USERNAME>
+- Windows: C:\Users\<USERNAME>
+
+These files include (macOS):
+- [START_UP.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/START_UP.command)
+- [DOWNLOAD.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/DOWNLOAD.command)
+- [WheelAnalysis_nographs.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/WheelAnalysis_nographs.command)
+- [PlotWheel.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/PlotWheel.command)
+- [WheelAnalysis_graphs.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/WheelAnalysis_graphs.command)
+- [Download_Analysis_nographs.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/WheelAnalysis_nographs.command)
+- [Download_Analysis_Plot.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/Download_Analysis_Plot.command)
+- [OPEN_Wheel_GUI.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/OPEN_Wheel_GUI.command)
+  - Create an alias/shortcut to this file called “RunningWheel_App” and store where ever you like.
+
+You can create the .command files using a text editor and saving them with .command. Save them in your PATH environment as stated above. You will then need to make these files executable. Do this with the following code in a Terminal window:
+1. cd /Users/<Username>
+   1. This is where your terminal window should be automatically. To double check that your .command files are in this directory you can just enter “ls”
+2. chmod +x <Filename>
+   1.Example: chmod +x START_UP.command
+   2.You will need to do this whenever you edit these files.
+```{console}
+usermac@USER ~ % cd /Users/<Username>
+usermac@User ~ % ls
+# Check that your .command files are here
+usermac@User ~ % chmod +x <Filename>
+```
+
+#### Must Update:
+1. Make sure that the directories are correct for where you’ve put the files on your computer. 
+2. You may need to update the MATLAB year (i.e. 2021b)
+```
+/Applications/MATLAB_R2021b.app/bin/matlab -nodisplay -r
+```
+3. If you are not using python3 then you will need to change that
+```
+python3 /Users/<USERNAME>/Desktop/RunningWheel/Python_Code/
+```
+
+
+Files for Windows:
+- [START_UP.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/START_UP.txt)
+- [DOWNLOAD.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/DOWNLOAD.txt)
+- [WheelAnalysis_nographs.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/WheelAnalysis_nographs.txt)
+- [PlotWheel.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/PlotWheel.txt)
+- [WheelAnalysis_graphs.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/MouseWeightAnalysis_graphs.txt)
+- [Download_Analysis.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/Download_Analysis.txt)
+- [Download_Analysis_Plot.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/Download_Analysis_Plot.txt)
+- [OPEN_Wheel_GUI.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/OPEN_Wheel_GUI.txt)
+  - Create an alias/shortcut to this file called “RunningWheel_App” and store where ever you like.
+
+You can create a .bat file using a text editor and saving them with .bat. Save them in your PATH environment as stated above. These files are automatically executable. I found that I was unable to open these files to edit them after creating them. I had to remake them if I needed to edit them. The files provided here are .txt, so you will need to resave them as .bat.
+
+#### Must Update:
+1. Make sure that the directories are correct for where you’ve put the files on your computer.
+2. Make sure that the python.exe directory is correct.
+```
+"C:\Users\<USERNAME>\OneDrive\Desktop\Uni\bin\matlab.exe" -batch
+```
+3. Make sure that the MATLAB directory is correct (both matlab.exe and the MATLAB folder under Documents)
+```
+"C:\Users\<USERNAME>\AppData\Local\Programs\Python\Python39\python.exe"
+```
+	
+---
+## Analysis of mouse weight, food and water consumption
+	
+In our paper, we used the running wheels in the activity-based anorexia (ABA) model. This meant that it was also important for us to collect information on mouse weight, and food and water consumed. I wrote code that would do this analysis along side the running wheel analysis. If you are also employing the ABA model, you may also wish to use the following code. If you are not and only wish to use the running wheels, then you will not need to apply the following section.
+
+### The following functions are needed when you are using the ABA model:
+	
+#### Desktop
+- [mouseweight_directory.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/mouseweight_directory.py)
+	- Used to create directory for the ABA.xlsx worbook (outlined below)
+- [Wheel_GUI_withMouseWeight.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI_withMouseWeight.py)
+	- Used to execute running wheel analysis and analysis of weights togther (outlined below)
+
+##### Must Update
+- [mouseweight_directory.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/mouseweight_directory.py)
+  - Update “DIRECTORY”, and “WORKBOOK”
+```{python}
+DIRECTORY = '/Users/<USERNAME>/Dropbox/RunningWheel'	#Location where the Mouse weight sheets are located
+WORKBOOK = 'ABA.xlsx'
+```
+
+#### MATLAB
+- [MouseWeight_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/MouseWeight_Analysis.m)
+	- Used to analyze and plot the mouse weight, food consumed, and water consumed each day
+	- After the morning of the first day of the first restriction (day 8 of experiment), this function will also calculate the 75% cutoff value for each mouse. This is 75% of the final day of baseline.
+	- Requires the following 2 functions to work:
+		1. [importDirectory_weights.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/importDirectory_weights.m)
+		2. [importWeights.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/importWeights.m)
+	- The use of the function MouseWeight_Analysis.m requires that you use our data collection workbook, [ABA.xlsx](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/ABA.xlsx), and store it on DropBox. Before the start of the experiment, a sheet for each day of the experiment should be created. Once this is done, the python function, mouseweight_directory.py, should be used to create a directory at the end of ABA.xlsx that is used by MouseWeight_Analysis.m to properly do the analysis. More information on filling out the ABA.xlsx workbook is below.
+- [MouseWeight_Tables.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/MouseWeight_Tables.m)
+	- Used to create tables with all the data organized according to groups.
+	
+##### Must Update
 - [MouseWeight_Analysis.m](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/MATLAB/MouseWeight/MouseWeight_Analysis.m)
   - Update the two paths, “mouse_savedData2”, “mouse_savedData1”, “Excel_file”, “Structure”, “Acclimation_day1”, “Baseline_day1”, “Restriction_final”, and “timezone”. You may also need to update “Groups_variables”, “number_mice”, “AdLib”, “Restricted”, and the mouse naming. This analysis is set-up for 16 mice in 4 different groups. Group 1 – Ad Lib with Wheel, Group 2 – Ad Lib with dummy Wheel, Group 3 – Restricted with Wheel, and Group 4 – Restricted with dummy Wheel. They alternate in that order. If you set it up in a different way then this analysis of the mouse weight will not work.
 ```{MATLAB}
@@ -400,72 +418,87 @@ RestrictedWheel_index = [3 7 11 15];    %Mice that are food restricted and a run
 RestrictedDummy_index = [4 8 12 16];    %Mice that are food restricted and a dummy wheel
 ```
 
-   
-### Command/Batch
-
-Place the command/batch files in a folder that is already in the PATH environment.
-Examples of this for the macOS and Windows are below:
-- macOS: /Users/<USERNAME>
-- Windows: C:\Users\<USERNAME>
-
-These files include (macOS):
-- [START_UP.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/START_UP.command)
-- [DOWNLOAD.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/DOWNLOAD.command)
-- [WheelAnalysis_nographs.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/WheelAnalysis_nographs.command)
-- [PlotWheel.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/PlotWheel.command)
-- [WheelAnalysis_graphs.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/WheelAnalysis_graphs.command)
-- [Download_Analysis_nographs.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/WheelAnalysis_nographs.command)
-- [Download_Analysis_Plot.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/Download_Analysis_Plot.command)
+	
+#### Command/Batch
 - [MouseWeightAnalysis_graphs.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/MouseWeightAnalysis_graphs.command)
-- [OPEN_Wheel_GUI.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/OPEN_Wheel_GUI.command)
-  - Create an alias/shortcut to this file called “RunningWheel_App” and store where ever you like.
-
-You can create the .command files using a text editor and saving them with .command. Save them in your PATH environment as stated above. You will then need to make these files executable. Do this with the following code in a Terminal window:
-1. cd /Users/<Username>
-   1. This is where your terminal window should be automatically. To double check that your .command files are in this directory you can just enter “ls”
-2. chmod +x <Filename>
-   1.Example: chmod +x START_UP.command
-   2.You will need to do this whenever you edit these files.
-```{console}
-usermac@USER ~ % cd /Users/<Username>
-usermac@User ~ % ls
-# Check that your .command files are here
-usermac@User ~ % chmod +x <Filename>
-```
-
-#### Edits and Updates that you may need to do:
-1. Make sure that the directories are correct for where you’ve put the files on your computer. 
-2. You may need to update the MATLAB year (i.e. 2021b)
-```
-/Applications/MATLAB_R2021b.app/bin/matlab -nodisplay -r
-```
-3. If you are not using python3 then you will need to change that
-```
-python3 /Users/<USERNAME>/Desktop/RunningWheel/Python_Code/
-```
-
-
-Files for Windows:
-- [START_UP.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/START_UP.txt)
-- [DOWNLOAD.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/DOWNLOAD.txt)
-- [WheelAnalysis_nographs.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/WheelAnalysis_nographs.txt)
-- [PlotWheel.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/PlotWheel.txt)
-- [WheelAnalysis_graphs.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/MouseWeightAnalysis_graphs.txt)
-- [Download_Analysis.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/Download_Analysis.txt)
-- [Download_Analysis_Plot.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/Download_Analysis_Plot.txt)
 - [MouseWeightAnalysis_graphs.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/MouseWeightAnalysis_graphs.txt)
-- [OPEN_Wheel_GUI.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/OPEN_Wheel_GUI.txt)
-  - Create an alias/shortcut to this file called “RunningWheel_App” and store where ever you like.
 
-You can create a .bat file using a text editor and saving them with .bat. Save them in your PATH environment as stated above. These files are automatically executable. I found that I was unable to open these files to edit them after creating them. I had to remake them if I needed to edit them. The files provided here are .txt, so you will need to resave them as .bat.
 
-#### Edits and Updates that you may need to do:
-1. Make sure that the directories are correct for where you’ve put the files on your computer.
-2. Make sure that the python.exe directory is correct.
+### Filling out the ABA.xlsx workbook
+The [ABA.xlsx workbook](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/ABA.xlsx) has 4 template sheets.
+- Acclimation_Template
+- Baseline_Template
+- Restriction_Template_6hrs
+- Restriction_Template_3hrs
+
+1. Make one copy of the Acclimation_Template. In the corresponding location of the table, enter in the date on which the first day of acclimation will occur (example: Saturday, Jun 12, 2021). When you isolate the mice you can also write in the time that this occurred.
+
+2. Make 7 copies of the Baseline_Template. Enter the Day (1 – 7) (example: Baseline (Day 1)) , and the date (example: Monday, June 14, 2021) when this will occur for each sheet.
+
+3. Make 3 copies of the Restriction_Template_6hrs. Enter the Day (8 – 10) (example: Restriction 6hrs (Day 8)), and the date (example: Monday, June 21, 2021) when this will occur for each sheet.
+
+4. Make 8 copies of the Restriction_Template_3hrs. Enter the Day (11 – 18) (example: Restriction 3 hrs (Day 11)), and the date (example: Thursday, June 24, 2021) when this will occur for each sheet.
+
+The name of each sheet/tab should be the date of data collection (ddmmmyyyy) and they should be in chronological order with the templates at the end. These should all be created before the start of the experiment.
+
+### Create the directory for this workbook
+This directory is necessary to use MouseWeight_Analysis.m
+
+1. You will need to download the python module [mouseweight_directory](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/mouseweight_directory.py) to do this
+2. Open mouseweight_directory.py in a text editor and update the “Directory” and “WORKBOOK”. These should be the location on Dropbox where the workbook can be found and the name of the workbook, respectively.
+```{python}
+DIRECTORY = '/Users/<USERNAME>/Dropbox/RunningWheel'	#Location where the Mouse weight sheets are located
+WORKBOOK = 'ABA.xlsx'
 ```
-"C:\Users\<USERNAME>\OneDrive\Desktop\Uni\bin\matlab.exe" -batch
+4. In python, enter:
+   1. import os
+   2. os.chdir(‘/Users/<USERNAME>/Desktop/RunningWheel/Python_Code’) or os.chdir(‘C:\Users\<USERNAME>\OneDrive\Desktop\ RunningWheel\Python_Code’)
+      i. macOS and Windows respectively
+   3. from mouseweight_directory import mouseweight_directory
+   4. mouseweight_directory()
+```{python}
+import os
+os.chdir(‘/Users/<USERNAME>/Desktop/RunningWheel/Python_Code’)
+from mouseweight_directory import mouseweight_directory
+mouseweight_directory()
 ```
-3. Make sure that the MATLAB directory is correct (both matlab.exe and the MATLAB folder under Documents)
-```
-"C:\Users\<USERNAME>\AppData\Local\Programs\Python\Python39\python.exe"
-```
+3. Check the ABA.xlsx and there should be a new sheet/tab at the end with a directory
+   1. Only do this once, or you will create multiple directories, which will create errors when running the code later.
+
+
+### Execution of Wheel Download and Analysis, and mouse weights
+
+I have created a GUI that will analyze the mouse weights along with the data from the running wheels. The code for running this GUI is:
+1. [Wheel_GUI_withMouseWeight.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI.py)
+- You will need to install [applescript](https://macdownload.informer.com/applescript-editor/) using pip3 to use the GUI on macOS
+- You will not need to install anything else to use the GUI on Windows
+
+**Additional button for GUI with mouse weight analysis included:**
+1. Mouse Weight Download and Plot Graphs
+   1. This is linked to the command/batch file MouseWeightAnalysis_graphs.command or MouseWeightAnalysis_graphs.bat
+   2. Downloads the mouse weight data from the DropBox location, stores it in a structure, and creates graphs showing the weight of the mouse and the food consumed over the course of the experiment. After the morning of the first restriction day, this will also calculate the 75% cutoff values for each mouse.
+	
+---
+## Running Wheels with no wifi connection
+
+If you are running your experiments with no, or a very weak/unreliable wifi connection, then you may wish to use the no wifi mode. If you choose to do this, you will first need to copy all the saved text files from each raspberry pi onto a USB drive and then store them together in a file. You can then use the following code to organize your data into Workbooks. Following this, the data analysis will be the same (i.e. the MATlAB part does not change).
+
+- [GETdata_wheel_nowifi.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/GETdata_wheel_nowifi.py)
+	- Put this file in the Python_Code folder instead of the Getdata_wheel.py.
+	
+### Must Update:
+- [GETdata_wheel_nowifi.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/GETdata_wheel_nowifi.py)
+  - Update “SavedData_Directory”, and “Spinner_List”
+```{python}
+# Make sure this corresponds to the directory where I will find and save my data
+SavedData_Directory = '/Users/<USERNAME>/Desktop/RunningWheel/Wheel_Data'	#This will need to be the folder directory where the data is saved.
+
+#This will need to be as long as the number of spinners you have. This variable is used in Wheel_RunFirst and GetData_wheel functions.
+Spinner_List = ['Spinner_1',
+'Spinner_2',
+'Spinner_3',
+'Spinner_4',
+'Spinner_5',
+'Spinner_6',
+'Spinner_7',
+'Spinner_8']
