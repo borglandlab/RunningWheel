@@ -208,9 +208,25 @@ pi@raspberrypi:~ $ sudo reboot
 ```
 
 #### Copying python code to RPi
-1. Insert USB drive into RPi containing python code for spinner.
-2. Copy spinner.py file to RPi from USB drive
-3. Change number in text editor to correspond with spinner number.
+1. Insert USB drive into RPi containing [python code for spinner](https://github.com/borglandlab/RunningWheel/blob/main/Spinner_Code/spinner_WIFI.py)
+2. Change name of file from spinner_WIFI.py to spinner.py
+3. Copy spinner.py file to RPi from USB drive
+4. Change number in text editor to correspond with spinner number ('SPINNER_NAME')
+   1. This must be different for each spinner and must be a whole number
+6. Update email address ('GMAIL_USERNAME')
+7. Update email address password ('GMAIL_PASSWORD')
+8. This is also where you you can adjust how often the wheels will send an email ('EMAIL_FREQUENCY') and how easily the hall-effect sensors will trigger ('TRIGGER_THRESHOLD')
+
+```{python}
+SPINNER_NAME = 1  #Corresponds to the wheel number
+EMAIL_FREQUENCY = 1     #Corresponds to how often an email will be sent, once every _____ hour.
+TRIGGER_THRESHOLD = 30
+#Email Variables
+SMTP_SERVER = 'smtp.gmail.com' #Email Server (don't change!)
+SMTP_PORT = 587 #Server Port (don't change!)
+GMAIL_USERNAME = 'email@gmail.com' #change this to match your gmail account
+GMAIL_PASSWORD = 'password'  #change this to match your gmail password
+```
 
 
 #### Setting up RPi for python program to automatically run at start-up/reboot
