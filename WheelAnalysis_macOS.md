@@ -53,36 +53,36 @@ To arrange and bin the data collected from the running wheels in more presentabl
    
 ### Execution of Wheel Download and Analysis
 
-To provide easy execution of the appropriate download codes, I have created a graphical user interface (GUI) in python that can be opened and used to speedily initiate analysis. The buttons on this GUI are linked to the command/batch files. The code required for running the GUI is:
+To provide easy execution of the appropriate download codes, I have created a graphical user interface (GUI) in python that can be opened and used to speedily initiate analysis. The buttons on this GUI are linked to the command files. The code required for running the GUI is:
 1. [Wheel_GUI.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI.py)
 - You will need to install [applescript](https://macdownload.informer.com/applescript-editor/) using pip3 to use the GUI on macOS
 - You will not need to install anything else to use the GUI on Windows
 
 **This GUI contains the following buttons:**
 1. Run before first Download (only run once at beginning)
-   1. This is linked to the command/batch file START_UP.command or START_UP.bat
+   1. This is linked to the command file START_UP.command
    2. This must be run once at the beginning before any data is downloaded and should not be run again.
 2. Data Download
-   1. This is linked the command/batch file DOWNLOAD.command or DOWNLOAD.bat
+   1. This is linked the command file DOWNLOAD.command
    2. Just downloads data from the email account to the excel files on your personal computer.
 3. Data Analysis
-   1. This is linked to the command/batch file WheelAnalysis_nographs.command or WheelAnalysis_nographs.bat
+   1. This is linked to the command file WheelAnalysis_nographs.command
    2. Just analyzes the data in MATLAB, storing the data in a MATLAB structure.
 4. Plot Graphs
-   1. This is linked to the command/batch file PlotWheel.command or PlotWheel.bat
+   1. This is linked to the command file PlotWheel.command
    2. Just plots the total distance and velocity for each running wheel using the data from the MATLAB structure.
 5.  Data Download and Analysis
-   1. This is linked to the command/batch file Download_Analysis.command or Download_Analysis.bat
+   1. This is linked to the command file Download_Analysis.command
    2. Downloads the data from the email account, stores it in excel files on your personal computer, and analyzes the data in MATLAB storing the data in a MATLAB structure
 6. Data Analysis and Plot Graphs
-   1. This is linked to the command/batch file WheelAnalysis_graphs.command or WheelAnalysis_graphs.bat
+   1. This is linked to the command file WheelAnalysis_graphs.command
    2. Analyzes the data in MATLAB, storing it in a MATLAB structure, and then creating graphs of the total distance travelled and the average velocity.
 7. Data Download, Analysis, and Plot Graphs
-   1. This is linked to the command/batch file Download_Analysis_Plot.command or Download_Analysis_Plot.bat
+   1. This is linked to the command file Download_Analysis_Plot.command
    2. Downloads the data, analyzes it in MATLAB, and creates graphs of the total distance travelled and average velocity.
    3. This is the main button that I use. The rest are just if you want to do an isolated step of the process.
 
-When you click on one of these buttons, no noise or impression will be made. However, the Terminal or Command Prompt window will pop-up and you will be able to see the progress of the command you have selected.
+When you click on one of these buttons, no noise or impression will be made. However, the Terminal window will pop-up and you will be able to see the progress of the command you have selected.
 
 For this GUI to work, you will also need the following two python modules in your Python_Code directory:
 1. [RunningWheel_StartupScript.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/RunningWheel_StartupScript.py)
@@ -93,9 +93,8 @@ For this GUI to work, you will also need the following two python modules in you
 
 ### Desktop
 Create a folder on the Desktop called “RunningWheel”.
-Examples of where this would be for macOS and Windows are below:
-- macOS: /Users/<USERNAME>/Desktop/
-- Windows (using OneDrive): C:\Users\<USERNAME>\OneDrive\Desktop\
+- Example of where this would be for macOS is below:
+	- /Users/<USERNAME>/Desktop/
 
 Structure the "RunningWheel" folder accordingly:
 - Python_Code (folder)
@@ -110,7 +109,7 @@ Structure the "RunningWheel" folder accordingly:
 - Wheel_Figures (folder)
   - Where all the MATLAB figures will be stored
 - RunningWheel_App (file)
-  - This is an alias/shortcut to the command/batch file to open the Wheel_GUI.py
+  - This is an alias/shortcut to the command file to open the Wheel_GUI.py
 
 #### Must Update:
 ```
@@ -151,10 +150,10 @@ password = 'app specific password'	#App password. You will need to set this up o
 from_email = 'Mouse Spinners <email address>'	#Email account that will send the alert email.
 to_email = 'personal email'	#Email account that you want to receive the alert. I had it sent to my personal email address so that I'd see it immediately.
 ```
-- [Wheel_GUI.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI.py) or [Wheel_GUI_withMouseWeight](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI_withMouseWeight.py)
+- [Wheel_GUI.py](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/Python/Wheel_GUI.py)
   - Update “Directory”
 ```{python}
-# Specify directory where your executable files are located (.command or .bat)
+# Specify directory where your executable files are located (.command)
 Directory = '/Users/<USERNAME>/'
 ```
 
@@ -243,12 +242,11 @@ Restricted_index = [2 4 6 8];
 ```
 
    
-### Command/Batch
+### Command
 
-Place the command/batch files in a folder that is already in the PATH environment.
-Examples of this for the macOS and Windows are below:
-- macOS: /Users/<USERNAME>
-- Windows: C:\Users\<USERNAME>
+Place the command files in a folder that is already in the PATH environment.
+Examples of this for macOS is below:
+- /Users/<USERNAME>
 
 These files include (macOS):
 - [START_UP.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/START_UP.command)
@@ -285,30 +283,6 @@ usermac@User ~ % chmod +x <Filename>
 python3 /Users/<USERNAME>/Desktop/RunningWheel/Python_Code/
 ```
 
-
-Files for Windows:
-- [START_UP.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/START_UP.txt)
-- [DOWNLOAD.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/DOWNLOAD.txt)
-- [WheelAnalysis_nographs.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/WheelAnalysis_nographs.txt)
-- [PlotWheel.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/PlotWheel.txt)
-- [WheelAnalysis_graphs.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/MouseWeightAnalysis_graphs.txt)
-- [Download_Analysis.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/Download_Analysis.txt)
-- [Download_Analysis_Plot.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/Download_Analysis_Plot.txt)
-- [OPEN_Wheel_GUI.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/OPEN_Wheel_GUI.txt)
-  - Create an alias/shortcut to this file called “RunningWheel_App” and store where ever you like.
-
-You can create a .bat file using a text editor and saving them with .bat. Save them in your PATH environment as stated above. These files are automatically executable. I found that I was unable to open these files to edit them after creating them. I had to remake them if I needed to edit them. The files provided here are .txt, so you will need to resave them as .bat.
-
-#### Must Update:
-1. Make sure that the directories are correct for where you’ve put the files on your computer.
-2. Make sure that the python.exe directory is correct.
-```
-"C:\Users\<USERNAME>\OneDrive\Desktop\Uni\bin\matlab.exe" -batch
-```
-3. Make sure that the MATLAB directory is correct (both matlab.exe and the MATLAB folder under Documents)
-```
-"C:\Users\<USERNAME>\AppData\Local\Programs\Python\Python39\python.exe"
-```
 	
 ---
 ## Analysis of mouse weight, food and water consumption
@@ -419,9 +393,8 @@ RestrictedDummy_index = [4 8 12 16];    %Mice that are food restricted and a dum
 ```
 
 	
-#### Command/Batch
+#### Command
 - [MouseWeightAnalysis_graphs.command](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/Code/CommandFiles/MouseWeightAnalysis_graphs.command)
-- [MouseWeightAnalysis_graphs.bat](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/Windows/Code/BatchFiles/MouseWeightAnalysis_graphs.txt)
 
 
 ### Filling out the ABA.xlsx workbook
@@ -452,8 +425,7 @@ WORKBOOK = 'ABA.xlsx'
 ```
 4. In python, enter:
    1. import os
-   2. os.chdir(‘/Users/<USERNAME>/Desktop/RunningWheel/Python_Code’) or os.chdir(‘C:\Users\<USERNAME>\OneDrive\Desktop\ RunningWheel\Python_Code’)
-      i. macOS and Windows respectively
+   2. os.chdir(‘/Users/<USERNAME>/Desktop/RunningWheel/Python_Code’)
    3. from mouseweight_directory import mouseweight_directory
    4. mouseweight_directory()
 ```{python}
@@ -475,7 +447,7 @@ I have created a GUI that will analyze the mouse weights along with the data fro
 
 **Additional button for GUI with mouse weight analysis included:**
 1. Mouse Weight Download and Plot Graphs
-   1. This is linked to the command/batch file MouseWeightAnalysis_graphs.command or MouseWeightAnalysis_graphs.bat
+   1. This is linked to the command file MouseWeightAnalysis_graphs.command
    2. Downloads the mouse weight data from the DropBox location, stores it in a structure, and creates graphs showing the weight of the mouse and the food consumed over the course of the experiment. After the morning of the first restriction day, this will also calculate the 75% cutoff values for each mouse.
 	
 ---
