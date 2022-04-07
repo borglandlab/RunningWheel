@@ -295,6 +295,33 @@ TRIGGER_THRESHOLD = 30
 ```
 
 -----
+## Setting up the Running Wheels
+
+To supply power to the raspberry pi a micro USB cable must be connected to the outside micro USB port. The inner micro USB port can only transmit data, so you can plug your keyboard and stuff into that one when you need to. There is also a micro HDMI port that can be used when to connect a monitor. This is on the opposite side from the micro USB power port. You will most likely need a micro HDMI adapter to use this.
+
+Before running connect each raspberry pi to a power source, keyboard (with joystick and trackpad), and monitor. Allow the raspberry pi to boot up. Once the desktop is open, remove or delete the text file. This will ensure that the new data collected in the text file will only be from the current experiment. Unplug the raspberry pi.
+
+When setting up the running wheels, carefully insert the raspberry pi into the Base Top so that the senor holder with sensors is lined up with the hold in the base top. This may require some careful bending of the wires connected to the sensors. The raspberry pi should fit into notches printed on the base bottom. Connect the raspberry pi to a micro USB power cable that is not yet connected to a power supply. Put the screws in place in the front and back of the base top to keep the base bottom connected. Slide the Spinner with the ball bearing on the protrusion of the base top. The running wheel is now ready for calibration. Depending on how much light your 3D printed running wheel base lets through, you may also wish to cover the ACT LED on the raspberry pi with opaque tape.
+
+It is important to note that the mice will chew the USB power cable. We’ve tried a number of different things, but the only reliable solution is to cut and bend copper tubing to protect the cable. The hole in the front of the base top is designed to snuggly fit ½” copper tubing. Tube bending springs can be used to change the shape of the copper tubing without causing kinks. However, you will need to avoid really tight bends because the micro USB cable still needs to be able to slide through the tubing. This will require some playing around to get right depending on how you are setting the wheels up and what type of cage you are using.
+
+### Calibration
+
+Each running wheel is automatically calibrated at start-up. Each time the wheels are connected to power, the spinner must be taped so that the magnets are as far away from the sensors as possible. There are three circular notches on the top of each spinner to aide in identifying the location of the magnets. Prior to connecting to power, running wheels should be placed in the cage in the environment where the experiment will take place. The calibration cycle will begin immediately after the running wheel is connected to power and takes about two to three minutes. You will be notified that the calibration cycle is complete by an email. Remove tape and place mouse in cage. If you are using the no wifi spinner.py version then assume that the calibration has been completed after 3 minutes have passed.
+
+Triggering of the hall-effect sensors will occur when read values are more than 30 above or below the maximum and minimum values read during the calibration cycle. Calibration only needs to be done once at the beginning of the experiment, or after any time the running wheel is disconnected from its power supply.
+
+It is important to bear in mind that hall-effect sensors detect changes in the magnetic field. Hence, any large fluctuations in the magnetic field other than the movement of the magnets on the bottom of the spinner will result in experimental noise. For this reason, it is important to ensure that the environment where you are running these experiments does not have large fluctuations in the magnetic field. Even in a good environment, some magnetic noise will most likely be detected, but it should be infrequent enough so that it will not noticeably change results.
+
+If you feel that there is too much noise, there are a few different solutions:
+1.	Disconnect and reconnect the wheel to the power supply to allow for the calibration sequency to run again. It is possible that the baseline noise has changed since calibration was initially done.
+2.	Change power supply. It’s possible that the power supply that you are using is noisy.
+3.	Change rooms. This may not be an option, but a room with less electrical noise is ideal.
+4.	Increase the threshold on the spinner.py. The default threshold value is 30, but this could be increased to 40 or 50. We have only tested the wheels with a threshold value of 30, so we recommend you run some tests to ensure that your higher threshold will still be triggered by the magnets.
+5.	Resolder the connections of electrical components.
+
+
+-----
 ## Software for using Running Wheel
 
 I have created software for both [macOS](https://github.com/borglandlab/RunningWheel/blob/main/WheelAnalysis_macOS.md) and [Windows](https://github.com/borglandlab/RunningWheel/blob/main/WheelAnalsis_Windows.md). Click on the appropriate link to be taken to the setup and use instructions.
