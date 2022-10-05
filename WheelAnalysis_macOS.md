@@ -58,11 +58,11 @@ It is simpler for you to create the executable files than for us to provide them
     1. Open the unzipped folder --> open the folder titled "Code"
     2. Right click on teh folder called "Python" and select "New Terminal at Folder" - This will open a terminal window ready to access files within the "Python" folder.
     3. Enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
-    For the standalone running wheelsystem
+    * For the standalone running wheelsystem
 	```{console}
 	usermac@USER Python % pyinstaller --onefile RunningWheel_Setup.py
 	```
-	For the running wheel system including the ABA protocol
+    * For the running wheel system including the ABA protocol
 	```{console}
 	usermac@USER Python % pyinstaller --onefile RunningWheel_Setup_ABA.py
 	```
@@ -73,15 +73,15 @@ It is simpler for you to create the executable files than for us to provide them
     8. This file is self contained and will run no matter where it is located.
 
 3. Create the executable Running Wheel file.
-- pyinstaller can't recognize matlabengine, so you need to manually add it. For this reason there are a few extra steps.
+* pyinstaller can't recognize matlabengine, so you need to manually add it. For this reason there are a few extra steps.
     1. Open the unzipped folder --> open the folder titled "Code"
     2. Right click on teh folder called "Python" and select "New Terminal at Folder" - This will open a terminal window ready to access files within the "Python" folder.
     3. Enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
-    For the standalone running wheelsystem
+    * For the standalone running wheelsystem
 	```{console}
 	usermac@USER Python % pyinstaller Wheel_GUI.py
 	```
-    For the running wheel system including the ABA protocol
+    * For the running wheel system including the ABA protocol
 	```{console}
 	usermac@USER Python % pyinstaller Wheel_GUI_ABA.py
 	```
