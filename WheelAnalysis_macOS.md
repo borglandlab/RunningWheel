@@ -55,9 +55,9 @@ It is simpler for you to create the executable files than for us to provide them
 1. Download the zipped folder that corresponds with what you would like to do (with or without the ABA protocol) from [here](https://github.com/borglandlab/RunningWheel/tree/main/Analysis_Code/macOS).
 
 2. Create the executable setup file.
-  1. Open the unzipped folder --> open the folder titled "Code"
-  2. Right click on teh folder called "Python" and select "New Terminal at Folder" - This will open a terminal window ready to access files within the "Python" folder.
-  3. Enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
+    1. Open the unzipped folder --> open the folder titled "Code"
+    2. Right click on teh folder called "Python" and select "New Terminal at Folder" - This will open a terminal window ready to access files within the "Python" folder.
+    3. Enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
     For the standalone running wheelsystem
 	```{console}
 	usermac@USER Python % pyinstaller --onefile RunningWheel_Setup.py
@@ -66,36 +66,36 @@ It is simpler for you to create the executable files than for us to provide them
 	```{console}
 	usermac@USER Python % pyinstaller --onefile RunningWheel_Setup_ABA.py
 	```
-  4. Within the "Python" folder, delete the "RunningWheel_Setup.spec" or "RunningWheel_Setup_ABA.spec" file.
-  5. Within the "Python" folder, delete the "build" folder.
-  6. Within the "Python" folder, open the "dist" folder and move the file "RunningWheel_Setup" or "RunningWheel_Setup_ABA" to the folder called "Executable", within the "Code" folder, then delete the "dist" folder.
-  7. Double click on the "RunningWheel_Setup" or "RunningWheel_Setup_ABA" file to run the running wheel setup.
-  8. This file is self contained and will run no matter where it is located.
+    4. Within the "Python" folder, delete the "RunningWheel_Setup.spec" or "RunningWheel_Setup_ABA.spec" file.
+    5. Within the "Python" folder, delete the "build" folder.
+    6. Within the "Python" folder, open the "dist" folder and move the file "RunningWheel_Setup" or "RunningWheel_Setup_ABA" to the folder called "Executable", within the "Code" folder, then delete the "dist" folder.
+    7. Double click on the "RunningWheel_Setup" or "RunningWheel_Setup_ABA" file to run the running wheel setup.
+    8. This file is self contained and will run no matter where it is located.
 
 3. Create the executable Running Wheel file.
 - pyinstaller can't recognize matlabengine, so you need to manually add it. For this reason there are a few extra steps.
-  1. Open the unzipped folder --> open the folder titled "Code"
-  2. Right click on teh folder called "Python" and select "New Terminal at Folder" - This will open a terminal window ready to access files within the "Python" folder.
-  3. Enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
-  For the standalone running wheelsystem
+    1. Open the unzipped folder --> open the folder titled "Code"
+    2. Right click on teh folder called "Python" and select "New Terminal at Folder" - This will open a terminal window ready to access files within the "Python" folder.
+    3. Enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
+    For the standalone running wheelsystem
 	```{console}
 	usermac@USER Python % pyinstaller Wheel_GUI.py
 	```
-  For the running wheel system including the ABA protocol
+    For the running wheel system including the ABA protocol
 	```{console}
 	usermac@USER Python % pyinstaller Wheel_GUI_ABA.py
 	```
-  4. Within the "Python" folder, delete the "Wheel_GUIp.spec" or "Wheel_GUI_ABA.spec" file.
-  5. Within the "Python" folder, delete the "build" folder.
-  6. Within the "Python" folder, open the "dist" folder and move the folder "Wheel_GUI" or "WHeel_GUI_ABA" to the folder called "Executable", within the "Code" folder, then delete the "dist" folder.
-  7. Open a terminal window and run the following code (this will open the location of the matlab module):
+    4. Within the "Python" folder, delete the "Wheel_GUIp.spec" or "Wheel_GUI_ABA.spec" file.
+    5. Within the "Python" folder, delete the "build" folder.
+    6. Within the "Python" folder, open the "dist" folder and move the folder "Wheel_GUI" or "WHeel_GUI_ABA" to the folder called "Executable", within the "Code" folder, then delete the "dist" folder.
+    7. Open a terminal window and run the following code (this will open the location of the matlab module):
 	```{console}
 	python findMATLAB.py
 	```
-  8. In the Finder window that has opened, right click on the "matlab" folder and copy it. Do not delete it.
-  9. Open the "Wheel_GUI" or "Wheel_GUI_ABA" folder, that you recently moved into the "Executable" folder, and paste the "matlab" folder there.
-  10. Inside of the "Wheel_GUI" or "Wheel_GUI_ABA" folder is an executable file called "Wheel_GUI" or "Wheel_GUI_ABA". Double click on this file to run the running wheel system. This file must remain inside of the "Wheel_GUI" or "Wheel_GUI_ABA" folder for it to work.
-  11. You can make this file more accessible by right clicking on it and clicking "Make Alias". This Alis file can be placed wherever you would like
+    8. In the Finder window that has opened, right click on the "matlab" folder and copy it. Do not delete it.
+    9. Open the "Wheel_GUI" or "Wheel_GUI_ABA" folder, that you recently moved into the "Executable" folder, and paste the "matlab" folder there.
+    10. Inside of the "Wheel_GUI" or "Wheel_GUI_ABA" folder is an executable file called "Wheel_GUI" or "Wheel_GUI_ABA". Double click on this file to run the running wheel system. This file must remain inside of the "Wheel_GUI" or "Wheel_GUI_ABA" folder for it to work.
+    11. You can make this file more accessible by right clicking on it and clicking "Make Alias". This Alis file can be placed wherever you would like
 	
 
 
