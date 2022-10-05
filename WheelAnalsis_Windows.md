@@ -25,7 +25,7 @@ Here is a list of the third party modueles that you will need to install using p
 3. [matlabengine](https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html)
 4. [pyinstaller](https://pyinstaller.org/en/stable/installation.html)
 
-You will need to install these in your terminal window. You can open a terminal window by pressing on "cmd" + spacebar, which will cause the spotlight search to pop up. Type in "terminal" and press the "return" button or click on the first entry titled "terminal".
+You will need to install these in a terminal window. Two methods to do this are to open Windows Terminal (application that comes with Windows 10 and later), or to launch COMD.exe Prompt from Anaconda.Navigator (We used the later method).
 
 To use pip, enter pip or pip3 (depending on which version you are using - pip3 for python3) followed by the module you are installing:
 ```{console}
@@ -58,8 +58,8 @@ It is simpler for you to create the executable files than for us to provide them
 
 2. Create the executable setup file.
     1. Open the unzipped folder --> open the folder titled "Code"
-    2. Right click on the folder called "Python" and select "Open in the Terminal" - This will open a terminal window ready to access files within the "Python" folder. Alternatively you can open CMD.exe Prompt from Anaconda.Navigator and copy and paste the directory address for the "Python" folder. This second method was how we did it.
-    3. If you are using the Terminal from the first method then enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
+    2. Right click on the folder called "Python" and select "Open in the Terminal" - This will open a Windows Terminal window ready to access files within the "Python" folder. Alternatively you can open CMD.exe Prompt from Anaconda.Navigator and copy and paste the directory address for the "Python" folder. This second method was how we did it.
+    3. If you are using the Windows Terminal from the first method then enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
 	```{console}
 	pyinstaller --onefile RunningWheel_Setup.py
 	```
@@ -77,8 +77,8 @@ It is simpler for you to create the executable files than for us to provide them
 3. Create the executable Running Wheel file.
 * pyinstaller can't recognize matlabengine, so you need to manually add it. For this reason there are a few extra steps.
     1. Open the unzipped folder --> open the folder titled "Code"
-  2. Right click on the folder called "Python" and select "Open in the Terminal" - This will open a terminal window ready to access files within the "Python" folder. Alternatively you can open CMD.exe Prompt from Anaconda.Navigator and copy and paste the directory address for the "Python" folder. This second method was how we did it.
-    3. If you are using the Terminal from the first method then enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
+  2. Right click on the folder called "Python" and select "Open in the Terminal" - This will open a Windows Terminal window ready to access files within the "Python" folder. Alternatively you can open CMD.exe Prompt from Anaconda.Navigator and copy and paste the directory address for the "Python" folder. This second method was how we did it.
+    3. If you are using the Windows Terminal from the first method then enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
 	```{console}
 	pyinstaller --onefile RunningWheel_Setup_ABA.py
 	```
@@ -90,7 +90,7 @@ It is simpler for you to create the executable files than for us to provide them
     5. Within the "Python" folder, delete the "Wheel_GUI.spec" file.
     6. Within the "Python" folder, delete the "build" folder.
     7. Within the "Python" folder, open the "dist" folder and move the folder "Wheel_GUI" to the folder called "Executable", within the "Code" folder, then delete the "dist" folder.
-    8. Again, open a terminal window with the "Python" folder directory as explained above. The enter the following code into the terminal window:
+    8. Again, open a terminal window with the "Python" folder directory as explained above. Then enter the following code into the terminal window:
 	```{console}
 	python findMATLAB.py
 	```
@@ -110,8 +110,8 @@ It is simpler for you to create the executable files than for us to provide them
 
 2. Create the executable setup file.
     1. Open the unzipped folder --> open the folder titled "Code"
-    2. Right click on the folder called "Python" and select "Open in the Terminal" - This will open a terminal window ready to access files within the "Python" folder. Alternatively you can open CMD.exe Prompt from Anaconda.Navigator and copy and paste the directory address for the "Python" folder. This second method was how we did it.
-    3. If you are using the Terminal from the first method then enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
+    2. Right click on the folder called "Python" and select "Open in the Terminal" - This will open a Windows Terminal window ready to access files within the "Python" folder. Alternatively you can open CMD.exe Prompt from Anaconda.Navigator and copy and paste the directory address for the "Python" folder. This second method was how we did it.
+    3. If you are using the Windows Terminal from the first method then enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
 	```{console}
 	pyinstaller --onefile RunningWheel_Setup_ABA.py
 	```
@@ -129,8 +129,8 @@ It is simpler for you to create the executable files than for us to provide them
 3. Create the executable Running Wheel file.
 * pyinstaller can't recognize matlabengine, so you need to manually add it. For this reason there are a few extra steps.
     1. Open the unzipped folder --> open the folder titled "Code"
-  2. Right click on the folder called "Python" and select "Open in the Terminal" - This will open a terminal window ready to access files within the "Python" folder. Alternatively you can open CMD.exe Prompt from Anaconda.Navigator and copy and paste the directory address for the "Python" folder. This second method was how we did it.
-    3. If you are using the Terminal from the first method then enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
+  2. Right click on the folder called "Python" and select "Open in the Terminal" - This will open a Winows Terminal window ready to access files within the "Python" folder. Alternatively you can open CMD.exe Prompt from Anaconda.Navigator and copy and paste the directory address for the "Python" folder. This second method was how we did it.
+    3. If you are using the Windows Terminal from the first method then enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
 	```{console}
 	pyinstaller --onefile RunningWheel_Setup_ABA.py
 	```
