@@ -1,4 +1,0 @@
-@echo off
-"C:\Users\<USERNAME>\OneDrive\Desktop\Uni\bin\matlab.exe" -batch "cd('C:\Users\<USERNAME>\OneDrive\Documents\MATLAB\RunningWheel'); Wheel_Analysis(); exit()"
-"C:\Users\<USERNAME>\OneDrive\Desktop\Uni\bin\matlab.exe" -nodesktop -r "cd('C:\Users\<USERNAME>\OneDrive\Documents\MATLAB\RunningWheel'); Wheel_Plot()"
-pause
