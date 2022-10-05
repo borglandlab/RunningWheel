@@ -60,11 +60,11 @@ It is simpler for you to create the executable files than for us to provide them
     3. Enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
     * For the standalone running wheelsystem
 	```{console}
-	usermac@USER Python % pyinstaller --onefile RunningWheel_Setup.py
+	pyinstaller --onefile RunningWheel_Setup.py
 	```
     * For the running wheel system including the ABA protocol
 	```{console}
-	usermac@USER Python % pyinstaller --onefile RunningWheel_Setup_ABA.py
+	pyinstaller --onefile RunningWheel_Setup_ABA.py
 	```
     4. Within the "Python" folder, delete the "RunningWheel_Setup.spec" or "RunningWheel_Setup_ABA.spec" file.
     5. Within the "Python" folder, delete the "build" folder.
@@ -75,20 +75,20 @@ It is simpler for you to create the executable files than for us to provide them
 3. Create the executable Running Wheel file.
 * pyinstaller can't recognize matlabengine, so you need to manually add it. For this reason there are a few extra steps.
     1. Open the unzipped folder --> open the folder titled "Code"
-    2. Right click on teh folder called "Python" and select "New Terminal at Folder" - This will open a terminal window ready to access files within the "Python" folder.
+    2. Right click on the folder called "Python" and select "New Terminal at Folder" - This will open a terminal window ready to access files within the "Python" folder.
     3. Enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
     * For the standalone running wheelsystem
 	```{console}
-	usermac@USER Python % pyinstaller Wheel_GUI.py
+	pyinstaller Wheel_GUI.py
 	```
     * For the running wheel system including the ABA protocol
 	```{console}
-	usermac@USER Python % pyinstaller Wheel_GUI_ABA.py
+	pyinstaller Wheel_GUI_ABA.py
 	```
     4. Within the "Python" folder, delete the "Wheel_GUIp.spec" or "Wheel_GUI_ABA.spec" file.
     5. Within the "Python" folder, delete the "build" folder.
     6. Within the "Python" folder, open the "dist" folder and move the folder "Wheel_GUI" or "WHeel_GUI_ABA" to the folder called "Executable", within the "Code" folder, then delete the "dist" folder.
-    7. Open a terminal window and run the following code (this will open the location of the matlab module):
+    7. Right click on the folder called "Python" and select "New Terminal at Folder". The enter the following code into the terminal window:
 	```{console}
 	python findMATLAB.py
 	```
