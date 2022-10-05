@@ -38,14 +38,14 @@ Pip will take care of finding and installing the module for you, so it's pretty 
 
 
 Additionally, here is a list of python modules already included with python:
-1. os – preinstalled
-2. re – preinstalled
-4. datetime – preinstalled
-6. imaplib – preinstalled
-7. email – preinstalled
-8. smtplib – preinstalled
-9. tkinter - preinstalled
-10. shutil - presinstalled
+1. os
+2. re
+4. datetime
+6. imaplib
+7. email
+8. smtplib
+9. tkinter
+10. shutil
 
 You should not need to install these using pip
 
@@ -55,10 +55,10 @@ It is simpler for you to create the executable files than for us to provide them
 1. Download the zipped folder that corresponds with what you would like to do (with or without the ABA protocol) from [here](https://github.com/borglandlab/RunningWheel/tree/main/Analysis_Code/macOS).
 
 2. Create the executable setup file.
-  a. Open the unzipped folder --> open the folder titled "Code"
-  b. Right click on teh folder called "Python" and select "New Terminal at Folder" - This will open a terminal window ready to access files within the "Python" folder.
-  c. Enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
-  For the standalone running wheelsystem
+    a. Open the unzipped folder --> open the folder titled "Code"
+    b. Right click on teh folder called "Python" and select "New Terminal at Folder" - This will open a terminal window ready to access files within the "Python" folder.
+    c. Enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
+    For the standalone running wheelsystem
 	```{console}
 	usermac@USER Python % pyinstaller --onefile RunningWheel_Setup.py
 	```
@@ -66,36 +66,36 @@ It is simpler for you to create the executable files than for us to provide them
 	```{console}
 	usermac@USER Python % pyinstaller --onefile RunningWheel_Setup_ABA.py
 	```
-  d. Within the "Python" folder, delete the "RunningWheel_Setup.spec" or "RunningWheel_Setup_ABA.spec" file.
-  e. Within the "Python" folder, delete the "build" folder.
-  f. Within the "Python" folder, open the "dist" folder and move the file "RunningWheel_Setup" or "RunningWheel_Setup_ABA" to the folder called "Executable", within the "Code" folder, then delete the "dist" folder.
-  g. Double click on the "RunningWheel_Setup" or "RunningWheel_Setup_ABA" file to run the running wheel setup.
-  h. This file is self contained and will run no matter where it is located.
+    d. Within the "Python" folder, delete the "RunningWheel_Setup.spec" or "RunningWheel_Setup_ABA.spec" file.
+    e. Within the "Python" folder, delete the "build" folder.
+    f. Within the "Python" folder, open the "dist" folder and move the file "RunningWheel_Setup" or "RunningWheel_Setup_ABA" to the folder called "Executable", within the "Code" folder, then delete the "dist" folder.
+    g. Double click on the "RunningWheel_Setup" or "RunningWheel_Setup_ABA" file to run the running wheel setup.
+    h. This file is self contained and will run no matter where it is located.
 
 3. Create the executable Running Wheel file.
 - pyinstaller can't recognize matlabengine, so you need to manually add it. For this reason there are a few extra steps.
-  a. Open the unzipped folder --> open the folder titled "Code"
-  b. Right click on teh folder called "Python" and select "New Terminal at Folder" - This will open a terminal window ready to access files within the "Python" folder.
-  c. Enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
-  For the standalone running wheelsystem
+    a. Open the unzipped folder --> open the folder titled "Code"
+    b. Right click on teh folder called "Python" and select "New Terminal at Folder" - This will open a terminal window ready to access files within the "Python" folder.
+    c. Enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
+    For the standalone running wheelsystem
 	```{console}
 	usermac@USER Python % pyinstaller Wheel_GUI.py
 	```
-  For the running wheel system including the ABA protocol
+    For the running wheel system including the ABA protocol
 	```{console}
 	usermac@USER Python % pyinstaller Wheel_GUI_ABA.py
 	```
-  d. Within the "Python" folder, delete the "Wheel_GUIp.spec" or "Wheel_GUI_ABA.spec" file.
-  e. Within the "Python" folder, delete the "build" folder.
-  f. Within the "Python" folder, open the "dist" folder and move the folder "Wheel_GUI" or "WHeel_GUI_ABA" to the folder called "Executable", within the "Code" folder, then delete the "dist" folder.
-  g. Open a terminal window and run the following code (this will open the location of the matlab module):
+    d. Within the "Python" folder, delete the "Wheel_GUIp.spec" or "Wheel_GUI_ABA.spec" file.
+    e. Within the "Python" folder, delete the "build" folder.
+    f. Within the "Python" folder, open the "dist" folder and move the folder "Wheel_GUI" or "WHeel_GUI_ABA" to the folder called "Executable", within the "Code" folder, then delete the "dist" folder.
+    g. Open a terminal window and run the following code (this will open the location of the matlab module):
 	```{console}
 	python findMATLAB.py
 	```
-  h. In the Finder window that has opened, right click on the "matlab" folder and copy it. Do not delete it.
-  i. Open the "Wheel_GUI" or "Wheel_GUI_ABA" folder, that you recently moved into the "Executable" folder, and paste the "matlab" folder there.
-  j. Inside of the "Wheel_GUI" or "Wheel_GUI_ABA" folder is an executable file called "Wheel_GUI" or "Wheel_GUI_ABA". Double click on this file to run the running wheel system. This file must remain inside of the "Wheel_GUI" or "Wheel_GUI_ABA" folder for it to work.
-  k. You can make this file more accessible by right clicking on it and clicking "Make Alias". This Alis file can be placed wherever you would 		like
+    h. In the Finder window that has opened, right click on the "matlab" folder and copy it. Do not delete it.
+    i. Open the "Wheel_GUI" or "Wheel_GUI_ABA" folder, that you recently moved into the "Executable" folder, and paste the "matlab" folder there.
+    j. Inside of the "Wheel_GUI" or "Wheel_GUI_ABA" folder is an executable file called "Wheel_GUI" or "Wheel_GUI_ABA". Double click on this file to run the running wheel system. This file must remain inside of the "Wheel_GUI" or "Wheel_GUI_ABA" folder for it to work.
+    k. You can make this file more accessible by right clicking on it and clicking "Make Alias". This Alis file can be placed wherever you would like
 	
 
 
