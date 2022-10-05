@@ -69,6 +69,8 @@ It is simpler for you to create the executable files than for us to provide them
 	d. Within the "Python" folder, delete the "RunningWheel_Setup.spec" or "RunningWheel_Setup_ABA.spec" file.
 	e. Within the "Python" folder, delete the "build" folder.
 	f. Within the "Python" folder, open the "dist" folder and move the file "RunningWheel_Setup" or "RunningWheel_Setup_ABA" to the folder called 		"Executable", within the "Code" folder, then delete the "dist" folder.
+	g. Double click on the "RunningWheel_Setup" or "RunningWheel_Setup_ABA" file to run the running wheel setup.
+	h. This file is self contained and will run no matter where it is located.
 
 3. Create the executable Running Wheel file.
 - pyinstaller can't recognize matlabengine, so you need to manually add it. For this reason there are a few extra steps.
@@ -85,17 +87,15 @@ It is simpler for you to create the executable files than for us to provide them
 	```
 	d. Within the "Python" folder, delete the "Wheel_GUIp.spec" or "Wheel_GUI_ABA.spec" file.
 	e. Within the "Python" folder, delete the "build" folder.
-	f. Within the "Python" folder, open the "dist" folder and move the folder "Wheel_GUI" or "WHeel_GUI_ABA" to the folder called 				"Executable", within the "Code" folder, then delete the "dist" folder.
-	g. Open a terminal window and run the following code (this will give you the location of the matlabengine module:
+	f. Within the "Python" folder, open the "dist" folder and move the folder "Wheel_GUI" or "WHeel_GUI_ABA" to the folder called "Executable", 		within the "Code" folder, then delete the "dist" folder.
+	g. Open a terminal window and run the following code (this will open the location of the matlab module):
 	```{console}
-	python
-	import matlab.engine, re
-	from subprocess import call
-	directory = matlab.engine.__file__
-	m = re.search('matlab', directory).start()
-	call(['open', directory[0:m]])
+	python findMATLAB.py
 	```
-	h. Find the printed directory in a finder window
+	h. In the Finder window that has opened, right click on the "matlab" folder and copy it. Do not delete it.
+	i. Open the "Wheel_GUI" or "Wheel_GUI_ABA" folder, that you recently moved into the "Executable" folder, and paste the "matlab" folder there.
+	j. Inside of the "Wheel_GUI" or "Wheel_GUI_ABA" folder is an executable file called "Wheel_GUI" or "Wheel_GUI_ABA". Double click on this file to 	run the running wheel system. This file must remain inside of the "Wheel_GUI" or "Wheel_GUI_ABA" folder for it to work.
+	k. You can make this file more accessible by right clicking on it and clicking "Make Alias". This Alis file can be placed wherever you would 		like
 	
 
 
