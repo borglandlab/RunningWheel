@@ -88,7 +88,7 @@ It is simpler for you to create the executable files than for us to provide them
 	f. Within the "Python" folder, open the "dist" folder and move the folder "Wheel_GUI" or "WHeel_GUI_ABA" to the folder called 				"Executable", within the "Code" folder, then delete the "dist" folder.
 	g. Open a terminal window and run the following code (this will give you the location of the matlabengine module:
 	```{console}
-	usermac@USER % python
+	python
 	import matlab.engine, re
 	from subprocess import call
 	directory = matlab.engine.__file__
