@@ -89,7 +89,7 @@ It is simpler for you to create the executable files than for us to provide them
     10. Inside of the "Wheel_GUI" folder is an executable file called "Wheel_GUI". Double click on this file to run the running wheel system. This file must remain inside of the "Wheel_GUI" folder for it to work.
     11. You can make this file more accessible by right clicking on it and clicking "Make Alias". This Alias file can be placed wherever you would like.
 	
-#### Running Wheel (stand alone)
+#### Running Wheel with ABA protocol
 
 1. Download the zipped folder called "RunningWheel_System_ABA_macOS.zip" from our GitHub repository [here](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/RunningWheel_System_ABA_macOS.zip).
 
