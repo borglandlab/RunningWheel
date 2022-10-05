@@ -1,9 +1,9 @@
 # Software for using Running Wheel (Windows)
 ---
 ## Wheel Download Software
-You must have python3 installed on you computer to run the data download software. It might work with Python 2, however it has only been tested with Python 3.
+You must have python3 installed on you computer to run the data download software. It might work with Python 2, however it has only been tested with Python 3. If you have Anaconda installed on your computer then you can use Python within your conda environment.
 
-In addition, make sure that your system PATH variable includes python or your computer will be unable to find it. This will prevent the code that I am sharing here from working on your computer. You can learn more about how to do this at this [website](https://www.educative.io/edpresso/how-to-add-python-to-the-path-variable-in-mac).
+In addition, make sure that your system PATH variable includes python or your computer will be unable to find it. This will prevent the code that I am sharing here from working on your computer. You can learn more about how to do this at this [website](https://www.educative.io/edpresso/how-to-add-python-to-the-path-variable-in-mac). If you have Anaconda installed on your computer then you can follow the steps below using COMD.exe Prompt from Anaconda.Navigator, a terminal window that launches within your conda environment.
 
 You may also need to install pip separately on your personal computer. Pip is a standard accesory to python, and is what you will use to install third party python modules, of which we will be using a few. You can learn how to install pip [here](https://pip.pypa.io/en/stable/installation/).
 
@@ -25,7 +25,7 @@ Here is a list of the third party modueles that you will need to install using p
 3. [matlabengine](https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html)
 4. [pyinstaller](https://pyinstaller.org/en/stable/installation.html)
 
-You will need to install these in a terminal window. Two methods to do this are to open Windows Terminal (application that comes with Windows 10 and later), or to launch COMD.exe Prompt from Anaconda.Navigator (We used the later method).
+You will need to install these in a terminal window. Two methods to do this are to open Windows Terminal (application that comes with Windows 10 and later), or to launch COMD.exe Prompt from Anaconda.Navigator (We used the second method). If you use Python on your computer through Anaconda, then you should use COMD.exe Prompt.
 
 To use pip, enter pip or pip3 (depending on which version you are using - pip3 for python3) followed by the module you are installing:
 ```{console}
