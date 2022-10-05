@@ -133,7 +133,7 @@ Now that you have created the executable files, all the code, files, and folders
 To setup your computer for the running wheel system, double click on the "RunningWheel_Setup" or "RunningWheel_Setup_ABA" (depending on which version you are using) to run the setup/installation GUI. Wait for the GUI to open, and then go through each button and input the requested information. The information entered in through the GUI includes:
 ### Running Wheel (stand alone)
 1. Location of the Running Wheel Python code
-2. Location of the Running Wheel MATLAB code
+2. Location of the Running Wheel MATLAB code. This is found in a folder called "WheelAnalysis" under a folder called "MATLAB" in the "Code" folder.
 3. Location of the general MATLAB folder
     1. This found in "Documents" and on my computer, I click on a "MATLAB" folder that is found within a folder entitled "MATLAB".
 4. Location where you would like to store your Spinner data
@@ -147,8 +147,14 @@ To setup your computer for the running wheel system, double click on the "Runnin
 12. Number of running wheels (mouse spinners) you will be using.
 13. The first day of the experiment (Must be entered in following the format of DD/MM/YYYY - ex, 01/01/2022 for January first, 20222)
 14. After entering in all of this information you will need to select the button to run at the end of start up to set everything up.
+* For the locations where you would like to save data you can use the folders provided, or select different folders based on your preferences. For example, we made our secondary MATLAB saving location to DropBox.
 
-
-
+### Running Wheel with ABA protocol
+In addition to the information above, you will also be asked to enter in the following information:
+1. Location of the ABA worksheet template, which is included within the downloaded zip file.
+2. The trial number.
+3. THe first day of acclimation (assumes two days for acclimation, so make sure it's two days before your baseline starts. Again, follow the above format for entering in a date).
+4. Location of MATLAB code for analyzing the mouse weight. This is found in a folder called "MouseWeight" under a folder called "MATLAB" in the "Code" folder.
+* For the locations where you would like to save data you can use the folders provided, or select different folders based on your preferences. For example, before running the setup, we moved the ABA_template.xlsx file to DropBox, allowing us to access the generated ABA file from various devices.
 
 
