@@ -130,8 +130,10 @@ It is simpler for you to create the executable files than for us to provide them
 
 Now that you have created the executable files, all the code, files, and folders that you will need to use the running wheels on your computer is there. However, you still need to set it up.
 
-To setup your computer for the running wheel system, double click on the "RunningWheel_Setup" or "RunningWheel_Setup_ABA" (depending on which version you are using) to run the setup/installation GUI. Wait for the GUI to open, and then go through each button and input the requested information. The information entered in through the GUI includes:
+To setup your computer for the running wheel system, double click on the "RunningWheel_Setup" or "RunningWheel_Setup_ABA" (depending on which version you are using) to run the setup/installation GUI. Wait for the GUI to open, and then go through each button and input the requested information.
+
 ### Running Wheel (stand alone)
+The information entered in through the GUI includes:
 1. Location of the Running Wheel Python code
 2. Location of the Running Wheel MATLAB code. This is found in a folder called "WheelAnalysis" under a folder called "MATLAB" in the "Code" folder.
 3. Location of the general MATLAB folder
@@ -156,5 +158,36 @@ In addition to the information above, you will also be asked to enter in the fol
 3. THe first day of acclimation (assumes two days for acclimation, so make sure it's two days before your baseline starts. Again, follow the above format for entering in a date).
 4. Location of MATLAB code for analyzing the mouse weight. This is found in a folder called "MouseWeight" under a folder called "MATLAB" in the "Code" folder.
 * For the locations where you would like to save data you can use the folders provided, or select different folders based on your preferences. For example, before running the setup, we moved the ABA_template.xlsx file to DropBox, allowing us to access the generated ABA file from various devices.
+
+## Running the Running Wheel GUI
+When you open the Running Wheel GUI, it will first ask you to select the location of the Running Wheel Python code. This is because the directory that contains all the paths, directories, and file names is found in this location. After selecting this the GUI will have access to all the information that you entered in through the setup GUI. Depending on whether or not you are following the ABA protocol you will use one of two different GUIs.
+
+### Running Wheel (stand alone)
+1. Data Download - will download your data received from the running wheels by the running wheel email address, and create excel workbooks containing this datat that matlab will then use for analysis.
+2. Data Transfer - No Wifi - will transfer the data if you are following the no wifi protocol that is outlined below.
+3. Data Analysis - will analyze the data that has been downloaded, creating a matlab structure containing the distance travelled and and the velocity.
+4. Plot Graphs - will create graphs for each running wheel showing the distance travelled and the velocity.
+* The next buttons are combinations of the above three buttons
+5. Data Download and Analysis
+6. Data Analysis and Plot Graphs
+7. Data Download, Analysis, and Plot Graphs - this is the button that we would typically use each morning, as it would do everything that we needed to do.
+
+### Running Wheel with ABA protocol
+In addition to the above buttons, when using the ABA protocol you will also have the following button:
+1. Mouse Weight Download and Plot Graphs - will download and analyze the data in the ABA excel file returning graphs that show the mouse weight, food consumed, and water consumed. You should run this each day so that you know when the mice have dropped before 75% of their initial body mass (based on the last day of baseline).
+
+## No Wifi method
+As explained in our paper, if you have a poor or no internet connection you will want to use the no wifi method. To do this you will need to set up the raspberry pi in the mouse spinner with the no-wifi code. The running data will be stored on the SD card and can be accessed at the end of the experiment. To do so, you will need to manually transfer the spinlog.txt file from your raspberry pi to the computer that is doing the ananlysis via a USB drive. Then follow these steps:
+1. Place the spinlog.txt files into a file within the "Spinner_Data" (You can create a new folder called "spinlogs") and add the corresponding "_#" to the end of the file.
+    1. Example: spinlog.txt from spinner_4 becomes spinlog_4.txt
+2. Do this for each spinner
+3. Once you've done this, the "Data Download" button on the GUI will result in an error, because it is now setup for no wifi data transfer.
+4. Run the GUI and select "Data Transfer - No Wifi"
+    1. This will transfer all the spinner data to organized excel files that are ready for analysis by MATLAB, as if they had been downloaded.
+
+
+
+
+
 
 
