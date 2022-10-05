@@ -5,7 +5,99 @@ You must have python3 installed on you computer to run the data download softwar
 
 In addition, make sure that your system PATH variable includes python or your computer will be unable to find it. This will prevent the code that I am sharing here from working on your computer. You can learn more about how to do this at this [website](https://www.educative.io/edpresso/how-to-add-python-to-the-path-variable-in-mac).
 
-Also, Raspian, the Raspberry Pi operating system automatically comes with python and Pip. However, in addition to downloading python onto your personal computer, you may also need to download pip. You can learn how to do this [here](https://pip.pypa.io/en/stable/installation/).
+You may also need to install pip separately on your personal computer. Pip is a standard accesory to python, and is what you will use to install third party python modules, of which we will be using a few. You can learn how to install pip [here](https://pip.pypa.io/en/stable/installation/).
+
+The running wheel system also requires MATLAB, it connects to matlab through a python module called matlab engine, but this will only work if you already have matlab installed on your personal computer. Based on this [reference](https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html) from mathworks, you will need to have a MATLAB version from 2014 or later to run the the matlab engine.
+
+
+## Setting up the Code on your computer
+The running wheel system utilizes two different graphical user interfaces (GUI). One is used to set everything up prior to running your experiment so that everything will run smoothly. Once you use this GUI, you do not need to use it again unless a folder directory changes. If you change the location of any files or folders, make sure you run through the setup GUI again. It is best to set everything up once and then don't move anything afterwards.
+
+The second GUI is for running the code. This is what you will use on a regular basis.
+
+The running wheel system can be run as standalone running wheels, or as part of the ABA protocol, as found in our research publication. Make sure you download the appropriate one. Both versions use a setup GUI and then a GUI to run the code, but if you are planning to follow our ABA protocol then the GUI will facilitate this.
+
+### Install third party python modules using pip
+
+Here is a list of the third party modueles that you will need to install using pip
+1. [openpyxl](https://pypi.org/project/openpyxl/)
+2. [pytz](https://pypi.org/project/pytz/)
+3. [matlabengine](https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html)
+4. [pyinstaller](https://pyinstaller.org/en/stable/installation.html)
+
+You will need to install these in your terminal window. You can open a terminal window by pressing on "cmd" + spacebar, which will cause the spotlight search to pop up. Type in "terminal" and press the "return" button or click on the first entry titled "terminal".
+
+To use pip, enter pip or pip3 (depending on which version you are using - pip3 for python3) followed by the module you are installing:
+```{console}
+usermac@USER ~ % pip3 install openpyxl
+usermac@USER ~ % pip3 install pytz
+usermac@USER ~ % pip3 install matlabengine
+usermac@USER ~ % pip3 install pyinstaller
+```
+Pip will take care of finding and installing the module for you, so it's pretty simple.
+
+
+Additionally, here is a list of python modules already included with python:
+1. os – preinstalled
+2. re – preinstalled
+4. datetime – preinstalled
+6. imaplib – preinstalled
+7. email – preinstalled
+8. smtplib – preinstalled
+9. tkinter - preinstalled
+10. shutil - presinstalled
+
+You should not need to install these using pip
+
+### Creating executable files
+It is simpler for you to create the executable files than for us to provide them to you, because your personal computer may not allow you to download or use executable files that were created by a nonverified source. So you will need to follow these steps before using either running wheel GUIs.
+
+1. Download the zipped folder that corresponds with what you would like to do (with or without the ABA protocol) from [here](https://github.com/borglandlab/RunningWheel/tree/main/Analysis_Code/macOS).
+
+2. Create the executable setup file.
+	a. Open the unzipped folder --> open the folder titled "Code"
+	b. Right click on teh folder called "Python" and select "New Terminal at Folder" - This will open a terminal window ready to access files within 	the "Python" folder.
+	c. Enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
+	For the standalone running wheelsystem
+	```{console}
+	usermac@USER Python % pyinstaller --onefile RunningWheel_Setup.py
+	```
+	For the running wheel system including the ABA protocol
+	```{console}
+	usermac@USER Python % pyinstaller --onefile RunningWheel_Setup_ABA.py
+	```
+	d. Within the "Python" folder, delete the "RunningWheel_Setup.spec" or "RunningWheel_Setup_ABA.spec" file.
+	e. Within the "Python" folder, delete the "build" folder.
+	f. Within the "Python" folder, open the "dist" folder and move the file "RunningWheel_Setup" or "RunningWheel_Setup_ABA" to the folder called 		"Executable", within the "Code" folder, then delete the "dist" folder.
+
+3. Create the executable Running Wheel file.
+- pyinstaller can't recognize matlabengine, so you need to manually add it. For this reason there are a few extra steps.
+	a. Open the unzipped folder --> open the folder titled "Code"
+	b. Right click on teh folder called "Python" and select "New Terminal at Folder" - This will open a terminal window ready to access files within 	the "Python" folder.
+	c. Enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
+	For the standalone running wheelsystem
+	```{console}
+	usermac@USER Python % pyinstaller Wheel_GUI.py
+	```
+	For the running wheel system including the ABA protocol
+	```{console}
+	usermac@USER Python % pyinstaller Wheel_GUI_ABA.py
+	```
+	d. Within the "Python" folder, delete the "Wheel_GUIp.spec" or "Wheel_GUI_ABA.spec" file.
+	e. Within the "Python" folder, delete the "build" folder.
+	f. Within the "Python" folder, open the "dist" folder and move the folder "Wheel_GUI" or "WHeel_GUI_ABA" to the folder called 				"Executable", within the "Code" folder, then delete the "dist" folder.
+	g. Open a terminal window and run the following code (this will give you the location of the matlabengine module:
+	```{console}
+	usermac@USER % python
+	import matlab.engine, re
+	from subprocess import call
+	directory = matlab.engine.__file__
+	m = re.search('matlab', directory).start()
+	call(['open', directory[0:m]])
+	```
+	h. Find the printed directory in a finder window
+	
+
 
 Finally, make sure that the directories used in all code line up with the directories on your computer. See below for more information on changing this.
 
@@ -35,6 +127,8 @@ In addition, the following python modules must also be installed on your compute
 6. imaplib – preinstalled
 7. email – preinstalled
 8. smtplib – preinstalled
+9. tkinter - preinstalled
+10. shutil - presinstalled
 
 ---
 ## Wheel Analysis Software
