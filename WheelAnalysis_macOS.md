@@ -77,7 +77,7 @@ It is simpler for you to create the executable files than for us to provide them
 	```{console}
 	pyinstaller Wheel_GUI.py
 	```
-    4. Within the "Python" folder, delete the "Wheel_GUIp.spec" file.
+    4. Within the "Python" folder, delete the "Wheel_GUI.spec" file.
     5. Within the "Python" folder, delete the "build" folder.
     6. Within the "Python" folder, open the "dist" folder and move the folder "Wheel_GUI" to the folder called "Executable", within the "Code" folder, then delete the "dist" folder.
     7. Right click on the folder called "Python" and select "New Terminal at Folder". The enter the following code into the terminal window:
