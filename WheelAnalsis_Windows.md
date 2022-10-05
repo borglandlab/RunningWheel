@@ -58,36 +58,51 @@ It is simpler for you to create the executable files than for us to provide them
 
 2. Create the executable setup file.
     1. Open the unzipped folder --> open the folder titled "Code"
-    2. Right click on teh folder called "Python" and select "New Terminal at Folder" - This will open a terminal window ready to access files within the "Python" folder.
-    3. Enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
+    2. Right click on the folder called "Python" and select "Open in the Terminal" - This will open a terminal window ready to access files within the "Python" folder. Alternatively you can open CMD.exe Prompt from Anaconda.Navigator and copy and paste the directory address for the "Python" folder. This second method was how we did it.
+    3. If you are using the Terminal from the first method then enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
 	```{console}
 	pyinstaller --onefile RunningWheel_Setup.py
 	```
-    4. Within the "Python" folder, delete the "RunningWheel_Setup.spec" file.
-    5. Within the "Python" folder, delete the "build" folder.
-    6. Within the "Python" folder, open the "dist" folder and move the file "RunningWheel_Setup" to the folder called "Executable", within the "Code" folder, then delete the "dist" folder.
-    7. Double click on the "RunningWheel_Setup" file to run the running wheel setup.
-    8. This file is self contained and will run no matter where it is located.
+    4. If you are using the CMD.exe Prompt then enter the following (change the "Python" folder directory to match yours):
+	```{console}
+	cd <paste python address here>
+	pyinstaller --onefile RunningWheel_Setup.py
+	```
+    5. Within the "Python" folder, delete the "RunningWheel_Setup.spec" file.
+    6. Within the "Python" folder, delete the "build" folder.
+    7. Within the "Python" folder, open the "dist" folder and move the file "RunningWheel_Setup" to the folder called "Executable", within the "Code" folder, then delete the "dist" folder.
+    8. Double click on the "RunningWheel_Setup" file to run the running wheel setup.
+    9. This file is self contained and will run no matter where it is located.
 
 3. Create the executable Running Wheel file.
 * pyinstaller can't recognize matlabengine, so you need to manually add it. For this reason there are a few extra steps.
     1. Open the unzipped folder --> open the folder titled "Code"
-    2. Right click on the folder called "Python" and select "New Terminal at Folder" - This will open a terminal window ready to access files within the "Python" folder.
-    3. Enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
+  2. Right click on the folder called "Python" and select "Open in the Terminal" - This will open a terminal window ready to access files within the "Python" folder. Alternatively you can open CMD.exe Prompt from Anaconda.Navigator and copy and paste the directory address for the "Python" folder. This second method was how we did it.
+    3. If you are using the Terminal from the first method then enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
 	```{console}
-	pyinstaller Wheel_GUI.py
+	pyinstaller --onefile RunningWheel_Setup_ABA.py
 	```
-    4. Within the "Python" folder, delete the "Wheel_GUI.spec" file.
-    5. Within the "Python" folder, delete the "build" folder.
-    6. Within the "Python" folder, open the "dist" folder and move the folder "Wheel_GUI" to the folder called "Executable", within the "Code" folder, then delete the "dist" folder.
-    7. Right click on the folder called "Python" and select "New Terminal at Folder". The enter the following code into the terminal window:
+    4. If you are using the CMD.exe Prompt then enter the following (change the "Python" folder directory to match yours):
+	```{console}
+	cd <paste python address here>
+	pyinstaller --onefile RunningWheel_Setup_ABA.py
+	```
+    5. Within the "Python" folder, delete the "Wheel_GUI.spec" file.
+    6. Within the "Python" folder, delete the "build" folder.
+    7. Within the "Python" folder, open the "dist" folder and move the folder "Wheel_GUI" to the folder called "Executable", within the "Code" folder, then delete the "dist" folder.
+    8. Again, open a terminal window with the "Python" folder directory as explained above. The enter the following code into the terminal window:
 	```{console}
 	python findMATLAB.py
 	```
-    8. In the Finder window that has opened, right click on the "matlab" folder and copy it. Do not delete it.
-    9. Open the "Wheel_GUI" that you recently moved into the "Executable" folder, and paste the "matlab" folder there.
-    10. Inside of the "Wheel_GUI" folder is an executable file called "Wheel_GUI". Double click on this file to run the running wheel system. This file must remain inside of the "Wheel_GUI" folder for it to work.
-    11. You can make this file more accessible by right clicking on it and clicking "Make Alias". This Alias file can be placed wherever you would like.
+    9. If you are using the CMD.exe Promt then enter the following (change the "Python" folder directory to match yours):
+	```{console}
+	cd <paste python address here>
+	python findMATLAB.py
+	```
+    10. In the Finder window that has opened, right click on the "matlab" folder and copy it. Do not delete it.
+    11. Open the "Wheel_GUI" that you recently moved into the "Executable" folder, and paste the "matlab" folder there.
+    12. Inside of the "Wheel_GUI" folder is an executable file called "Wheel_GUI". Double click on this file to run the running wheel system. This file must remain inside of the "Wheel_GUI" folder for it to work.
+    13. You can make this file more accessible by right clicking on it and clicking "Show more options" --> "Create shortcut". This shortcut file can be placed wherever you would like.
 	
 #### Running Wheel with ABA protocol
 
@@ -95,36 +110,51 @@ It is simpler for you to create the executable files than for us to provide them
 
 2. Create the executable setup file.
     1. Open the unzipped folder --> open the folder titled "Code"
-    2. Right click on teh folder called "Python" and select "New Terminal at Folder" - This will open a terminal window ready to access files within the "Python" folder.
-    3. Enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
+    2. Right click on the folder called "Python" and select "Open in the Terminal" - This will open a terminal window ready to access files within the "Python" folder. Alternatively you can open CMD.exe Prompt from Anaconda.Navigator and copy and paste the directory address for the "Python" folder. This second method was how we did it.
+    3. If you are using the Terminal from the first method then enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
 	```{console}
 	pyinstaller --onefile RunningWheel_Setup_ABA.py
 	```
-    4. Within the "Python" folder, delete the "RunningWheel_Setup_ABA.spec" file.
-    5. Within the "Python" folder, delete the "build" folder.
-    6. Within the "Python" folder, open the "dist" folder and move the file "RunningWheel_Setup_ABA" to the folder called "Executable", within the "Code" folder, then delete the "dist" folder.
-    7. Double click on the "RunningWheel_Setup_ABA" file to run the running wheel setup.
-    8. This file is self contained and will run no matter where it is located.
+    4. If you are using the CMD.exe Prompt then enter the following (change the "Python" folder directory to match yours):
+	```{console}
+	cd <paste python address here>
+	pyinstaller --onefile RunningWheel_Setup_ABA.py
+	```
+    5. Within the "Python" folder, delete the "RunningWheel_Setup_ABA.spec" file.
+    6. Within the "Python" folder, delete the "build" folder.
+    7. Within the "Python" folder, open the "dist" folder and move the file "RunningWheel_Setup_ABA" to the folder called "Executable", within the "Code" folder, then delete the "dist" folder.
+    8. Double click on the "RunningWheel_Setup_ABA" file to run the running wheel setup.
+    9. This file is self contained and will run no matter where it is located.
 
 3. Create the executable Running Wheel file.
 * pyinstaller can't recognize matlabengine, so you need to manually add it. For this reason there are a few extra steps.
     1. Open the unzipped folder --> open the folder titled "Code"
-    2. Right click on the folder called "Python" and select "New Terminal at Folder" - This will open a terminal window ready to access files within the "Python" folder.
-    3. Enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
+  2. Right click on the folder called "Python" and select "Open in the Terminal" - This will open a terminal window ready to access files within the "Python" folder. Alternatively you can open CMD.exe Prompt from Anaconda.Navigator and copy and paste the directory address for the "Python" folder. This second method was how we did it.
+    3. If you are using the Terminal from the first method then enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
 	```{console}
-	pyinstaller Wheel_GUI_ABA.py
+	pyinstaller --onefile RunningWheel_Setup_ABA.py
 	```
-    4. Within the "Python" folder, delete the "Wheel_GUI_ABA.spec" file.
-    5. Within the "Python" folder, delete the "build" folder.
-    6. Within the "Python" folder, open the "dist" folder and move the folder "WHeel_GUI_ABA" to the folder called "Executable", within the "Code" folder, then delete the "dist" folder.
-    7. Right click on the folder called "Python" and select "New Terminal at Folder". The enter the following code into the terminal window:
+    4. If you are using the CMD.exe Prompt then enter the following (change the "Python" folder directory to match yours):
+	```{console}
+	cd <paste python address here>
+	pyinstaller --onefile RunningWheel_Setup_ABA.py
+	```
+    5. Within the "Python" folder, delete the "Wheel_GUI_ABA.spec" file.
+    6. Within the "Python" folder, delete the "build" folder.
+    7. Within the "Python" folder, open the "dist" folder and move the folder "WHeel_GUI_ABA" to the folder called "Executable", within the "Code" folder, then delete the "dist" folder.
+    8. Again, open a terminal window with the "Python" folder directory as explained above. The enter the following code into the terminal window:
 	```{console}
 	python findMATLAB.py
 	```
-    8. In the Finder window that has opened, right click on the "matlab" folder and copy it. Do not delete it.
-    9. Open the "Wheel_GUI_ABA" folder, that you recently moved into the "Executable" folder, and paste the "matlab" folder there.
-    10. Inside of the "Wheel_GUI_ABA" folder is an executable file called "Wheel_GUI_ABA". Double click on this file to run the running wheel system. This file must remain inside of the "Wheel_GUI_ABA" folder for it to work.
-    11. You can make this file more accessible by right clicking on it and clicking "Make Alias". This Alis file can be placed wherever you would like
+    9. If you are using the CMD.exe Promt then enter the following (change the "Python" folder directory to match yours):
+	```{console}
+	cd <paste python address here>
+	python findMATLAB.py
+	```
+    10. In the Finder window that has opened, right click on the "matlab" folder and copy it. Do not delete it.
+    11. Open the "Wheel_GUI_ABA" folder, that you recently moved into the "Executable" folder, and paste the "matlab" folder there.
+    12. Inside of the "Wheel_GUI_ABA" folder is an executable file called "Wheel_GUI_ABA". Double click on this file to run the running wheel system. This file must remain inside of the "Wheel_GUI_ABA" folder for it to work.
+    13. You can make this file more accessible by right clicking on it and clicking "Show more options" --> "Create shortcut". This shortcut file can be placed wherever you would like
 
 ## Running the Setup GUI
 
