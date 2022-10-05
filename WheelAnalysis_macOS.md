@@ -52,7 +52,7 @@ You should not need to install these using pip
 ### Creating executable files
 It is simpler for you to create the executable files than for us to provide them to you, because your personal computer may not allow you to download or use executable files that were created by a nonverified source. So you will need to follow these steps before using either running wheel GUIs.
 
-1. Download the zipped folder that corresponds with what you would like to do (with or without the ABA protocol) from [here](https://github.com/borglandlab/RunningWheel/tree/main/Analysis_Code/macOS).
+1. Download the zipped folder that corresponds with what you would like to do (with or without the ABA protocol) from our GitHub repository [here](https://github.com/borglandlab/RunningWheel/tree/main/Analysis_Code/macOS).
 
 2. Create the executable setup file.
     1. Open the unzipped folder --> open the folder titled "Code"
