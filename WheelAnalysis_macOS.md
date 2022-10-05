@@ -55,9 +55,9 @@ It is simpler for you to create the executable files than for us to provide them
 1. Download the zipped folder that corresponds with what you would like to do (with or without the ABA protocol) from [here](https://github.com/borglandlab/RunningWheel/tree/main/Analysis_Code/macOS).
 
 2. Create the executable setup file.
-    A. Open the unzipped folder --> open the folder titled "Code"
-    B. Right click on teh folder called "Python" and select "New Terminal at Folder" - This will open a terminal window ready to access files within the "Python" folder.
-    C. Enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
+    1. Open the unzipped folder --> open the folder titled "Code"
+    2. Right click on teh folder called "Python" and select "New Terminal at Folder" - This will open a terminal window ready to access files within the "Python" folder.
+    3. Enter the following into the terminal window and press "return" (This will take a bit of time to create your executable files):
     For the standalone running wheelsystem
 	```{console}
 	usermac@USER Python % pyinstaller --onefile RunningWheel_Setup.py
