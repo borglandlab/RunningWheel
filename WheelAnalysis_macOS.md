@@ -29,10 +29,10 @@ You will need to install these in your terminal window. You can open a terminal 
 
 To use pip, enter pip or pip3 (depending on which version you are using - pip3 for python3) followed by the module you are installing:
 ```{console}
-usermac@USER ~ % pip3 install openpyxl
-usermac@USER ~ % pip3 install pytz
-usermac@USER ~ % pip3 install matlabengine
-usermac@USER ~ % pip3 install pyinstaller
+pip3 install openpyxl
+pip3 install pytz
+pip3 install matlabengine
+pip3 install pyinstaller
 ```
 Pip will take care of finding and installing the module for you, so it's pretty simple.
 
