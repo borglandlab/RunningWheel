@@ -1,11 +1,11 @@
 # Software for using Running Wheel (Windows)
 ---
 ## Wheel Download Software
-You must have Python 3 installed on you computer to run the data download software. It might work with Python 2, however it has only been tested with Python 3. If you have Anaconda installed on your computer then you can use Python within your conda environment.
+You must have Python 3 installed on you computer to run the data download software. It might work with Python 2, however it has only been tested with Python 3. If you are a new Python user, installing [Anaconda](https://www.anaconda.com/products/distribution) will make your life simpler. It includes python and all of the accessory packages needed (such as pip) to run. In addition, you can use COMD.exe Prompt from Anaconda.Navigator, a terminal window that launches within you conda environment.
 
-In addition, make sure that your system PATH variable includes python or your computer will be unable to find it. This will prevent the code that I am sharing here from working on your computer. You can learn more about how to do this at this [website](https://www.educative.io/edpresso/how-to-add-python-to-the-path-variable-in-mac). If you have Anaconda installed on your computer then you can follow the steps below using COMD.exe Prompt from Anaconda.Navigator, a terminal window that launches within your conda environment.
+Make sure that your system PATH variable includes Python or your computer will be unable to find it (not necessary if you have installed Anaconda). This will prevent the code that I am sharing here from working on your computer. You can learn more about how to do this at this [website](https://www.educative.io/edpresso/how-to-add-python-to-the-path-variable-in-mac).
 
-You may also need to install pip separately on your personal computer. Pip is a standard accesory to python, and is what you will use to install third party python modules, of which we will be using a few. You can learn how to install pip [here](https://pip.pypa.io/en/stable/installation/).
+You may also need to install pip separately on your personal computer (not necessary if you have installed Anaconda). Pip is a standard accesory to python, and is what you will use to install third party python modules, of which we will be using a few. You can learn how to install pip [here](https://pip.pypa.io/en/stable/installation/).
 
 The running wheel system also requires MATLAB, it connects to matlab through a python module called matlab engine, but this will only work if you already have matlab installed on your personal computer. Based on this [reference](https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html) from mathworks, you will need to have a MATLAB version from 2014 or later to run the the matlab engine.
 
