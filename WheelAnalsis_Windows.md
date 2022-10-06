@@ -15,7 +15,7 @@ The running wheel system utilizes two different graphical user interfaces (GUI).
 
 The second GUI is for running the code. This is what you will use on a regular basis.
 
-The running wheel system can be run as standalone running wheels, or as part of the ABA protocol, as found in our research publication. Make sure you download the appropriate one. Both versions use a setup GUI and then a GUI to run the code, but if you are planning to follow our ABA protocol then the GUI will facilitate this.
+The running wheel system can be run as standalone running wheels, or as part of the ABA protocol, as found in our research publication. Make sure you download the appropriate one. Both versions use a setup GUI and then a GUI to run the code, but if you are planning to follow our ABA protocol then the ABA GUI will facilitate this.
 
 ### Install third party python modules using pip
 
