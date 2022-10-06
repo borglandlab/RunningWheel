@@ -173,6 +173,8 @@ Now that you have created the executable files, all the code, files, and folders
 
 To setup your computer for the running wheel system, double click on the "RunningWheel_Setup" or "RunningWheel_Setup_ABA" (depending on which version you are using) to run the setup/installation GUI. Wait for the GUI to open, and then go through each button and input the requested information.
 
+<br/>
+
 ### Running Wheel (stand alone)
 The information entered in through the GUI includes:
 1. Location of the Running Wheel Python code
@@ -223,6 +225,8 @@ In addition to the information above, you will also be asked to enter in the fol
 
 ## Running the Running Wheel GUI
 When you open the Running Wheel GUI, it will first ask you to select the location of the Running Wheel Python code. This is because the directory that contains all the paths, directories, and file names is found in this location. After selecting this the GUI will have access to all the information that you entered in through the setup GUI. Depending on whether or not you are following the ABA protocol you will use one of two different GUIs.
+
+<br/>
 
 ### Running Wheel (stand alone)
 1. Data Download - will download your data received from the running wheels by the running wheel email address, and create excel workbooks containing this data that matlab will then use for analysis.
