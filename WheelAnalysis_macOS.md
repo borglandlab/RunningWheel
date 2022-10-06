@@ -9,6 +9,7 @@ You may also need to install pip separately on your personal computer (not neces
 
 The running wheel system also requires MATLAB, it connects to matlab through a Python module called matlab engine, but this will only work if you already have MATLAB installed on your personal computer. Based on this [reference](https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html) from MathWorks, you will need to have a MATLAB version from 2014 or later to run the the matlab engine.
 
+<br/>
 
 ## Setting up the Code on your computer
 The running wheel system utilizes two different graphical user interfaces (GUI). One is used to set everything up prior to running your experiment so that everything will run smoothly. Once you use this GUI, you do not need to use it again unless a folder directory changes. If you change the location of any files or folders, make sure you run through the setup GUI again. It is best to set everything up once and then don't move anything afterwards.
@@ -16,6 +17,8 @@ The running wheel system utilizes two different graphical user interfaces (GUI).
 The second GUI is for running the code. This is what you will use on a regular basis.
 
 The running wheel system can be run as standalone running wheels, or as part of the ABA protocol, as found in our research publication. Make sure you download the appropriate one. Both versions use a setup GUI and then a GUI to run the code, but if you are planning to follow our ABA protocol then the ABA GUI will facilitate this.
+
+<br/>
 
 ### Install third party Python modules using pip
 
@@ -49,8 +52,12 @@ Additionally, here is a list of python modules, which we use in our code, that a
 
 You should not need to install these using pip
 
+<br/>
+
 ### Creating executable files
 It is simpler for you to create the executable files than for us to provide them to you, because your personal computer may not allow you to download or use executable files that were created by a nonverified source. So you will need to follow these steps before using either running wheel GUIs. Although the process is the same, for the sake of clarity, due to different names, we have outlined the steps separately for the two versions that we offer.
+
+<br/>
 
 #### Running Wheel (stand alone)
 
@@ -88,7 +95,9 @@ It is simpler for you to create the executable files than for us to provide them
     9. Open the "Wheel_GUI" that you recently moved into the "Executable" folder, and paste the "matlab" folder there.
     10. Inside of the "Wheel_GUI" folder is an executable file called "Wheel_GUI". Double click on this file to run the running wheel system. This file must remain inside of the "Wheel_GUI" folder for it to work.
     11. You can make this file more accessible by right clicking on it and clicking "Make Alias". This Alias file can be placed wherever you would like.
-	
+
+<br/>
+
 #### Running Wheel with ABA protocol
 
 1. Download the zipped folder called "RunningWheel_System_ABA_macOS.zip" from our GitHub repository [here](https://github.com/borglandlab/RunningWheel/blob/main/Analysis_Code/macOS/RunningWheel_System_ABA_macOS.zip).
@@ -126,11 +135,15 @@ It is simpler for you to create the executable files than for us to provide them
     10. Inside of the "Wheel_GUI_ABA" folder is an executable file called "Wheel_GUI_ABA". Double click on this file to run the running wheel system. This file must remain inside of the "Wheel_GUI_ABA" folder for it to work.
     11. You can make this file more accessible by right clicking on it and clicking "Make Alias". This Alis file can be placed wherever you would like
 
+<br/>
+
 ## Running the Setup GUI
 
 Now that you have created the executable files, all the code, files, and folders that you will need to use the running wheels on your computer is there. However, you still need to set it up.
 
 To setup your computer for the running wheel system, double click on the "RunningWheel_Setup" or "RunningWheel_Setup_ABA" (depending on which version you are using) to run the setup/installation GUI. Wait for the GUI to open, and then go through each button and input the requested information.
+
+<br/>
 
 ### Running Wheel (stand alone)
 The information entered in through the GUI includes:
@@ -150,6 +163,8 @@ The information entered in through the GUI includes:
 13. The first day of the experiment (Must be entered in following the format of DD/MM/YYYY - ex, 01/01/2022 for January first, 20222)
 14. After entering in all of this information you will need to select the button to run at the end of start up to set everything up.
 * For the locations where you would like to save data you can use the folders provided, or select different folders based on your preferences. For example, we made our secondary MATLAB saving location to be DropBox.
+
+<br/>
 
 ### Running Wheel with ABA protocol
 In addition to the information above, you will also be asked to enter in the following information:
@@ -176,8 +191,12 @@ In addition to the information above, you will also be asked to enter in the fol
 5. Location of MATLAB code for analyzing the mouse weight. This is found in a folder called "MouseWeight" under a folder called "MATLAB" in the "Code" folder.
 * For the locations where you would like to save data you can use the folders provided, or select different folders based on your preferences. For example, before running the setup, we moved the ABA_template.xlsx file to DropBox, allowing us to access the generated ABA file from various devices.
 
+<br/>
+
 ## Running the Running Wheel GUI
 When you open the Running Wheel GUI, it will first ask you to select the location of the Running Wheel Python code. This is because the directory that contains all the paths, directories, and file names is found in this location. After selecting this the GUI will have access to all the information that you entered in through the setup GUI. Depending on whether or not you are following the ABA protocol you will use one of two different GUIs.
+
+<br/>
 
 ### Running Wheel (stand alone)
 1. Data Download - will download your data received from the running wheels by the running wheel email address, and create excel workbooks containing this data that matlab will then use for analysis.
@@ -189,10 +208,14 @@ When you open the Running Wheel GUI, it will first ask you to select the locatio
 6. Data Analysis and Plot Graphs
 7. Data Download, Analysis, and Plot Graphs - this is the button that we would typically use each morning, as it would do everything that we needed to do.
 
+<br/>
+
 ### Running Wheel with ABA protocol
 In addition to the above buttons, when using the ABA protocol you will also have the following button:
 1. Mouse Weight Download and Plot Graphs - will download and analyze the data in the ABA excel file returning graphs that show the mouse weight, food consumed, and water consumed. You should run this each day so that you know when the mice have dropped before 75% of their initial body mass (based on the last day of baseline). For this to work, you need to be filling out the ABA_<date>.xlsx file that the setup GUI created for you. That is why we made ours on DropBox (by putting the template there before running the setup GUI) so it was easy to update from different locations.
 
+<br/>
+	
 ## No Wifi method
 As explained in our paper, if you have a poor or no internet connection you will want to use the no wifi method. To do this you will need to set up the raspberry pi in the mouse spinner with the no-wifi code. This process was explained in a previous section. The running data will be stored on the SD card and can be accessed at the end of the experiment. To do so, you will need to manually transfer the spinlog.txt file from your raspberry pi to the computer that is doing the analysis via a USB drive. Then follow these steps:
 1. Add the corresponding "_#" to the end of the spinlog.txt file.
