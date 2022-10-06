@@ -37,7 +37,7 @@ pip3 install pyinstaller
 Pip will take care of finding and installing the module for you, so it's pretty simple.
 
 
-Additionally, here is a list of python modules already included with python:
+Additionally, here is a list of python modules, which we use in our code, that are already included with Python:
 1. os
 2. re
 4. datetime
