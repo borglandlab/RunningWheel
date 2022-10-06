@@ -25,7 +25,7 @@ Here is a list of the third party modueles that you will need to install using p
 3. [matlabengine](https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html)
 4. [pyinstaller](https://pyinstaller.org/en/stable/installation.html)
 
-You will need to install these in your terminal window. You can open a terminal window by pressing on "cmd" + spacebar, which will cause the spotlight search to pop up. Type in "terminal" and press the "return" key or click on the first entry titled "terminal".
+You will need to install these in your terminal window. You can open a terminal window by pressing on "cmd" + spacebar, which will cause the spotlight search to pop up. Type in "terminal" and press the "return" key, or click on the first entry titled "terminal".
 
 To use pip, enter pip or pip3 (depending on which version you are using - pip3 for python3) followed by the module you are installing:
 ```{console}
