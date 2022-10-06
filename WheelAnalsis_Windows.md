@@ -68,7 +68,7 @@ It is simpler for you to create the executable files than for us to provide them
 	cd <paste python address here>
 	pyinstaller --onefile RunningWheel_Setup.py
 	```
-        1. You can get the "Python" folder address by right clicking on the "Python" folder in the File Explorer navigator bar and clicking on "Copy address"
+    * You can get the "Python" folder address by right clicking on the "Python" folder in the File Explorer navigator bar and clicking on "Copy address"
     5. Within the "Python" folder, delete the "RunningWheel_Setup.spec" file.
     6. Within the "Python" folder, delete the "build" folder.
     7. Within the "Python" folder, open the "dist" folder and move the file "RunningWheel_Setup" to the folder called "Executable", within the "Code" folder, then delete the "dist" folder.
@@ -121,7 +121,7 @@ It is simpler for you to create the executable files than for us to provide them
 	cd <paste python address here>
 	pyinstaller --onefile RunningWheel_Setup_ABA.py
 	```
-            1. You can get the "Python" folder address by right clicking on the "Python" folder in the File Explorer navigator bar and clicking on "Copy address"
+    * You can get the "Python" folder address by right clicking on the "Python" folder in the File Explorer navigator bar and clicking on "Copy address"
     5. Within the "Python" folder, delete the "RunningWheel_Setup_ABA.spec" file.
     6. Within the "Python" folder, delete the "build" folder.
     7. Within the "Python" folder, open the "dist" folder and move the file "RunningWheel_Setup_ABA" to the folder called "Executable", within the "Code" folder, then delete the "dist" folder.
