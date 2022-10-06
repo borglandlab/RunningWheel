@@ -50,7 +50,7 @@ Additionally, here is a list of python modules, which we use in our code, that a
 You should not need to install these using pip
 
 ### Creating executable files
-It is simpler for you to create the executable files than for us to provide them to you, because your personal computer may not allow you to download or use executable files that were created by a nonverified source. So you will need to follow these steps before using either running wheel GUIs. Although the process is the same, for the sake of clarity due to different names, we have outlined the steps separately for two versions that we offer.
+It is simpler for you to create the executable files than for us to provide them to you, because your personal computer may not allow you to download or use executable files that were created by a nonverified source. So you will need to follow these steps before using either running wheel GUIs. Although the process is the same, for the sake of clarity, due to different names, we have outlined the steps separately for the two versions that we offer.
 
 #### Running Wheel (stand alone)
 
