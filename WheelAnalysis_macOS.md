@@ -5,9 +5,9 @@ You must have Python 3 installed on you computer to run the data download softwa
 
 Make sure that your system PATH variable includes Python or your computer will be unable to find it (not necessary if you have installed Anaconda or Miniconda). This will prevent the code that I am sharing here from working on your computer. You can learn more about how to do this at this [website](https://www.educative.io/edpresso/how-to-add-python-to-the-path-variable-in-mac).
 
-You may also need to install pip separately on your personal computer (not necessary if you have installed Anaconda or Miniconda). Pip is a standard accesory to python, and is what you will use to install third party python modules, of which we will be using a few. You can learn how to install pip [here](https://pip.pypa.io/en/stable/installation/).
+You may also need to install pip separately on your personal computer (not necessary if you have installed Anaconda or Miniconda). Pip is a standard accesory to python, and is what you will use to install third party Python modules, of which we will be using a few. You can learn how to install pip [here](https://pip.pypa.io/en/stable/installation/).
 
-The running wheel system also requires MATLAB, it connects to matlab through a python module called matlab engine, but this will only work if you already have matlab installed on your personal computer. Based on this [reference](https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html) from mathworks, you will need to have a MATLAB version from 2014 or later to run the the matlab engine.
+The running wheel system also requires MATLAB, it connects to matlab through a Python module called matlab engine, but this will only work if you already have MATLAB installed on your personal computer. Based on this [reference](https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html) from MathWorks, you will need to have a MATLAB version from 2014 or later to run the the matlab engine.
 
 
 ## Setting up the Code on your computer
@@ -17,9 +17,9 @@ The second GUI is for running the code. This is what you will use on a regular b
 
 The running wheel system can be run as standalone running wheels, or as part of the ABA protocol, as found in our research publication. Make sure you download the appropriate one. Both versions use a setup GUI and then a GUI to run the code, but if you are planning to follow our ABA protocol then the ABA GUI will facilitate this.
 
-### Install third party python modules using pip
+### Install third party Python modules using pip
 
-Here is a list of the third party modueles that you will need to install using pip
+Here is a list of the third party modules that you will need to install using pip
 1. [openpyxl](https://pypi.org/project/openpyxl/)
 2. [pytz](https://pypi.org/project/pytz/)
 3. [matlabengine](https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html)
@@ -27,7 +27,7 @@ Here is a list of the third party modueles that you will need to install using p
 
 You will need to install these in your terminal window. You can open a terminal window by pressing on "cmd" + spacebar, which will cause the spotlight search to pop up. Type in "terminal" and press the "return" key, or click on the first entry titled "terminal".
 
-To use pip, enter pip or pip3 (depending on which version you are using - pip3 for python3) followed by the module you are installing:
+To use pip, enter pip or pip3 (depending on which version you are using - pip3 for Python 3) followed by the module you are installing:
 ```{console}
 pip3 install openpyxl
 pip3 install pytz
