@@ -1,9 +1,9 @@
 # Software for using Running Wheel (macOS)
 ---
 ## Wheel Download Software
-You must have Python 3 installed on you computer to run the data download software. It might work with Python 2, however it has only been tested with Python 3.
+You must have Python 3 installed on you computer to run the data download software. It might work with Python 2, however it has only been tested with Python 3. If you are a new Python user, installing [Anaconda](https://www.anaconda.com/products/distribution) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) (a significantly lighter version of conda) will make your life simpler. They both include python and all of the accessory packages needed (such as pip) to run. In addition your terminal window will open in the conda environment, ensuring that you have access to Python.
 
-In addition, make sure that your system PATH variable includes python or your computer will be unable to find it. This will prevent the code that I am sharing here from working on your computer. You can learn more about how to do this at this [website](https://www.educative.io/edpresso/how-to-add-python-to-the-path-variable-in-mac). If you are a new Python user, installing [Anaconda](https://www.anaconda.com/products/distribution) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) (a significantly lighter version of conda) will make your life simpler. They both include python and all of the accessory packages needed (such as pip) to run. In addition your terminal window will open in the conda environment, ensuring that you have access to Python.
+Make sure that your system PATH variable includes Python or your computer will be unable to find it (not necessary if you have installed Anaconda or Miniconda). This will prevent the code that I am sharing here from working on your computer. You can learn more about how to do this at this [website](https://www.educative.io/edpresso/how-to-add-python-to-the-path-variable-in-mac).
 
 You may also need to install pip separately on your personal computer (not necessary if you have installed Anaconda or Miniconda). Pip is a standard accesory to python, and is what you will use to install third party python modules, of which we will be using a few. You can learn how to install pip [here](https://pip.pypa.io/en/stable/installation/).
 
