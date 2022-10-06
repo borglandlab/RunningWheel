@@ -9,6 +9,7 @@ You may also need to install pip separately on your personal computer (not neces
 
 The running wheel system also requires MATLAB, it connects to matlab through a Python module called matlab engine, but this will only work if you already have MATLAB installed on your personal computer. Based on this [reference](https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html) from MathWorks, you will need to have a MATLAB version from 2014 or later to run the the matlab engine.
 
+<br/>
 
 ## Setting up the Code on your computer
 The running wheel system utilizes two different graphical user interfaces (GUI). One is used to set everything up prior to running your experiment so that everything will run smoothly. Once you use this GUI, you do not need to use it again unless a folder directory changes. If you change the location of any files or folders, make sure you run through the setup GUI again. It is best to set everything up once and then don't move anything afterwards.
